@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>http://dev.vatterottfoundation.com/</loc>
+  <lastmod>2016-10-25T03:56:46+00:00</lastmod>
+</url>
+<url>
+  <loc>http://dev.vatterottfoundation.com/applications</loc>
+  <lastmod>2016-11-18T03:56:46+00:00</lastmod>
+</url>
+<url>
+  <loc>http://dev.vatterottfoundation.com/applications/new-application</loc>
+  <lastmod>2016-11-18T03:56:46+00:00</lastmod>
+</url>
+<url>
+  <loc>http://dev.vatterottfoundation.com/terms-of-use</loc>
+  <lastmod>2016-11-18T03:56:46+00:00</lastmod>
+</url>
+<url>
+  <loc>http://dev.vatterottfoundation.com/who-we-help</loc>
+  <lastmod>2016-11-18T03:56:46+00:00</lastmod>
+</url>
+<url>
+  <loc>http://dev.vatterottfoundation.com/youth-board</loc>
+  <lastmod>2016-11-18T03:56:46+00:00</lastmod>
+</url>
+<url>
+  <loc>http://dev.vatterottfoundation.com/trustees</loc>
+  <lastmod>2016-11-18T03:56:46+00:00</lastmod>
+</url>
+<url>
+  <loc>http://dev.vatterottfoundation.com/privacy-policy</loc>
+  <lastmod>2016-11-18T03:56:46+00:00</lastmod>
+</url>
+</urlset>

@@ -1,0 +1,117 @@
+.menu {
+  display: none;
+}
+
+.nav-menu {
+  .menu-item {
+    display: block;
+    color: @blue-primary;
+    padding: 1rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: .9rem;
+    background-color: transparent;
+    transition: background-color 0.6s @timing-function;
+
+    &:hover {
+      color: @white;
+      font-weight: 100;
+      background-color: rgba(red(@blue-primary), green(@blue-primary), blue(@blue-primary), .8);
+      text-decoration: underline;
+    }
+  }
+}
+
+#menu-reveal {
+  padding-right: 1rem;
+  color: @white;
+  font-size: 1rem;
+
+  @media (min-width: @tablet) {
+    display: none;
+  }
+}
+
+#main-menu {
+  display: block;
+  position: fixed;
+  right: 0;
+  top: @header-height;
+  background: @background-swatch;
+  width: 300px;
+  height: ~"calc(100vh - @{header-height})";
+  z-index: 10;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  visibility: hidden;
+  opacity: 1;
+  transform: translate3d(300px, 0, 0);
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+}
+
+.home-link {
+  display: flex;
+  height: 100%;
+  flex: 1 0 auto;
+  color: black;
+  align-items: center;
+
+  @media (min-width: @tablet) {
+    flex: 0 0 500px;
+  }
+}
+
+.section-link {
+  display: block;
+  position: relative;
+  color: @blue-primary;
+  border-bottom: 1px solid;
+  cursor: pointer;
+  padding: 1em;
+  font-size: 1.25em;
+  transition: color 0.3s;
+  transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+
+  &:before, &:after {
+    content: '';
+    z-index: -1;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s, opacity 0.3s;
+    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  }
+
+  &:before {
+    border: 2px solid @blue-primary;
+    opacity: 0;
+    background: @blue-primary;
+    transform: scale3d(1.2, 1.2, 1);
+    border-width: 1px;
+    border-color: @blue-primary;
+  }
+
+  &:after {
+    background: transparent;
+  }
+
+  &:hover {
+    color: white;
+
+    &:before {
+      opacity: 1;
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+
+    &:after {
+      opacity: 0;
+      -webkit-transform: scale3d(0.8, 0.8, 1);
+      transform: scale3d(0.8, 0.8, 1);
+    }
+  }
+}

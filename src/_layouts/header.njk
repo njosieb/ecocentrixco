@@ -1,0 +1,20 @@
+<div class="site-header">
+  <div class="header-wrapper">
+    <div class="site-title">
+      <a href="/" class="menu-item">
+        <h1>Site Title</h1>
+      </a>
+      <small><em>Site tagline</em></small>
+    </div>
+    <div class="menu">
+      {% for item in site.data.menu %}
+      <a title="<$  item.description  $>" href="<$  item.route  $>" class="menu-item">
+        <$  item.label  $>
+      </a>
+      {% endfor %}
+    </div>
+    <div id="menu-reveal" class="menu-button-container right">
+      Menu&nbsp;<i class="fa fa-bars"></i>
+    </div>
+  </div>
+</div>
