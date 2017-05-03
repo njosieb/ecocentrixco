@@ -1,11 +1,8 @@
 'use strict';
-const url = require('url')
-const proxy = require('proxy-middleware')
 
 export default function(gulp, plugins, args, config, taskTarget, browserSync) {
   // BrowserSync
   gulp.task('browserSync', () => {
-    const proxyOptions = url.parse('http://localhost:3002');
 
     browserSync.init({
       open: args.open ? 'local' : false,
@@ -14,7 +11,6 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
       port: config.port || 3000,
       server: {
         baseDir: taskTarget,
-        middleware: [proxy(proxyOptions)],
         routes: (() => {
           let routes = {};
 
