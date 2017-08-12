@@ -7,12 +7,13 @@
   }
 
   .footer-top {
-    background-color: @offBlack;
-    padding-top: 2rem;
+    background-color: @black;
+    padding-top: 0rem;
   }
   .footer-bottom {
     background-color: @black;
   }
+
 }
 
 .links {
@@ -121,7 +122,7 @@
 .social-media.links {
   display: flex;
   justify-content: space-around;
-  margin: 0 0 2rem;
+  // margin: 0 0 2rem;
 
   li {
     height: 4rem;
@@ -129,6 +130,10 @@
     border-radius: 100%;
     overflow: hidden;
     cursor: pointer;
+
+    &:last-child {
+      margin: 0;
+    }
   }
 }
 
