@@ -1,8 +1,6 @@
 ---
 - label: 'Home'
   route: '/'
-- label: 'Porfolio'
-  route: '/portfolio'
 - label: 'About Us'
   route: '/about-us'
 - label: 'Services'

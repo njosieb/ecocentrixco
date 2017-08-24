@@ -12,12 +12,12 @@ import wrench from 'wrench';
 const plugins = gulpLoadPlugins();
 
 const defaultNotification = function(err) {
-    return {
-        subtitle: err.plugin,
-        message: err.message,
-        sound: 'Funk',
-        onLast: true,
-    };
+  return {
+    subtitle: err.plugin,
+    message: err.message,
+    sound: 'Funk',
+    onLast: true,
+  };
 };
 
 let config = Object.assign({}, pjson.config, defaultNotification);
@@ -45,6 +45,7 @@ gulp.task('default', ['clean'], () => {
 // Build production-ready code
 gulp.task('build', [
   'copy',
+  'copyVideo',
   'templates',
   'imagemin',
   'fontmin',
@@ -59,11 +60,17 @@ gulp.task('serve', [
   'fontmin',
   'templates',
   'copy',
+  'copyVideo',
   'nunjucks',
   'less',
   'browserify',
   'browserSync',
   'watch'
+]);
+
+gulp.task('deploy' [
+  'build',
+  'ghPages'
 ]);
 
 // Testing

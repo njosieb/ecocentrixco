@@ -1,0 +1,39 @@
+{% macro modal(project) %}
+
+{% set project = project or {} %}
+{% set _id = project.id or '' %}
+{% set _title = project.title or '' %}
+{% set _description = project.description or '' %}
+{% set _date = project.date or '' %}
+{% set _tags = project.tags or [] %}
+{% set _imageUrl = project.image or '' %}
+{% set _slideshow = project.slideshow or [] %}
+
+<div id="modal-{{ _id }}" class="modal-container fixed h-100 w-100 top-0">
+  <div class="modal-overlay absolute h-100 w-100 top-0"></div>
+  <div class="modal relative">
+    <div class="modal-header">
+      <h3>{{_title}}</h3>
+    </div>
+    <div class="modal-body">
+      <div class="project-date">{{_date}}</div>
+      <div class="project-tags">
+        {% for tag in _tags %}
+        <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      <p class="project-description">{{_description}}</p>
+      <div class="project-images">
+        {% for image in _slideshow %}
+        <div class="image-container">
+          <a href="{{ image.slideUrl }}" data-lightbox="{{ _id }}">
+            <img class="project-image" src="{{ image.slideUrl }}" />
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endmacro %}

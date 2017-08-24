@@ -1,47 +1,43 @@
-.green {
-  color: @green-color;
+.tachyons-override (@class, @color) {
+  .@{class} { color: @color; }
+  .bg-@{class} { background-color: @color; }
+  .hover-@{class} {
+    &:hover,
+    &:focus {
+      color: @color;
+    }
+  }
+  .hover-bg-@{class} {
+    &:hover,
+    &:focus {
+      background-color: @color;
+    }
+  }
+  .b--@{class} { border-color: @color; }
 }
 
-.bg-green {
-  background-color: @green-color;
+.tachyons-override(~"green", @green-color);
+.tachyons-override(~"green-light", @green-light);
+.tachyons-override(~"green-lighter", @green-lighter);
+.tachyons-override(~"green-lightest", @green-lightest);
+.tachyons-override(~"gold", @gold-color);
+.tachyons-override(~"gold-light", @gold-light);
+.tachyons-override(~"gold-lighter", @gold-lighter);
+.tachyons-override(~"gold-lightest", @gold-lightest);
+.tachyons-override(~"off-black", @offBlack);
+
+.hover-shadow {
+  transition: box-shadow .2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
 }
 
-.hover-green:hover {
-  color: @green-color;
+.text-outline {
+  text-shadow: 1px 1px @offBlack, 1px -1px @offBlack, -1px -1px @offBlack, -1px 1px @offBlack;
 }
 
-.green-light {
-  color: @green-light;
-}
-
-.bg-green-light {
-  background-color: @green-light;
-}
-
-.hover-green-light:hover {
-  color: @green-light;
-}
-
-.green-lighter {
-  color: @green-lighter;
-}
-
-.bg-green-lighter {
-  background-color: @green-lighter;
-}
-
-.hover-green-lighter:hover {
-  color: @green-lighter;
-}
-
-.green-lightest {
-  color: @green-lightest;
-}
-
-.bg-green-lightest {
-  background-color: @green-lightest;
-}
-
-.hover-green-lightest:hover {
-  color: @green-lightest;
+.flex-50 {
+  flex: 1 1 50%;
 }

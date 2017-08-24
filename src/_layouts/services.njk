@@ -1,0 +1,38 @@
+<div class="services-main">
+  <div class="services-header pt6 pb5">
+    <h1 class="mw7 f-5 center white mv0">Services</h1>
+  </div>
+  <div class="portfoilo-body">
+    <p class="mw6 center tc pv3">
+      Energy needs come in all sorts of different projects. Filter here on just how many we can help with
+    </p>
+    <div class="filtering-tags mw7 center flex justify-center">
+      <div id="all-projects" class="project-filter underline-hover mh3 pointer f4">All</div>
+      {% for tag in site.data.config.tags %}
+      <div data-tagname="{{ tag | lower }}" class="project-filter clickable underline-hover mh3 pointer f4">{{ tag }}</div>
+      {% endfor %}
+    </div>
+    <div class="services-container flex flex-wrap justify-center pb4 pt4">
+      {% for project in site.data.services %}
+        <div id="{{ project.id }}" class="project pointer relative mb4 mh4 {{ project.tags | string | replace(',', ' ') | lower }}">
+          <div class="project-info absolute w-100">
+            <h3 class="project-title tc pt3 ma0 flex items-center justify-center">
+              <span class="project-title-text blue-darker underline-hover lh-copy">{{ project.title }}</span>
+              <div class="project-date tc f5 lh-copy">&nbsp;&mdash; {{ project.date }}</div>
+            </h3>
+            <div class="tags tc pb2">
+              {% for tag in project.tags %}
+                <a href="/services#{{tag | lower}}" data-tagname="{{ tag | lower }}" class="filter-tag blue-darker underline-hover">{{ tag }}</a>{% if not loop.last %}<span>, </span>{% endif %}
+              {% endfor %}
+            </div>
+          </div>
+          <div class="image-container center hover-shadow">
+            <img class="db" src="{{ project.image }}" />
+          </div>
+        </div>
+        {% else %}
+        <div>Projects Coming Soon!!</div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

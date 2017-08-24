@@ -3,6 +3,16 @@
   "version": "0.0.1",
   "license": "MIT",
   "dependencies": {
+    "font-awesome": "^4.7.0",
+    "jquery": "2.2.0",
+    "lodash": "4.17.2",
+    "ng-file-upload": "12.2.x",
+    "normalize.css": "3.0.3",
+    "sugar": "2.0.4",
+    "tachyons": "~4.8.1",
+    "waypoints": "4.0.1"
+  },
+  "devDependencies": {
     "autoprefixer": "6.3.1",
     "babel-core": "6.9.1",
     "babel-eslint": "6.0.4",
@@ -16,8 +26,7 @@
     "envify": "3.4.0",
     "file-saver": "1.3.3",
     "foldero": "0.1.1",
-    "font-awesome": "^4.7.0",
-    "glob": "6.0.4",
+    "gulp-gh-pages": "^0.5.4",
     "gulp": "3.9.0",
     "gulp-angular-templatecache": "1.8.0",
     "gulp-changed": "1.3.0",
@@ -39,24 +48,18 @@
     "gulp-sourcemaps": "1.6.0",
     "gulp-uglify": "1.5.1",
     "gulp-util": "3.0.7",
+    "glob": "6.0.4",
     "imagemin-pngquant": "4.2.0",
     "imagemin-svgo": "4.2.0",
-    "jquery": "2.2.0",
     "js-yaml": "3.5.2",
     "less": "2.7.2",
-    "lodash": "4.17.2",
     "minimist": "1.2.0",
-    "ng-file-upload": "12.2.x",
-    "normalize.css": "3.0.3",
     "nunjucks": "2.4.0",
     "pluto-path": "0.3.0",
     "rimraf": "2.5.0",
-    "sugar": "2.0.4",
-    "tachyons": "~4.6.1",
     "vinyl-buffer": "1.0.0",
     "vinyl-source-stream": "1.1.0",
     "watchify": "3.7.0 ",
-    "waypoints": "4.0.1",
     "wrench": "1.5.8"
   },
   "scripts": {
@@ -75,7 +78,7 @@
   },
   "browserify-shim": {
     "waypoints": {
-      "exports": null,
+      "exports": "waypoints",
       "depends": "jquery:jQuery"
     }
   },
@@ -96,6 +99,7 @@
       "images": "_images",
       "styles": "_styles",
       "scripts": "_scripts",
+      "videos": "_videos",
       "data": "_data"
     },
     "entries": {

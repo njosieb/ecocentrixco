@@ -1,0 +1,19 @@
+{% extends '_layouts/base.njk' %}
+{% from '_modules/modal/modal.html' import modal %}
+
+{% block content %}
+<div class="main-container">
+  {% include "_layouts/header.njk" %}
+  {% include "_layouts/nav.njk" %}
+  <main class="portfolio">
+    {% include "_layouts/services.njk" %}
+    {% include "_layouts/footer.njk" %}
+  </main>
+</div>
+
+{% for project in site.data.portfolio %}
+  {% call modal(project) %}
+  {% endcall %}
+{% endfor %}
+
+{% endblock %}
