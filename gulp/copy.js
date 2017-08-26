@@ -16,4 +16,13 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
     .pipe(plugins.changed(dest))
     .pipe(gulp.dest(dest));
   });
+
+  gulp.task('copyDataFile', () => {
+    return gulp.src([
+      path.join(dirs.source, '_data/services.json'),
+      path.join(dirs.source, '_scripts/markerclusterer.js')
+    ])
+    .pipe(plugins.changed(dest))
+    .pipe(gulp.dest(path.join(dest, 'public')))
+  })
 }

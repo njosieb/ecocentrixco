@@ -1,5 +1,5 @@
-<section>
-  <div class="site-header">
+<header>
+  <div class="site-header bg-black-20 db">
     <div class="header-wrapper pt3-ns pb3-ns">
       <div class="ml4-ns">
         <img src="/images/logo.png" class="background-faded-white ph3 pv2"/>
@@ -7,9 +7,16 @@
       </div>
       <div class="menu">
         {% for item in site.data.menu %}
-        <a title="<$ item.description $>" href="<$ item.route $>" class="menu-item">
-          <$ item.label $>
-        </a>
+        <div class="menu-item">
+          <a title="<$ item.description $>" href="<$ item.route $>" class="white hover-gold"><$ item.label $></a>
+            {% if item.children %}
+            <div class="sub-menu absolute bg-black-60 pa2">
+              {% for child in item.children %}
+              <a title="<$ child.description $>" href="<$ child.route $>" class="db pv2 white nowrap hover-gold"><$ child.label $></a>
+              {% endfor %}
+            </div>
+            {% endif %}
+        </div>
         {% endfor %}
       </div>
       <div id="menu-reveal" class="menu-button-container right">
@@ -17,4 +24,4 @@
       </div>
     </div>
   </div>
-</section>
+</header>

@@ -45,6 +45,7 @@ gulp.task('default', ['clean'], () => {
 // Build production-ready code
 gulp.task('build', [
   'copy',
+  'copyDataFile',
   'copyVideo',
   'templates',
   'imagemin',
@@ -60,6 +61,7 @@ gulp.task('serve', [
   'fontmin',
   'templates',
   'copy',
+  'copyDataFile',
   'copyVideo',
   'nunjucks',
   'less',
@@ -68,7 +70,7 @@ gulp.task('serve', [
   'watch'
 ]);
 
-gulp.task('deploy' [
+gulp.task('deploy', [
   'build',
   'ghPages'
 ]);

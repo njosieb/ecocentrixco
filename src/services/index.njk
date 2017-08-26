@@ -1,5 +1,5 @@
 {% extends '_layouts/base.njk' %}
-{% from '_modules/modal/modal.html' import modal %}
+{# {% from '_modules/modal/modal.html' import modal %} #}
 
 {% block content %}
 <div class="main-container">
@@ -10,10 +10,12 @@
     {% include "_layouts/footer.njk" %}
   </main>
 </div>
+<script src="/public/markerclusterer.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsuCjHZUuNmjtfjwxYsFGj8aouf18e9aU&callback=initMap"></script>
 
-{% for project in site.data.portfolio %}
+{# {% for project in site.data.services %}
   {% call modal(project) %}
   {% endcall %}
-{% endfor %}
+{% endfor %} #}
 
 {% endblock %}

@@ -7,7 +7,36 @@ import $ from 'jquery';
 import 'waypoints';
 
 $(() => {
-  const jWindow = $(window);
+
+  // Google Maps
+
+  window.initMap = function() {
+    const generateMarkers = function() {
+
+    }
+
+    const map = new google.maps.Map(document.getElementById('services-map'), {
+      zoom: 5,
+      center: { lat: 38.628141, lng: -90.209818 },
+      mapTypeControl: false,
+      fullscreenControl: false,
+      streetViewControl: false,
+    })
+
+    $.getJSON('/public/services.json', function(data) {
+      const markers = data.projects.map((project, i) => {
+        return new google.maps.Marker({
+          position: project.position,
+          // label: project.title,
+          map: map
+        })
+      })
+
+      const markerCluster = new MarkerClusterer(map, markers, {
+        imagePath: '/images/m'
+      })
+    })
+  }
 
   let sidebarVisible = false;
 
@@ -27,11 +56,37 @@ $(() => {
     sidebarVisible = false;
   });
 
-  if (window.location.pathname === '/' && jWindow.width() >= 600) {
-    // const topSection = $('#top-splash')
+  // Filtering projects
+  const filterableTags = ['existing-buildings', 'new-construction', 'home-energy-audit', 'radon-testing', 'cleaning']
 
-    // jWindow.on('scroll', () => {
-    //   topSection.find('.parallax-image').css('transform', `translate3d(0, ${jWindow.scrollTop() * -.3}px, 0)`)
-    // })
+  const filterProjects = function (clicked) {
+    $('.project').hide()
+    $('.active-tag').removeClass('active-tag')
+    $(`.project-filter[data-tagname="${clicked}"]`).addClass('active-tag')
+    $('.project').filter(`.${clicked}`).show()
   }
+
+  $(document).ready(function() {
+    if (window.location.pathname === '//') {
+      if (filterableTags.some(tag => tag === window.location.hash.substring(1))) {
+        filterProjects(window.location.hash.substring(1))
+      } else {
+        window.location.hash = ''
+        $('#all-projects').addClass('active-tag')
+      }
+    }
+  })
+
+  $('#all-projects').click(function() {
+    window.location.hash = ''
+    $('.project').show()
+  })
+
+  $('.filter-tag, .project-filter.clickable').click(function(event) {
+    event.preventDefault()
+    const filteringTag = $(this).data('tagname')
+    window.location.hash = `#${filteringTag}`
+    filterProjects($(this).data('tagname'))
+  })
+
 });
