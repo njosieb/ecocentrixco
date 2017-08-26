@@ -1,14 +1,14 @@
 <header>
-  <div class="site-header bg-black-20 db">
+  <div class="site-header db bg-blue">
     <div class="header-wrapper pt3-ns pb3-ns">
-      <div class="ml4-ns">
-        <img src="/images/logo.png" class="background-faded-white ph3 pv2"/>
+      <a href="/" class="db bg-white br-pill ml4-ns">
+        <img src="/images/logo.png" class="ph3 pv2"/>
         {# <h4 class="ma0 white"><em><$ site.data.info.tagline $></em></h4> #}
-      </div>
+      </a>
       <div class="menu">
         {% for item in site.data.menu %}
         <div class="menu-item">
-          <a title="<$ item.description $>" href="<$ item.route $>" class="white hover-gold"><$ item.label $></a>
+          <a title="<$ item.description $>" href="<$ item.route $>" class="white hover-gold fw7"><$ item.label $></a>
             {% if item.children %}
             <div class="sub-menu absolute bg-black-60 pa2">
               {% for child in item.children %}

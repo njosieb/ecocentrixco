@@ -1,25 +1,25 @@
 <div class="services-main">
-  <div class="services-header pt6 pb5" style="background-image: url(/images/windmill_still.jpg">
-    <h1 class="mw7 f-5 center white mv0">Services</h1>
+  <div class="pt6 pb5 bg-blue">
+    <h1 class="mw8 ph4 f-5 center white mv0 lh-copy">Services</h1>
+    <p class="f3 ma0 mw7 center pt2 pb5 white">
+      Energy needs are different for every type of project, and we've covered a lot of them in several locations across the country. <b class="gold">Click the filters below</b> to see the variety of projects we've worked with in the past.
+    </p>
   </div>
   <div class="portfoilo-body">
-    <p class="mw6 center tc pv3">
-      Energy needs come in all sorts of different projects, and we've covered a lot of them in several locations across the country. Filter here on just how many we can help with
-    </p>
-    <div class="filtering-tags mw7 center flex justify-center mv3 tc items-center">
-      <span id="all-projects" class="project-filter mh3 pointer f4">All</span>
+    <div class="filtering-tags mw8 center flex flex-wrap justify-center mv3 tc items-center pv4">
+      <span id="all-projects" class="project-filter mh3 pointer f4 blue fw7 br-pill bg-white ba ph3 pv2 b--gold mb3">All</span>
       {% for tag in site.data.config.tags %}
-      <span data-tagname="<$ tag | lower $>" class="project-filter clickable mh3 pointer f4"><$ tag $></span>
+      <span data-tagname="<$ tag | lower $>" class="project-filter clickable mh3 pointer f4 blue fw7 br-pill bg-white ba ph3 pv2 b--gold mb3"><$ tag $></span>
       {% endfor %}
     </div>
 
     <div class="services-area flex vh-50 overflow-hidden">
       <div id="services-map" class="h-100 flex-50"></div>
 
-      <div class="services-container flex-50 pb4 pt4 overflow-auto h-100">
+      <div class="services-container flex-50 pb4 overflow-auto h-100">
         {% for project in site.data.services.projects %}
           <div data-job-id="<$ project.id $>" class="project pointer flex relative mb2 mh4 <$ project.tags | string | replace(',', ' ') | lower $>">
-            <h3 class="project-title f4 ma0" style="flex-basis: 50%">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
               <span class="project-title-text underline-hover lh-copy"><$ project.title $></span>
             </h3>
             <div class="project-location flex-auto" style="flex-basis: 25%;"><$ project.city $>, <$ project.state $></div>

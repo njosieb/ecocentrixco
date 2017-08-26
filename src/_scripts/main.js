@@ -67,7 +67,7 @@ $(() => {
   }
 
   $(document).ready(function() {
-    if (window.location.pathname === '//') {
+    if (window.location.pathname === '/services/') {
       if (filterableTags.some(tag => tag === window.location.hash.substring(1))) {
         filterProjects(window.location.hash.substring(1))
       } else {
