@@ -9,7 +9,7 @@
     <div class="filtering-tags mw8 center flex flex-wrap justify-center mv3 tc items-center pv4">
       <span id="all-projects" class="project-filter mh3 pointer f4 blue fw7 br-pill bg-white ba ph3 pv2 b--gold mb3">All</span>
       {% for tag in site.data.config.tags %}
-      <span data-tagname="<$ tag | lower $>" class="project-filter clickable mh3 pointer f4 blue fw7 br-pill bg-white ba ph3 pv2 b--gold mb3"><$ tag $></span>
+      <span data-tagname="<$ tag | replace(' ', '-') | lower $>" class="project-filter clickable mh3 pointer f4 blue fw7 br-pill bg-white ba ph3 pv2 b--gold mb3"><$ tag $></span>
       {% endfor %}
     </div>
 
@@ -18,17 +18,18 @@
 
       <div class="services-container flex-50 pb4 overflow-auto h-100">
         {% for project in site.data.services.projects %}
-          <div data-job-id="<$ project.id $>" class="project pointer flex relative mb2 mh4 <$ project.tags | string | replace(',', ' ') | lower $>">
+          <div data-job-id="<$ project.id $>" class="project pointer flex relative mb2 mh4 <$ project.tags | string | replace(' ', '-') | replace(',', ' ') | lower $>">
             <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
               <span class="project-title-text underline-hover lh-copy"><$ project.title $></span>
             </h3>
             <div class="project-location flex-auto" style="flex-basis: 25%;"><$ project.city $>, <$ project.state $></div>
             <div class="project-units flex-auto" style="flex-basis: 15%;"><$ project.units $> units</div>
-            <div class="tags tc flex-auto" style="flex-basis: 10%;">
+            <div class="type tc flex-auto" style="flex-basis: 10%;"><$ project.type $></div>
+            {# <div class="tags tc flex-auto" style="flex-basis: 10%;">
               {% for tag in project.tags %}
                 <a href="/services#<$ tag | lower $>" data-tagname="<$ tag | lower $>" class="filter-tag blue-darker underline-hover"><$ tag $></a>{% if not loop.last %}<span>, </span>{% endif %}
               {% endfor %}
-            </div>
+            </div> #}
           </div>
           {% else %}
           <div>Projects Coming Soon!!</div>

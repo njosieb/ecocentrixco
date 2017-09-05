@@ -9,7 +9,7 @@
       "units": 31,
       "type": "NGBS",
       "tags": [
-        "NGBS"
+        "National Green Building Standard"
       ]
     },
     {
@@ -21,7 +21,7 @@
       "units": 100,
       "type": "EAR",
       "tags": [
-        "EAR"
+        "Energy Audit Review"
       ]
     },
     {
@@ -33,7 +33,7 @@
       "units": 10,
       "type": "NGBS",
       "tags": [
-        "NGBS"
+        "National Green Building Standard"
       ]
     },
     {
@@ -45,7 +45,7 @@
       "units": 47,
       "type": "ES",
       "tags": [
-        "ES"
+        "Energy Star"
       ]
     },
     {
@@ -57,7 +57,7 @@
       "units": 58,
       "type": "HERS",
       "tags": [
-        "HERS"
+        "Home Energy Rating System"
       ]
     },
     {
@@ -69,7 +69,7 @@
       "units": 62,
       "type": "HERS",
       "tags": [
-        "HERS"
+        "Home Energy Rating System"
       ]
     },
     {
@@ -81,7 +81,7 @@
       "units": 40,
       "type": "ES",
       "tags": [
-        "ES"
+        "Energy Star"
       ]
     },
     {
@@ -93,7 +93,7 @@
       "units": 157,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -105,7 +105,7 @@
       "units": 20,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -117,7 +117,7 @@
       "units": 52,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -129,7 +129,7 @@
       "units": 74,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -141,7 +141,7 @@
       "units": 38,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -153,7 +153,7 @@
       "units": 80,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -165,7 +165,7 @@
       "units": 35,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -177,7 +177,7 @@
       "units": 58,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -189,7 +189,7 @@
       "units": 40,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -201,7 +201,7 @@
       "units": 40,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -213,7 +213,7 @@
       "units": 48,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -225,7 +225,7 @@
       "units": 32,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -237,7 +237,7 @@
       "position": { "lat": 44.978933, "lng": -93.265943 },
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -249,7 +249,7 @@
       "units": 35,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -261,7 +261,7 @@
       "units": 55,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -273,7 +273,7 @@
       "units": 8,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -285,7 +285,7 @@
       "units": 74,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -297,7 +297,7 @@
       "units": 96,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -309,7 +309,7 @@
       "units": 18,
       "type": "HERS",
       "tags": [
-        "HERS"
+        "Home Energy Rating System"
       ]
     },
     {
@@ -321,7 +321,7 @@
       "units": 84,
       "type": "HERS",
       "tags": [
-        "HERS"
+        "Home Energy Rating System"
       ]
     },
     {
@@ -333,7 +333,7 @@
       "units": 25,
       "type": "HERS",
       "tags": [
-        "HERS"
+        "Home Energy Rating System"
       ]
     },
     {
@@ -345,7 +345,7 @@
       "units": 40,
       "type": "NGBS",
       "tags": [
-        "NGBS"
+        "National Green Building Standard"
       ]
     },
     {
@@ -357,7 +357,7 @@
       "units": 49,
       "type": "NGBS",
       "tags": [
-        "NGBS"
+        "National Green Building Standard"
       ]
     },
     {
@@ -369,7 +369,7 @@
       "units": 47,
       "type": "HERS",
       "tags": [
-        "HERS"
+        "Home Energy Rating System"
       ]
     },
     {
@@ -381,7 +381,7 @@
       "units": 60,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -393,7 +393,7 @@
       "units": 72,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -405,7 +405,7 @@
       "units": 115,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -417,7 +417,7 @@
       "units": 24,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -429,7 +429,7 @@
       "units": 63,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -441,7 +441,7 @@
       "units": 36,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -453,7 +453,7 @@
       "units": 147,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -465,7 +465,7 @@
       "units": 85,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -477,7 +477,7 @@
       "units": 48,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -489,7 +489,7 @@
       "units": 150,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -501,7 +501,7 @@
       "units": 1,
       "type": "ES",
       "tags": [
-        "ES"
+        "Energy Star"
       ]
     },
     {
@@ -513,7 +513,7 @@
       "units": 50,
       "type": "ES",
       "tags": [
-        "ES"
+        "Energy Star"
       ]
     },
     {
@@ -525,7 +525,7 @@
       "units": 208,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -537,7 +537,7 @@
       "units": 46,
       "type": "HERS",
       "tags": [
-        "HERS"
+        "Home Energy Rating System"
       ]
     },
     {
@@ -549,7 +549,7 @@
       "units": 105,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -561,7 +561,7 @@
       "units": 47,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -573,7 +573,7 @@
       "units": 48,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -585,7 +585,7 @@
       "units": 152,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -597,7 +597,7 @@
       "units": 42,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -609,7 +609,7 @@
       "units": 44,
       "type": "EA",
       "tags": [
-        "EA"
+        "Energy Audit"
       ]
     },
     {
@@ -621,7 +621,7 @@
       "units": 5,
       "type": "ES",
       "tags": [
-        "ES"
+        "Energy Star"
       ]
     },
     {
@@ -633,7 +633,7 @@
       "units": 226,
       "type": "HERS",
       "tags": [
-        "HERS"
+        "Home Energy Rating System"
       ]
     },
     {
@@ -645,7 +645,7 @@
       "units": 41,
       "type": "NGBS",
       "tags": [
-        "NGBS"
+        "National Green Building Standard"
       ]
     }
   ]

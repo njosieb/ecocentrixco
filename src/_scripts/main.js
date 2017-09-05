@@ -57,7 +57,7 @@ $(() => {
   });
 
   // Filtering projects
-  const filterableTags = ['existing-buildings', 'new-construction', 'home-energy-audit', 'radon-testing', 'cleaning']
+  const filterableTags = ['energy-audit', 'energy-audit-review', 'energy-star', 'national-green-building-standard', 'home-energy-rating-system']
 
   const filterProjects = function (clicked) {
     $('.project').hide()
@@ -79,6 +79,8 @@ $(() => {
 
   $('#all-projects').click(function() {
     window.location.hash = ''
+    $('.active-tag').removeClass('active-tag')
+    $(this).addClass('active-tag')
     $('.project').show()
   })
 
