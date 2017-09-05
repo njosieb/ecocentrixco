@@ -27,7 +27,7 @@
             <div class="type tc flex-auto" style="flex-basis: 10%;"><$ project.type $></div>
             {# <div class="tags tc flex-auto" style="flex-basis: 10%;">
               {% for tag in project.tags %}
-                <a href="/services#<$ tag | lower $>" data-tagname="<$ tag | lower $>" class="filter-tag blue-darker underline-hover"><$ tag $></a>{% if not loop.last %}<span>, </span>{% endif %}
+                <a href="<$ baseUrl $>/services#<$ tag | lower $>" data-tagname="<$ tag | lower $>" class="filter-tag blue-darker underline-hover"><$ tag $></a>{% if not loop.last %}<span>, </span>{% endif %}
               {% endfor %}
             </div> #}
           </div>

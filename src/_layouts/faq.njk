@@ -1,3 +1,7 @@
+{% block config %}
+  {% set baseUrl = config.baseUrl or './' %}
+{% endblock %}
+
 <div class="faq-main">
   <div class="pt6 pb5 bg-blue">
     <h1 class="mw8 ph4 f-5 center white mv0 lh-copy">FAQ</h1>
@@ -32,7 +36,7 @@
       </div>
       <div class="right-side w-50 flex items-center justify-center">
         <div class="img-container">
-          <img src="/images/natural_lightbulb.jpg" />
+          <img src="<$ baseUrl $>/images/natural_lightbulb.jpg" />
         </div>
       </div>
     </div>

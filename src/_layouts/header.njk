@@ -1,8 +1,12 @@
+{% block config %}
+  {% set baseUrl = config.baseUrl or './' %}
+{% endblock %}
+
 <header>
   <div class="site-header db bg-blue">
     <div class="header-wrapper pt3-ns pb3-ns">
-      <a href="/" class="db bg-white br-pill ml4-ns">
-        <img src="/images/logo.png" class="ph3 pv2"/>
+      <a href="<$ baseUrl $>" class="db bg-white br-pill ml4-ns">
+        <img src="<$ baseUrl $>/images/logo.png" class="ph3 pv2"/>
         {# <h4 class="ma0 white"><em><$ site.data.info.tagline $></em></h4> #}
       </a>
       <div class="menu">
