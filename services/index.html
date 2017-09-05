@@ -1,0 +1,253 @@
+
+
+  
+  
+  
+
+
+<!DOCTYPE html>
+
+<!--[if lt IE 9]>
+<html class="lt-ie9 no-js" lang="en">
+<![endif]-->
+<!--[if gte IE 9]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="Site description">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <base href="/">
+    <link rel="stylesheet" href="./styles/main.css" onload="this.media='all'">
+    
+  </head>
+  <body>
+    <!--[if lt IE 9]>
+    <p class="browsehappy">
+      You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+    </p>
+    <![endif]-->
+
+    
+<div class="main-container">
+  <section>
+  <div class="site-header">
+    <div class="header-wrapper pt3-ns pb3-ns">
+      <div class="ml4-ns">
+        <img src="/images/logo.png" class="background-faded-white">
+        <h4 class="ma0 white"><em>Energy Auditors & Consultants</em></h4>
+      </div>
+      <div class="menu">
+        
+        <a href="/" class="menu-item">
+          Home
+        </a>
+        
+        <a href="/about-us" class="menu-item">
+          About Us
+        </a>
+        
+        <a href="/services" class="menu-item">
+          Services
+        </a>
+        
+        <a href="/contact-us" class="menu-item">
+          Contact Us
+        </a>
+        
+      </div>
+      <div id="menu-reveal" class="menu-button-container right">
+        Menu&nbsp;<i class="fa fa-bars"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- nav.njk -->
+<nav id="main-menu" class="right nav-menu">
+  <div class="menu-section">
+    
+      <a href="/" class="section-link">
+        Home
+      </a>
+    
+      <a href="/about-us" class="section-link">
+        About Us
+      </a>
+    
+      <a href="/services" class="section-link">
+        Services
+      </a>
+    
+      <a href="/contact-us" class="section-link">
+        Contact Us
+      </a>
+    
+  </div>
+</nav>
+
+  <main class="portfolio">
+    <div class="services-main">
+  <div class="services-header pt6 pb5">
+    <h1 class="mw7 f-5 center white mv0">Services</h1>
+  </div>
+  <div class="portfoilo-body">
+    <p class="mw6 center tc pv3">
+      Energy needs come in all sorts of different projects. Filter here on just how many we can help with
+    </p>
+    <div class="filtering-tags mw7 center flex justify-center">
+      <div id="all-projects" class="project-filter underline-hover mh3 pointer f4">All</div>
+      
+      <div data-tagname="{{ tag | lower }}" class="project-filter clickable underline-hover mh3 pointer f4">{{ tag }}</div>
+      
+      <div data-tagname="{{ tag | lower }}" class="project-filter clickable underline-hover mh3 pointer f4">{{ tag }}</div>
+      
+      <div data-tagname="{{ tag | lower }}" class="project-filter clickable underline-hover mh3 pointer f4">{{ tag }}</div>
+      
+      <div data-tagname="{{ tag | lower }}" class="project-filter clickable underline-hover mh3 pointer f4">{{ tag }}</div>
+      
+      <div data-tagname="{{ tag | lower }}" class="project-filter clickable underline-hover mh3 pointer f4">{{ tag }}</div>
+      
+    </div>
+    <div class="services-container flex flex-wrap justify-center pb4 pt4">
+      
+        <div id="{{ project.id }}" class="project pointer relative mb4 mh4 {{ project.tags | string | replace(',', ' ') | lower }}">
+          <div class="project-info absolute w-100">
+            <h3 class="project-title tc pt3 ma0 flex items-center justify-center">
+              <span class="project-title-text blue-darker underline-hover lh-copy">{{ project.title }}</span>
+              <div class="project-date tc f5 lh-copy">&nbsp;&mdash; {{ project.date }}</div>
+            </h3>
+            <div class="tags tc pb2">
+              
+            </div>
+          </div>
+          <div class="image-container center hover-shadow">
+            <img class="db" src="{{ project.image }}">
+          </div>
+        </div>
+        
+        <div id="{{ project.id }}" class="project pointer relative mb4 mh4 {{ project.tags | string | replace(',', ' ') | lower }}">
+          <div class="project-info absolute w-100">
+            <h3 class="project-title tc pt3 ma0 flex items-center justify-center">
+              <span class="project-title-text blue-darker underline-hover lh-copy">{{ project.title }}</span>
+              <div class="project-date tc f5 lh-copy">&nbsp;&mdash; {{ project.date }}</div>
+            </h3>
+            <div class="tags tc pb2">
+              
+            </div>
+          </div>
+          <div class="image-container center hover-shadow">
+            <img class="db" src="{{ project.image }}">
+          </div>
+        </div>
+        
+        <div id="{{ project.id }}" class="project pointer relative mb4 mh4 {{ project.tags | string | replace(',', ' ') | lower }}">
+          <div class="project-info absolute w-100">
+            <h3 class="project-title tc pt3 ma0 flex items-center justify-center">
+              <span class="project-title-text blue-darker underline-hover lh-copy">{{ project.title }}</span>
+              <div class="project-date tc f5 lh-copy">&nbsp;&mdash; {{ project.date }}</div>
+            </h3>
+            <div class="tags tc pb2">
+              
+            </div>
+          </div>
+          <div class="image-container center hover-shadow">
+            <img class="db" src="{{ project.image }}">
+          </div>
+        </div>
+        
+        <div id="{{ project.id }}" class="project pointer relative mb4 mh4 {{ project.tags | string | replace(',', ' ') | lower }}">
+          <div class="project-info absolute w-100">
+            <h3 class="project-title tc pt3 ma0 flex items-center justify-center">
+              <span class="project-title-text blue-darker underline-hover lh-copy">{{ project.title }}</span>
+              <div class="project-date tc f5 lh-copy">&nbsp;&mdash; {{ project.date }}</div>
+            </h3>
+            <div class="tags tc pb2">
+              
+            </div>
+          </div>
+          <div class="image-container center hover-shadow">
+            <img class="db" src="{{ project.image }}">
+          </div>
+        </div>
+        
+        <div id="{{ project.id }}" class="project pointer relative mb4 mh4 {{ project.tags | string | replace(',', ' ') | lower }}">
+          <div class="project-info absolute w-100">
+            <h3 class="project-title tc pt3 ma0 flex items-center justify-center">
+              <span class="project-title-text blue-darker underline-hover lh-copy">{{ project.title }}</span>
+              <div class="project-date tc f5 lh-copy">&nbsp;&mdash; {{ project.date }}</div>
+            </h3>
+            <div class="tags tc pb2">
+              
+            </div>
+          </div>
+          <div class="image-container center hover-shadow">
+            <img class="db" src="{{ project.image }}">
+          </div>
+        </div>
+        
+    </div>
+  </div>
+</div>
+
+    <section class="bt section-border">
+<div class="site-footer section-border">
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-columns">
+        <div class="footer-column">
+        </div>
+        <div class="footer-column">
+          <ul class="social-media links">
+            
+            <li>
+              <a class="social-media-link" href=""><i class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+              <a class="social-media-link" href=""><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+              <a class="social-media-link" href=""><i class="fa fa-instagram"></i></a>
+            </li>
+          </ul>
+         </div>
+        <div class="footer-column">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p class="copyright-row">
+        <span class="copyright">Copyright 2017</span>
+        <span class="made-by">Site built by <a href="http://cvharris.com" target="_blank">CV Harris Design, LLC.</a></span>
+      </p>
+    </div>
+  </div>
+</div>
+</section>
+
+  </main>
+</div>
+
+
+
+
+
+    <script src="./scripts/main.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-XXXXXXXX-XX', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>
