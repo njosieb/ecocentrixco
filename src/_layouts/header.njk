@@ -12,11 +12,11 @@
       <div class="menu">
         {% for item in site.data.menu %}
         <div class="menu-item">
-          <a title="<$ item.description $>" href="<$ item.route $>" class="white hover-gold fw7"><$ item.label $></a>
+          <a title="<$ item.description $>" href="<$ baseUrl $><$ item.route $>" class="white hover-gold fw7"><$ item.label $></a>
             {% if item.children %}
             <div class="sub-menu absolute bg-black-60 pa2">
               {% for child in item.children %}
-              <a title="<$ child.description $>" href="<$ child.route $>" class="db pv2 white nowrap hover-gold"><$ child.label $></a>
+              <a title="<$ child.description $>" href="<$ baseUrl $><$ child.route $>" class="db pv2 white nowrap hover-gold"><$ child.label $></a>
               {% endfor %}
             </div>
             {% endif %}

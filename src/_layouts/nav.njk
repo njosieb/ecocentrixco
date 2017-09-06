@@ -6,7 +6,7 @@
 <nav id="main-menu" class="right nav-menu">
   <div class="menu-section">
     {% for section in site.data.menu %}
-      <a href="<$ baseUrl $>/<$ section.route $>" class="section-link">
+      <a href="<$ section.route $>" class="section-link">
         <$ section.label $>
       </a>
     {% endfor %}
