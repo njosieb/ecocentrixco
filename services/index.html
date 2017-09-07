@@ -20,8 +20,8 @@
     <title></title>
     <meta name="description" content="Site description">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <base href="/">
-    <link rel="stylesheet" href="./styles/main.css" onload="this.media='all'">
+    <base href="/ecocentrixco">
+    <link rel="stylesheet" href="/ecocentrixco/styles/main.css" onload="this.media='all'">
     
   </head>
   <body>
@@ -33,30 +33,67 @@
 
     
 <div class="main-container">
-  <section>
-  <div class="site-header">
+  
+  
+
+
+<header>
+  <div class="site-header db bg-blue">
     <div class="header-wrapper pt3-ns pb3-ns">
-      <div class="ml4-ns">
-        <img src="/images/logo.png" class="background-faded-white">
-        <h4 class="ma0 white"><em>Energy Auditors & Consultants</em></h4>
-      </div>
+      <a href="/ecocentrixco" class="db bg-white br-pill ml4-ns">
+        <img src="/ecocentrixco/images/logo.png" class="ph3 pv2">
+        
+      </a>
       <div class="menu">
         
-        <a href="/" class="menu-item">
-          Home
-        </a>
+        <div class="menu-item">
+          <a href="/ecocentrixco/" class="white hover-gold fw7">Home</a>
+            
+        </div>
         
-        <a href="/about-us" class="menu-item">
-          About Us
-        </a>
+        <div class="menu-item">
+          <a href="/ecocentrixco/about" class="white hover-gold fw7">About Us</a>
+            
+            <div class="sub-menu absolute bg-black-60 pa2">
+              
+              <a href="/ecocentrixco/about" class="db pv2 white nowrap hover-gold">Who We Are</a>
+              
+              <a href="/ecocentrixco/about#auditing" class="db pv2 white nowrap hover-gold">About Energy Auditing</a>
+              
+              <a href="/ecocentrixco/about#consulting" class="db pv2 white nowrap hover-gold">About Energy Consulting</a>
+              
+            </div>
+            
+        </div>
         
-        <a href="/services" class="menu-item">
-          Services
-        </a>
+        <div class="menu-item">
+          <a href="/ecocentrixco/services" class="white hover-gold fw7">Services</a>
+            
+            <div class="sub-menu absolute bg-black-60 pa2">
+              
+              <a href="/ecocentrixco/services#energy-audit" class="db pv2 white nowrap hover-gold">Energy Audits</a>
+              
+              <a href="/ecocentrixco/services#energy-audit-review" class="db pv2 white nowrap hover-gold">Energy Audit Reviews</a>
+              
+              <a href="/ecocentrixco/services#energy-star" class="db pv2 white nowrap hover-gold">Energy Star</a>
+              
+              <a href="/ecocentrixco/services#national-green-building-standard" class="db pv2 white nowrap hover-gold">National Green Building Standard</a>
+              
+              <a href="/ecocentrixco/services#home-energy-rating-system" class="db pv2 white nowrap hover-gold">Home Energy Rating System</a>
+              
+            </div>
+            
+        </div>
         
-        <a href="/contact-us" class="menu-item">
-          Contact Us
-        </a>
+        <div class="menu-item">
+          <a href="/ecocentrixco/faq" class="white hover-gold fw7">FAQ</a>
+            
+        </div>
+        
+        <div class="menu-item">
+          <a href="/ecocentrixco/contact" class="white hover-gold fw7">Contact Us</a>
+            
+        </div>
         
       </div>
       <div id="menu-reveal" class="menu-button-container right">
@@ -64,9 +101,13 @@
       </div>
     </div>
   </div>
-</section>
+</header>
 
-  <!-- nav.njk -->
+  
+  
+
+
+<!-- nav.njk -->
 <nav id="main-menu" class="right nav-menu">
   <div class="menu-section">
     
@@ -74,7 +115,7 @@
         Home
       </a>
     
-      <a href="/about-us" class="section-link">
+      <a href="/about" class="section-link">
         About Us
       </a>
     
@@ -82,7 +123,11 @@
         Services
       </a>
     
-      <a href="/contact-us" class="section-link">
+      <a href="/faq" class="section-link">
+        FAQ
+      </a>
+    
+      <a href="/contact" class="section-link">
         Contact Us
       </a>
     
@@ -91,104 +136,574 @@
 
   <main class="portfolio">
     <div class="services-main">
-  <div class="services-header pt6 pb5">
-    <h1 class="mw7 f-5 center white mv0">Services</h1>
+  <div class="pt6 pb5 bg-blue">
+    <h1 class="mw8 ph4 f-5 center white mv0 lh-copy">Services</h1>
+    <p class="f3 ma0 mw7 center pt2 pb5 white">
+      Energy needs are different for every type of project, and we've covered a lot of them in several locations across the country. <b class="gold">Click the filters below</b> to see the variety of projects we've worked with in the past.
+    </p>
   </div>
   <div class="portfoilo-body">
-    <p class="mw6 center tc pv3">
-      Energy needs come in all sorts of different projects. Filter here on just how many we can help with
-    </p>
-    <div class="filtering-tags mw7 center flex justify-center">
-      <div id="all-projects" class="project-filter underline-hover mh3 pointer f4">All</div>
+    <div class="filtering-tags mw8 center flex flex-wrap justify-center mv3 tc items-center pv4">
+      <span id="all-projects" class="project-filter mh3 pointer f4 blue fw7 br-pill bg-white ba ph3 pv2 b--gold mb3">All</span>
       
-      <div data-tagname="{{ tag | lower }}" class="project-filter clickable underline-hover mh3 pointer f4">{{ tag }}</div>
+      <span data-tagname="energy-audit" class="project-filter clickable mh3 pointer f4 blue fw7 br-pill bg-white ba ph3 pv2 b--gold mb3">Energy Audit</span>
       
-      <div data-tagname="{{ tag | lower }}" class="project-filter clickable underline-hover mh3 pointer f4">{{ tag }}</div>
+      <span data-tagname="energy-audit-review" class="project-filter clickable mh3 pointer f4 blue fw7 br-pill bg-white ba ph3 pv2 b--gold mb3">Energy Audit Review</span>
       
-      <div data-tagname="{{ tag | lower }}" class="project-filter clickable underline-hover mh3 pointer f4">{{ tag }}</div>
+      <span data-tagname="energy-star" class="project-filter clickable mh3 pointer f4 blue fw7 br-pill bg-white ba ph3 pv2 b--gold mb3">Energy Star</span>
       
-      <div data-tagname="{{ tag | lower }}" class="project-filter clickable underline-hover mh3 pointer f4">{{ tag }}</div>
+      <span data-tagname="national-green-building-standard" class="project-filter clickable mh3 pointer f4 blue fw7 br-pill bg-white ba ph3 pv2 b--gold mb3">National Green Building Standard</span>
       
-      <div data-tagname="{{ tag | lower }}" class="project-filter clickable underline-hover mh3 pointer f4">{{ tag }}</div>
+      <span data-tagname="home-energy-rating-system" class="project-filter clickable mh3 pointer f4 blue fw7 br-pill bg-white ba ph3 pv2 b--gold mb3">Home Energy Rating System</span>
       
     </div>
-    <div class="services-container flex flex-wrap justify-center pb4 pt4">
-      
-        <div id="{{ project.id }}" class="project pointer relative mb4 mh4 {{ project.tags | string | replace(',', ' ') | lower }}">
-          <div class="project-info absolute w-100">
-            <h3 class="project-title tc pt3 ma0 flex items-center justify-center">
-              <span class="project-title-text blue-darker underline-hover lh-copy">{{ project.title }}</span>
-              <div class="project-date tc f5 lh-copy">&nbsp;&mdash; {{ project.date }}</div>
-            </h3>
-            <div class="tags tc pb2">
-              
-            </div>
-          </div>
-          <div class="image-container center hover-shadow">
-            <img class="db" src="{{ project.image }}">
-          </div>
-        </div>
+
+    <div class="services-area flex vh-50 overflow-hidden">
+      <div id="services-map" class="h-100 flex-50"></div>
+
+      <div class="services-container flex-50 pb4 overflow-auto h-100">
         
-        <div id="{{ project.id }}" class="project pointer relative mb4 mh4 {{ project.tags | string | replace(',', ' ') | lower }}">
-          <div class="project-info absolute w-100">
-            <h3 class="project-title tc pt3 ma0 flex items-center justify-center">
-              <span class="project-title-text blue-darker underline-hover lh-copy">{{ project.title }}</span>
-              <div class="project-date tc f5 lh-copy">&nbsp;&mdash; {{ project.date }}</div>
+          <div data-job-id="12040" class="project pointer flex relative mb2 mh4 national-green-building-standard">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Pine Lawn Homes</span>
             </h3>
-            <div class="tags tc pb2">
-              
-            </div>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Pine Lawn, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">31 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">NGBS</div>
+            
           </div>
-          <div class="image-container center hover-shadow">
-            <img class="db" src="{{ project.image }}">
-          </div>
-        </div>
-        
-        <div id="{{ project.id }}" class="project pointer relative mb4 mh4 {{ project.tags | string | replace(',', ' ') | lower }}">
-          <div class="project-info absolute w-100">
-            <h3 class="project-title tc pt3 ma0 flex items-center justify-center">
-              <span class="project-title-text blue-darker underline-hover lh-copy">{{ project.title }}</span>
-              <div class="project-date tc f5 lh-copy">&nbsp;&mdash; {{ project.date }}</div>
+          
+          <div data-job-id="12085" class="project pointer flex relative mb2 mh4 energy-audit-review">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">The Court at Washington Square</span>
             </h3>
-            <div class="tags tc pb2">
-              
-            </div>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Harrisburg, PA</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">100 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EAR</div>
+            
           </div>
-          <div class="image-container center hover-shadow">
-            <img class="db" src="{{ project.image }}">
-          </div>
-        </div>
-        
-        <div id="{{ project.id }}" class="project pointer relative mb4 mh4 {{ project.tags | string | replace(',', ' ') | lower }}">
-          <div class="project-info absolute w-100">
-            <h3 class="project-title tc pt3 ma0 flex items-center justify-center">
-              <span class="project-title-text blue-darker underline-hover lh-copy">{{ project.title }}</span>
-              <div class="project-date tc f5 lh-copy">&nbsp;&mdash; {{ project.date }}</div>
+          
+          <div data-job-id="13015" class="project pointer flex relative mb2 mh4 national-green-building-standard">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Pine Lawn Homes II</span>
             </h3>
-            <div class="tags tc pb2">
-              
-            </div>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Pine Lawn, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">10 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">NGBS</div>
+            
           </div>
-          <div class="image-container center hover-shadow">
-            <img class="db" src="{{ project.image }}">
-          </div>
-        </div>
-        
-        <div id="{{ project.id }}" class="project pointer relative mb4 mh4 {{ project.tags | string | replace(',', ' ') | lower }}">
-          <div class="project-info absolute w-100">
-            <h3 class="project-title tc pt3 ma0 flex items-center justify-center">
-              <span class="project-title-text blue-darker underline-hover lh-copy">{{ project.title }}</span>
-              <div class="project-date tc f5 lh-copy">&nbsp;&mdash; {{ project.date }}</div>
+          
+          <div data-job-id="13043" class="project pointer flex relative mb2 mh4 energy-star">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Windfall Trace II</span>
             </h3>
-            <div class="tags tc pb2">
-              
-            </div>
+            <div class="project-location flex-auto" style="flex-basis: 25%">St. Louis, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">47 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">ES</div>
+            
           </div>
-          <div class="image-container center hover-shadow">
-            <img class="db" src="{{ project.image }}">
+          
+          <div data-job-id="13089" class="project pointer flex relative mb2 mh4 home-energy-rating-system">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">3010 Apartments</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">St. Louis, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">58 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">HERS</div>
+            
           </div>
-        </div>
-        
+          
+          <div data-job-id="13416" class="project pointer flex relative mb2 mh4 home-energy-rating-system">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Etzel Place</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">St. Louis, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">62 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">HERS</div>
+            
+          </div>
+          
+          <div data-job-id="13418" class="project pointer flex relative mb2 mh4 energy-star">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Village at Delmar</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">St. Louis, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">40 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">ES</div>
+            
+          </div>
+          
+          <div data-job-id="14004" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Booth Manor Minneapolis</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Minneapolis, MN</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">157 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="14004" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Booth Manor Columbus</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Columbus, IN</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">20 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="14004" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Carpenter Apartments</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Indianapolis, IN</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">52 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="14004" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Booth Manor Indiana</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Indianapolis, IN</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">74 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="14004" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Barton Center</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Indianapolis, IN</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">38 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="14004" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Booth Manor Missouri</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Grandview, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">80 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="14004" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Booth Manor Kansas</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Kansas City, KS</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">35 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="14004" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Booth Manor Chicago</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Chicago, IL</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">58 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="14004" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Booth Manor Oak Creek</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Oak Creek, WI</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">40 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="14004" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Booth Manor Oak Creek II</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Oak Creek, WI</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">40 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="14004" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Durham Booth Manor</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Omaha, NE</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">48 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="14004" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Castleview Apartments</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Rochester, MN</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">32 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="14004" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Hope Harbor</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Minneapolis, MN</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">96 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="14004" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Booth Brown House</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">St. Paul, MN</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">35 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="14004" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Harbor Light</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Minneapolis, MN</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">55 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="14004" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Harvest Hills</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Coon Rapids, MN</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">8 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="14004" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Booth Manor St. Louis</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">St. Louis, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">74 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="14004" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Railton Residence</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">St. Louis, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">96 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="14034" class="project pointer flex relative mb2 mh4 home-energy-rating-system">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">DeSales Impact</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">St. Louis, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">18 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">HERS</div>
+            
+          </div>
+          
+          <div data-job-id="14076" class="project pointer flex relative mb2 mh4 home-energy-rating-system">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Stuart Parker</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Columbia, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">84 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">HERS</div>
+            
+          </div>
+          
+          <div data-job-id="14096" class="project pointer flex relative mb2 mh4 home-energy-rating-system">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Callyn Project</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Kirksville, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">25 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">HERS</div>
+            
+          </div>
+          
+          <div data-job-id="14100" class="project pointer flex relative mb2 mh4 national-green-building-standard">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Lemay Homes</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Lemay, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">40 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">NGBS</div>
+            
+          </div>
+          
+          <div data-job-id="15001" class="project pointer flex relative mb2 mh4 national-green-building-standard">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Oak View Village</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Union, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">49 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">NGBS</div>
+            
+          </div>
+          
+          <div data-job-id="15005" class="project pointer flex relative mb2 mh4 home-energy-rating-system">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">East Fox Homes</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">St. Louis, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">47 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">HERS</div>
+            
+          </div>
+          
+          <div data-job-id="15006" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Friendship Manor</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Blue Springs, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">60 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="15007" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Scott Manor Apartments</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Sikeston, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">72 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="15009" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Woodbridge Apartments</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Kansas City, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">115 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="15010" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">North Webster Manor</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Webster Groves, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">24 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="15012" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">DeSales Preservation</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">St. Louis, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">63 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="15013" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Bryant Walkway</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Columbia, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">36 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="15014" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Oak Tower</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Columbia, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">147 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="15015" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">St. Regis Apartments</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Kansas City, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">85 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="15016" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">The Lane Apartments</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Neosho, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">48 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="16001" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Rolla Apartments</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Rolla, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">150 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="16002" class="project pointer flex relative mb2 mh4 energy-star">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">4446 Clarence</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">St. Louis, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">1 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">ES</div>
+            
+          </div>
+          
+          <div data-job-id="16003" class="project pointer flex relative mb2 mh4 energy-star">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Adam’s Grove</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">St. Louis, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">50 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">ES</div>
+            
+          </div>
+          
+          <div data-job-id="16004" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Metro @ 70 Apartments</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">St. Louis, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">208 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="16005" class="project pointer flex relative mb2 mh4 home-energy-rating-system">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Chippewa Park</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">St. Louis, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">46 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">HERS</div>
+            
+          </div>
+          
+          <div data-job-id="16006" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Gotham Apartments</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Kansas City, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">105 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="16007" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Pioneer House</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Lexington, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">47 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="16008" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Hyde Park</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">St. Louis, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">48 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="16009" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Englewood</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Kansas City, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">152 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="16010" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Valley Park Apartments</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Valley Park, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">42 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="16011" class="project pointer flex relative mb2 mh4 energy-audit">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Preservation Square</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">St. Louis, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">44 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">EA</div>
+            
+          </div>
+          
+          <div data-job-id="16012" class="project pointer flex relative mb2 mh4 energy-star">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Charless Village</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">St. Louis, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">5 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">ES</div>
+            
+          </div>
+          
+          <div data-job-id="16013" class="project pointer flex relative mb2 mh4 home-energy-rating-system">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Eastern Creek</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Memphis, TN</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">226 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">HERS</div>
+            
+          </div>
+          
+          <div data-job-id="17001" class="project pointer flex relative mb2 mh4 national-green-building-standard">
+            <h3 class="project-title f4 ma0 green" style="flex-basis: 50%">
+              <span class="project-title-text underline-hover lh-copy">Pine Lawn Manor</span>
+            </h3>
+            <div class="project-location flex-auto" style="flex-basis: 25%">Pine Lawn, MO</div>
+            <div class="project-units flex-auto" style="flex-basis: 15%">41 units</div>
+            <div class="type tc flex-auto" style="flex-basis: 10%">NGBS</div>
+            
+          </div>
+          
+      </div>
     </div>
   </div>
 </div>
@@ -232,12 +747,14 @@
 
   </main>
 </div>
+<script src="/ecocentrixco/public/markerclusterer.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsuCjHZUuNmjtfjwxYsFGj8aouf18e9aU&callback=initMap"></script>
 
 
 
 
 
-    <script src="./scripts/main.js"></script>
+    <script src="/ecocentrixco/scripts/main.js"></script>
     
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
