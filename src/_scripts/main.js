@@ -23,7 +23,7 @@ $(() => {
       streetViewControl: false,
     })
 
-    $.getJSON('/public/services.json', function(data) {
+    $.getJSON('/ecocentrixco/public/services.json', function(data) {
       const markers = data.projects.map((project, i) => {
         return new google.maps.Marker({
           position: project.position,
