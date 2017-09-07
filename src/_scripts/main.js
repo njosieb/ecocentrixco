@@ -9,7 +9,7 @@ import 'waypoints';
 $(() => {
 
   // Google Maps
-  const path = window.location.path.indexOf('/ecocentrixco') !== -1 ? '/ecocentrixco' : ''
+  const path = window.location.pathname.indexOf('/ecocentrixco') !== -1 ? '/ecocentrixco' : ''
 
   window.initMap = function() {
     const generateMarkers = function() {
