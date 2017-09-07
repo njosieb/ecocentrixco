@@ -4,16 +4,12 @@
 'use strict';
 
 import $ from 'jquery';
-import 'waypoints';
 
 $(() => {
 
   // Google Maps
 
   window.initMap = function() {
-    const generateMarkers = function() {
-
-    }
 
     const map = new google.maps.Map(document.getElementById('services-map'), {
       zoom: 5,

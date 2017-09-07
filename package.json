@@ -74,13 +74,8 @@
     ]
   },
   "browser": {
-    "waypoints": "./node_modules/waypoints/lib/jquery.waypoints.min.js"
   },
   "browserify-shim": {
-    "waypoints": {
-      "exports": "waypoints",
-      "depends": "jquery:jQuery"
-    }
   },
   "//": "CUSTOM CONFIGURATION",
   "config": {
