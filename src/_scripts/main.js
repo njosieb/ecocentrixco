@@ -8,9 +8,23 @@ import $ from 'jquery';
 $(() => {
 
   // Google Maps
+  window.initContactLocation = function() {
+    const map = new google.maps.Map(document.getElementById('contact-map'), {
+      zoom: 12,
+      center: { lat: 38.636834, lng: -90.213108 },
+      mapTypeControl: false,
+      fullscreenControl: false,
+      streetViewControl: false,
+      draggable: false,
+    })
+
+    const marker = new google.maps.Marker({
+      position: { lat: 38.636834, lng: -90.213108 },
+      map: map
+    })
+  }
 
   window.initMap = function() {
-
     const map = new google.maps.Map(document.getElementById('services-map'), {
       zoom: 5,
       center: { lat: 38.628141, lng: -90.209818 },
@@ -19,19 +33,21 @@ $(() => {
       streetViewControl: false,
     })
 
-    $.getJSON('/public/services.json', function(data) {
-      const markers = data.projects.map((project, i) => {
-        return new google.maps.Marker({
-          position: project.position,
-          // label: project.title,
-          map: map
+    if (map) {
+      $.getJSON('/public/services.json', function(data) {
+        const markers = data.projects.map((project, i) => {
+          return new google.maps.Marker({
+            position: project.position,
+            // label: project.title,
+            map: map
+          })
+        })
+
+        const markerCluster = new MarkerClusterer(map, markers, {
+          imagePath: '/images/m'
         })
       })
-
-      const markerCluster = new MarkerClusterer(map, markers, {
-        imagePath: '/images/m'
-      })
-    })
+    }
   }
 
   let sidebarVisible = false;

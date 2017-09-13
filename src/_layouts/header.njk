@@ -3,16 +3,16 @@
 {% endblock %}
 
 <header>
-  <div class="site-header db bg-blue">
+  <div class="site-header db bg-white">
     <div class="header-wrapper pt3-ns pb3-ns">
-      <a href="<$ baseUrl $>" class="db bg-white br-pill ml4-ns">
+      <a href="<$ baseUrl $>" class="db ml4-ns">
         <img src="<$ baseUrl $>/images/logo.png" class="ph3 pv2"/>
         {# <h4 class="ma0 white"><em><$ site.data.info.tagline $></em></h4> #}
       </a>
       <div class="menu">
         {% for item in site.data.menu %}
         <div class="menu-item">
-          <a title="<$ item.description $>" href="<$ baseUrl $><$ item.route $>" class="white hover-gold fw7"><$ item.label $></a>
+          <a title="<$ item.description $>" href="<$ baseUrl $><$ item.route $>" class="underline-hover fw7"><$ item.label $></a>
             {% if item.children %}
             <div class="sub-menu absolute bg-black-60 pa2">
               {% for child in item.children %}
