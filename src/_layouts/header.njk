@@ -4,10 +4,9 @@
 
 <header>
   <div class="site-header db bg-white">
-    <div class="header-wrapper pt3-ns pb3-ns">
+    <div class="header-wrapper pt3-ns pb3-ns flex justify-between items-center">
       <a href="<$ baseUrl $>" class="db ml4-ns">
         <img src="<$ baseUrl $>/images/logo.png" class="ph3 pv2"/>
-        {# <h4 class="ma0 white"><em><$ site.data.info.tagline $></em></h4> #}
       </a>
       <div class="menu">
         {% for item in site.data.menu %}
@@ -23,7 +22,7 @@
         </div>
         {% endfor %}
       </div>
-      <div id="menu-reveal" class="menu-button-container right">
+      <div id="menu-reveal" class="menu-button-container right f4 mt3 blue">
         Menu&nbsp;<i class="fa fa-bars"></i>
       </div>
     </div>

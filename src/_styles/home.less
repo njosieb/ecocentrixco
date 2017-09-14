@@ -99,11 +99,12 @@
 }
 
 .video-wrapper {
-  // mix-blend-mode: hard-light;
-  // background-color: @blue-logo;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
-  video {
-    // background-color: @blue-logo;
+  @media (min-width: @tablet) {
+    background-image: none !important;
   }
 }
 
@@ -117,7 +118,7 @@
 
 #contact-map {
   height: 350px;
-  width: 350px;
+  max-width: 350px;
 }
 
 //  a {
