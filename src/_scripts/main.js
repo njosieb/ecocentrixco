@@ -6,6 +6,7 @@
 import $ from 'jquery';
 
 $(() => {
+  const path = window.location.pathname.indexOf('/ecocentrixco') !== -1 ? '/ecocentrixco' : ''
 
   // Google Maps
   window.initContactLocation = function() {
@@ -33,21 +34,19 @@ $(() => {
       streetViewControl: false,
     })
 
-    if (map) {
-      $.getJSON('/public/services.json', function(data) {
-        const markers = data.projects.map((project, i) => {
-          return new google.maps.Marker({
-            position: project.position,
-            // label: project.title,
-            map: map
-          })
+    $.getJSON(`${path}/public/services.json`, function(data) {
+      const markers = data.projects.map((project, i) => {
+        return new google.maps.Marker({
+          position: project.position,
+          // label: project.title,
+          map: map
         })
 
         const markerCluster = new MarkerClusterer(map, markers, {
-          imagePath: '/images/m'
+          imagePath: `${path}/images/m`
         })
       })
-    }
+    })
   }
 
   let sidebarVisible = false;
@@ -79,7 +78,7 @@ $(() => {
   }
 
   $(document).ready(function() {
-    if (window.location.pathname === '/services/') {
+    if (window.location.pathname === `${path}/services/`) {
       if (filterableTags.some(tag => tag === window.location.hash.substring(1))) {
         filterProjects(window.location.hash.substring(1))
       } else {
@@ -103,4 +102,4 @@ $(() => {
     filterProjects($(this).data('tagname'))
   })
 
-});
+})
