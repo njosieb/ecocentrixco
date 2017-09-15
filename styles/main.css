@@ -2783,7 +2783,7 @@ th {
 html {
   font-size: 12pt;
 }
-@media (min-width: 600px) {
+@media (min-width: 450px) {
   html {
     font-size: 12pt;
   }
@@ -2826,7 +2826,7 @@ ol {
   padding-left: 1.2rem;
   margin-bottom: 1rem;
 }
-@media (min-width: 600px) {
+@media (min-width: 450px) {
   ul,
   ol {
     margin-left: 30px;
@@ -2940,7 +2940,7 @@ h6 {
 h1 {
   font-size: 2rem;
 }
-@media (min-width: 600px) {
+@media (min-width: 450px) {
   h1 {
     font-size: 3rem;
   }
@@ -2948,7 +2948,7 @@ h1 {
 h2 {
   font-size: 1.5rem;
 }
-@media (min-width: 600px) {
+@media (min-width: 450px) {
   h2 {
     font-size: 2.25rem;
   }
@@ -2956,7 +2956,7 @@ h2 {
 h3 {
   font-size: 1.25rem;
 }
-@media (min-width: 600px) {
+@media (min-width: 450px) {
   h3 {
     font-size: 1.75rem;
   }
@@ -3041,7 +3041,7 @@ select:focus {
   max-width: 60rem;
   margin: 0 auto;
 }
-@media (min-width: 600px) {
+@media (min-width: 450px) {
   .container {
     padding: 30px 45px;
     max-width: 1080px;
@@ -3057,7 +3057,7 @@ select:focus {
           flex-direction: column;
   min-height: 100vh;
 }
-@media (min-width: 600px) {
+@media (min-width: 450px) {
   .main-container {
     min-width: 1000px;
   }
@@ -3067,7 +3067,7 @@ main {
       -ms-flex: 1;
           flex: 1;
 }
-@media (min-width: 600px) {
+@media (min-width: 450px) {
 }
 .action-button {
   display: block;
@@ -3102,7 +3102,7 @@ main {
 .action-button:active {
   color: #ffffff;
 }
-@media (min-width: 600px) {
+@media (min-width: 450px) {
   .action-button {
     max-width: 22rem;
   }
@@ -3131,7 +3131,7 @@ main {
   z-index: -1;
   pointer-events: none;
 }
-@media (min-width: 600px) {
+@media (min-width: 450px) {
   .parallax > .parallax-image {
     position: fixed;
     height: 100vh;
@@ -3430,6 +3430,11 @@ body.menuOpen #main-menu {
       -ms-flex: 1 1 50%;
           flex: 1 1 50%;
 }
+.flex-0 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
+}
 .menu {
   display: none;
 }
@@ -3452,10 +3457,8 @@ body.menuOpen #main-menu {
 }
 #menu-reveal {
   padding-right: 1rem;
-  color: #ffffff;
-  font-size: 1rem;
 }
-@media (min-width: 600px) {
+@media (min-width: 450px) {
   #menu-reveal {
     display: none;
   }
@@ -3464,11 +3467,11 @@ body.menuOpen #main-menu {
   display: block;
   position: fixed;
   right: 0;
-  top: 87px;
+  top: 78px;
   background: #ffffff;
   width: 300px;
-  height: -webkit-calc(100vh - 87px);
-  height: calc(100vh - 87px);
+  height: -webkit-calc(100vh - 78px);
+  height: calc(100vh - 78px);
   z-index: 10;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -3494,7 +3497,7 @@ body.menuOpen #main-menu {
       -ms-flex-align: center;
           align-items: center;
 }
-@media (min-width: 600px) {
+@media (min-width: 450px) {
   .home-link {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 500px;
@@ -3586,7 +3589,7 @@ body.menuOpen #main-menu {
 .site-title small {
   font-size: 1rem;
 }
-@media (min-width: 600px) {
+@media (min-width: 450px) {
   .site-title {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3649,7 +3652,7 @@ body.menuOpen #main-menu {
   opacity: 1;
   pointer-events: all;
 }
-@media (min-width: 600px) {
+@media (min-width: 450px) {
   .menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3694,7 +3697,7 @@ body.menuOpen #main-menu {
       -ms-flex: 0 0 33%;
           flex: 0 0 33%;
 }
-@media (max-width: 600px) {
+@media (max-width: 450px) {
   .footer-columns .footer-column {
     padding: 1rem;
     text-align: center;
@@ -3706,7 +3709,7 @@ body.menuOpen #main-menu {
     background: transparent;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 450px) {
   .footer-columns {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3722,7 +3725,7 @@ body.menuOpen #main-menu {
   display: block;
   position: relative;
 }
-@media (min-width: 600px) {
+@media (min-width: 450px) {
   #contact-us i {
     position: absolute;
     left: -1.5rem;
@@ -3738,7 +3741,7 @@ body.menuOpen #main-menu {
 #contact-us a:hover i {
   color: white;
 }
-@media (min-width: 600px) {
+@media (min-width: 450px) {
   #contact-us {
     padding: inherit;
     text-align: left;
@@ -3758,7 +3761,7 @@ body.menuOpen #main-menu {
   background-color: rgba(30, 175, 236, 0.75);
   text-decoration: underline;
 }
-@media (min-width: 600px) {
+@media (min-width: 450px) {
   .important-links.links a {
     text-align: left;
     padding: .5rem .5rem;
@@ -3770,7 +3773,7 @@ body.menuOpen #main-menu {
 .important-links.links.first-column li {
   max-width: 100%;
 }
-@media (min-width: 600px) {
+@media (min-width: 450px) {
   .important-links.links.first-column li {
     max-width: 250px;
   }
@@ -3828,7 +3831,7 @@ body.menuOpen #main-menu {
   display: block;
   color: #aeb0b5;
 }
-@media (min-width: 600px) {
+@media (min-width: 450px) {
   .copyright-row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3865,7 +3868,7 @@ body.menuOpen #main-menu {
   line-height: 1.2;
   margin-top: 2rem;
 }
-@media (min-width: 600px) {
+@media (min-width: 450px) {
   .section-header {
     font-size: 3rem;
     line-height: 2;
@@ -3884,7 +3887,7 @@ body.menuOpen #main-menu {
 .centered-quotations strong {
   font-style: normal;
 }
-@media (min-width: 600px) {
+@media (min-width: 450px) {
   .centered-quotations {
     font-size: 2.25rem;
     margin-bottom: 4rem;
@@ -3906,7 +3909,7 @@ body.menuOpen #main-menu {
   font-size: 1.1rem;
   margin-bottom: 1rem;
 }
-@media (min-width: 600px) {
+@media (min-width: 450px) {
   .big-quote p {
     font-size: 1.6rem;
   }
@@ -3925,6 +3928,16 @@ body.menuOpen #main-menu {
   border-width: 15px;
   border-color: #1eafec;
 }
+.video-wrapper {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 450px) {
+  .video-wrapper {
+    background-image: none !important;
+  }
+}
 #logo-background {
   display: block;
   margin: 0 auto;
@@ -3932,10 +3945,30 @@ body.menuOpen #main-menu {
   padding: 2rem 3.5rem;
   max-height: 250px;
 }
+#contact-map {
+  height: 350px;
+  max-width: 350px;
+}
+#home-hero {
+  height: 85vh;
+}
+@media (min-width: 450px) {
+  #home-hero {
+    height: 700px;
+  }
+}
 .page-header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top 20%;
+}
+#services-map {
+  height: 375px;
+}
+@media (min-width: 450px) {
+  #services-map {
+    height: inherit;
+  }
 }
 .active-tag {
   background-color: #1eafec;

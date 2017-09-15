@@ -38,36 +38,37 @@
 
 
 <header>
-  <div class="site-header db bg-blue">
-    <div class="header-wrapper pt3-ns pb3-ns">
-      <a href="/ecocentrixco" class="db bg-white br-pill ml4-ns">
+  <div class="site-header db bg-white">
+    <div class="header-wrapper pt3-ns pb3-ns flex justify-between items-center">
+      <a href="/ecocentrixco" class="db ml4-ns">
         <img src="/ecocentrixco/images/logo.png" class="ph3 pv2">
-        
       </a>
       <div class="menu">
         
         <div class="menu-item">
-          <a href="/ecocentrixco/" class="white hover-gold fw7">Home</a>
+          <a href="/ecocentrixco/" class="underline-hover fw7">Home</a>
             
         </div>
         
         <div class="menu-item">
-          <a href="/ecocentrixco/about" class="white hover-gold fw7">About Us</a>
+          <a href="/ecocentrixco/about" class="underline-hover fw7">About Us</a>
             
             <div class="sub-menu absolute bg-black-60 pa2">
               
               <a href="/ecocentrixco/about" class="db pv2 white nowrap hover-gold">Who We Are</a>
               
-              <a href="/ecocentrixco/about#auditing" class="db pv2 white nowrap hover-gold">About Energy Auditing</a>
+              <a href="/ecocentrixco/about#auditing" class="db pv2 white nowrap hover-gold">Energy Auditing</a>
               
-              <a href="/ecocentrixco/about#consulting" class="db pv2 white nowrap hover-gold">About Energy Consulting</a>
+              <a href="/ecocentrixco/about#consulting" class="db pv2 white nowrap hover-gold">Energy Consulting</a>
+              
+              <a href="/ecocentrixco/about#radon" class="db pv2 white nowrap hover-gold">Radon Testing</a>
               
             </div>
             
         </div>
         
         <div class="menu-item">
-          <a href="/ecocentrixco/services" class="white hover-gold fw7">Our Work</a>
+          <a href="/ecocentrixco/services" class="underline-hover fw7">Services</a>
             
             <div class="sub-menu absolute bg-black-60 pa2">
               
@@ -86,17 +87,22 @@
         </div>
         
         <div class="menu-item">
-          <a href="/ecocentrixco/faq" class="white hover-gold fw7">FAQ</a>
+          <a href="/ecocentrixco/certifications" class="underline-hover fw7">Certifications</a>
             
         </div>
         
         <div class="menu-item">
-          <a href="/ecocentrixco/contact" class="white hover-gold fw7">Contact Us</a>
+          <a href="/ecocentrixco/faq" class="underline-hover fw7">FAQ</a>
+            
+        </div>
+        
+        <div class="menu-item">
+          <a href="/ecocentrixco/contact" class="underline-hover fw7">Contact Us</a>
             
         </div>
         
       </div>
-      <div id="menu-reveal" class="menu-button-container right">
+      <div id="menu-reveal" class="menu-button-container right f4 mt3 blue">
         Menu&nbsp;<i class="fa fa-bars"></i>
       </div>
     </div>
@@ -120,7 +126,11 @@
       </a>
     
       <a href="/services" class="section-link">
-        Our Work
+        Services
+      </a>
+    
+      <a href="/certifications" class="section-link">
+        Certifications
       </a>
     
       <a href="/faq" class="section-link">
@@ -139,46 +149,117 @@
   
 
 
-<section class="relative overflow-hidden" style="height: 700px">
+<section id="home-hero" class="relative overflow-hidden">
   <div class="video-wrapper h-100">
     <video preload loop muted autoplay poster="images/windmill_still.jpg" class="bg-video db mw-100 w-100 h-100" style="object-fit: cover; object-position: center">
-      <source src="/ecocentrixco/videos/windmill_video.webm" type="video/webm">
-      <source src="/ecocentrixco/videos/windmill_video.mp4" type="video/mp4">
+      <source src="/ecocentrixco/videos/windmill.webm" type="video/webm">
     </video>
   </div>
-  <div class="top-content absolute bottom-0 w-100">
-    <div class="centered-wrapper center mw7 mb4 ph4 relative tc">
-      <p class="f2 white fw7 text-outline">We are energy auditors and consultants,<br>for residential and commercial spaces</p>
-      <p class="f3 white fw7 text-outline">Need an audit? Want to save money and be green?</p>
-      <a href="/ecocentrixco/contact" class="db bg-blue white pa2 f3 mw6 center hover-white hover-shadow fw7">Tell Us About Your Project</a>
+  <div class="top-content absolute top-0 w-100 pt5 h-100 flex flex-column">
+    <div class="mb4 pt3 ph4 relative flex-auto">
+      <p class="f3 f2-ns white fw7 text-outline">Energy auditors and consultants<br>for residential and commercial spaces</p>
+      <p class="f4 f3-ns white fw7 text-outline">Need an audit? Want to save money and be green?</p>
     </div>
+    <a href="/ecocentrixco/services" class="db bg-blue white pa2 f4 tc f3-ns mw6 center hover-white hover-shadow fw7 mb4">Check Out The Work We Do</a>
   </div>
 </section>
-<section id="work" class="relative pv6 ph3">
-  <div class="mw7 center flex justify-around">
-    <div class="work-type flex-50">
-      <div class="tc mr3">
+<section id="work" class="relative pt6 ph3">
+  <div class="mw8 center flex-ns justify-around">
+    <div class="work-type flex-50 mb4">
+      <div class="tc mr3-ns">
         <i class="fa fa-check-square-o f-6 dib green"></i>
         <h3 class="f2 green">Energy Auditing</h3>
         <p class="f4">Invite us to visit your existing buildings to identify <b class="blue">energy saving opportunities</b>, conducting specialized and nationally recognized energy audits</p>
         <a href="/ecocentrixco/about#auditing" class="db bg-blue white pa2 f4 hover-white hover-shadow fw7 mv4 hover-gold">Learn About<br>Energy Auditing</a>
-        <a href="/ecocentrixco/services#auditing" class="db bg-blue white pa2 f4 hover-white hover-shadow fw7 hover-gold">View Our Auditing Projects</a>
+        <a href="/ecocentrixco/services" class="db bg-blue white pa2 f4 hover-white hover-shadow fw7 hover-gold">View Our Auditing Projects</a>
       </div>
     </div>
-    <div class="work-type flex-50">
-      <div class="tc ml3">
+    <div class="work-type flex-50 mb4">
+      <div class="tc mh1-ns">
         <i class="fa fa-handshake-o f-6 dib green"></i>
         <h3 class="f2 green">Energy Consulting</h3>
         <p class="f4">Bring us on early in your project to work side-by-side with your architects and implement <b class="blue">sustainable enery solutions</b> within your budget</p>
         <a href="/ecocentrixco/about#consulting" class="db bg-blue white pa2 f4 hover-white hover-shadow fw7 mv4 hover-gold">Learn About<br>Energy Consulting</a>
-        <a href="/ecocentrixco/services#consulting" class="db bg-blue white pa2 f4 hover-white hover-shadow fw7 hover-gold">View Our Consulting Projects</a>
+        <a href="/ecocentrixco/services" class="db bg-blue white pa2 f4 hover-white hover-shadow fw7 hover-gold">View Our Consulting Projects</a>
+      </div>
+    </div>
+    <div class="work-type flex-50">
+      <div class="tc ml3-ns">
+        <i class="fa fa-dashboard f-6 dib green"></i>
+        <h3 class="f2 green">Radon Testing</h3>
+        <p class="f4">Buying a home or need to evaluate an older property? We can <b class="blue">measure radon levels</b> and give you solutions for keeping your basements free of radon</p>
+        <a href="/ecocentrixco/about#radon" class="db bg-blue white pa2 f4 hover-white hover-shadow fw7 mv4 hover-gold">Learn About<br>Radon Testing</a>
+        <a href="/ecocentrixco/services" class="db bg-blue white pa2 f4 hover-white hover-shadow fw7 hover-gold">View Our Radon Projects</a>
       </div>
     </div>
   </div>
 </section>
-<section id="contact" class="relative pv6 ph3">
+<section id="stats" class="relative pv4 pv6-ns mt4 ph3 bg-blue">
+  <div class="mw8 center">
+    <div class="flex flex-wrap justify-between-ns justify-center fw7">
+      <div class="stat mh5 tc flex-0">
+        <div class="f-6-ns f-5 white">3,600</div>
+        <div class="f3 gold">Units</div>
+      </div>
+      <div class="stat mh5 tc flex-0">
+        <div class="f-6-ns f-5 white">60+</div>
+        <div class="f3 gold">Projects</div>
+      </div>
+      <div class="stat mh5 tc flex-0">
+        <div class="f-6-ns f-5 white">9</div>
+        <div class="f3 gold">States</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="certifications" class="relative pt5 ph3">
   <div class="mw7 center">
-    <h3 class="f2 green">Contact Us</h3>
+    <h2 class="f2 f1-ns green tc">Certifications</h2>
+    <p>We have the expertise and the certifcations to back it up. Don't trust anyone else with your project who isn't qualified as we are</p>
+    <div class="flex flex-wrap justify-center items-center">
+      <div class="image-container mh2 mw5">
+        <img class="db center mb4" src="/ecocentrixco/images/BPI-certified.jpg" alt="BPI certified">
+      </div>
+      <div class="image-container mh4 mw5">
+        <img class="db center mb4" src="/ecocentrixco/images/resnet-certified.jpg" alt="RESNET certified">
+      </div>
+      <div class="image-container mh4 mw5">
+        <img class="db center mb4" src="/ecocentrixco/images/green-professional-certified.jpg" alt="Certified Green Professioal">
+      </div>
+      <div class="image-container mh4 mw5">
+        <img class="db center mb4" src="/ecocentrixco/images/nahb-certified.jpg" alt="NAHB certified">
+      </div>
+      <div class="image-container mh4 mw5">
+        <img class="db center mb4" src="/ecocentrixco/images/missouri-certified-home-energy-rater.jpg" alt="Missouri certified home energy rater">
+      </div>
+      <div class="image-container mh4 mw5">
+        <img class="db center mb4" src="/ecocentrixco/images/leed.jpg" alt="Leed Green certified">
+      </div>
+      <div class="image-container mh4 mw5">
+        <img class="db center mb4" src="/ecocentrixco/images/nrpp.jpg" alt="NEHA-NRPP certified">
+      </div>
+      <div class="image-container mh4 mw5">
+        <img class="db center mb4" src="/ecocentrixco/images/ITC-Logo.jpg" alt="ITC certified">
+      </div>
+      <div class="image-container mh4 mw5">
+        <img class="db center mb4" src="/ecocentrixco/images/certified_energy_auditor.jpg" alt="Certified energy auditor certified">
+      </div>
+    </div>
+  </div>
+</section>
+<section id="contact" class="relative pv5 ph3">
+  <div class="mw7 center">
+    <h3 class="f2 f1-ns green tc">Contact Us</h3>
+    <div class="flex-ns justify-between">
+      <div>
+        <div class="fw7">ECOcentrix Consultants, LLC</div>
+        <div class="fw5">2612 Delmar Blvd</div>
+        <div class="fw5">St. Louis, MO. 631013</div>
+        <div class="pv2"><a class="fw7" href="mailto:mollie@ecocentrixco.com">mollie@ecocentrixco.com</a></div>
+        <div class="fw5">314.409.1684</div>
+      </div>
+      <div id="contact-map" class="w-100"></div>
+    </div>
   </div>
 </section>
 
@@ -193,13 +274,13 @@
           <ul class="social-media links">
             
             <li>
-              <a class="social-media-link" href=""><i class="fa fa-facebook"></i></a>
+              <a class="social-media-link" href="https://www.facebook.com/ECOcentrix-Consulting-LLC-225325200871400/"><i class="fa fa-facebook"></i></a>
             </li>
             <li>
-              <a class="social-media-link" href=""><i class="fa fa-twitter"></i></a>
+              <a class="social-media-link" href="https://twitter.com/ecocentrixco"><i class="fa fa-twitter"></i></a>
             </li>
             <li>
-              <a class="social-media-link" href=""><i class="fa fa-instagram"></i></a>
+              <a class="social-media-link" href="mailto:mollie@ecocentrixco.com"><i class="fa fa-envelope-o"></i></a>
             </li>
           </ul>
          </div>
@@ -221,6 +302,7 @@
 
   </main>
 </div>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsuCjHZUuNmjtfjwxYsFGj8aouf18e9aU&callback=initContactLocation"></script>
 
 
     <script src="/ecocentrixco/scripts/main.js"></script>
