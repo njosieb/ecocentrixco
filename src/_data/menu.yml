@@ -6,10 +6,12 @@
   children:
     - label: 'Who We Are'
       route: '/about'
-    - label: 'About Energy Auditing'
+    - label: 'Energy Auditing'
       route: '/about#auditing'
-    - label: 'About Energy Consulting'
+    - label: 'Energy Consulting'
       route: '/about#consulting'
+    - label: 'Radon Testing'
+      route: '/about#radon'
 - label: 'Services'
   route: '/services'
   children:

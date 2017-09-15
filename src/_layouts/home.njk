@@ -2,84 +2,107 @@
   {% set baseUrl = config.baseUrl or './' %}
 {% endblock %}
 
-<section class="relative overflow-hidden" style="height: 700px;">
+<section id="home-hero" class="relative overflow-hidden">
   <div class="video-wrapper h-100">
     <video preload loop muted autoplay poster="images/windmill_still.jpg" class="bg-video db mw-100 w-100 h-100" style="object-fit: cover; object-position: center;">
-      <source src="<$ baseUrl $>/videos/windmill_video.webm" type="video/webm">
-      <source src="<$ baseUrl $>/videos/windmill_video.mp4" type="video/mp4">
+      <source src="<$ baseUrl $>/videos/windmill.webm" type="video/webm">
     </video>
   </div>
   <div class="top-content absolute top-0 w-100 pt5 h-100 flex flex-column">
-    <div class="center mw7 mb4 ph4 relative flex-auto">
+    <div class="mb4 pt3 ph4 relative flex-auto">
       <p class="f3 f2-ns white fw7 text-outline">Energy auditors and consultants<br>for residential and commercial spaces</p>
       <p class="f4 f3-ns white fw7 text-outline">Need an audit? Want to save money and be green?</p>
     </div>
-    <a href="<$ baseUrl $>/services" class="db bg-blue white pa2 f4 tc f3-ns mw6 center hover-white hover-shadow fw7 mb6">Check Out The Work We Do</a>
+    <a href="<$ baseUrl $>/services" class="db bg-blue white pa2 f4 tc f3-ns mw6 center hover-white hover-shadow fw7 mb4">Check Out The Work We Do</a>
   </div>
 </section>
-<section id="work" class="relative pv6 ph3">
+<section id="work" class="relative pt6 ph3">
   <div class="mw8 center flex-ns justify-around">
     <div class="work-type flex-50 mb4">
-      <div class="tc mr3">
+      <div class="tc mr3-ns">
         <i class="fa fa-check-square-o f-6 dib green"></i>
         <h3 class="f2 green">Energy Auditing</h3>
         <p class="f4">Invite us to visit your existing buildings to identify <b class="blue">energy saving opportunities</b>, conducting specialized and nationally recognized energy audits</p>
         <a href="<$ baseUrl $>/about#auditing" class="db bg-blue white pa2 f4 hover-white hover-shadow fw7 mv4 hover-gold">Learn About<br>Energy Auditing</a>
-        <a href="<$ baseUrl $>/services#auditing" class="db bg-blue white pa2 f4 hover-white hover-shadow fw7 hover-gold">View Our Auditing Projects</a>
+        <a href="<$ baseUrl $>/services" class="db bg-blue white pa2 f4 hover-white hover-shadow fw7 hover-gold">View Our Auditing Projects</a>
       </div>
     </div>
     <div class="work-type flex-50 mb4">
-      <div class="tc mh1">
+      <div class="tc mh1-ns">
         <i class="fa fa-handshake-o f-6 dib green"></i>
         <h3 class="f2 green">Energy Consulting</h3>
         <p class="f4">Bring us on early in your project to work side-by-side with your architects and implement <b class="blue">sustainable enery solutions</b> within your budget</p>
         <a href="<$ baseUrl $>/about#consulting" class="db bg-blue white pa2 f4 hover-white hover-shadow fw7 mv4 hover-gold">Learn About<br>Energy Consulting</a>
-        <a href="<$ baseUrl $>/services#consulting" class="db bg-blue white pa2 f4 hover-white hover-shadow fw7 hover-gold">View Our Consulting Projects</a>
+        <a href="<$ baseUrl $>/services" class="db bg-blue white pa2 f4 hover-white hover-shadow fw7 hover-gold">View Our Consulting Projects</a>
       </div>
     </div>
     <div class="work-type flex-50">
-      <div class="tc ml3">
+      <div class="tc ml3-ns">
         <i class="fa fa-dashboard f-6 dib green"></i>
         <h3 class="f2 green">Radon Testing</h3>
         <p class="f4">Buying a home or need to evaluate an older property? We can <b class="blue">measure radon levels</b> and give you solutions for keeping your basements free of radon</p>
-        <a href="<$ baseUrl $>/about#consulting" class="db bg-blue white pa2 f4 hover-white hover-shadow fw7 mv4 hover-gold">Learn About<br>Radon Testing</a>
-        <a href="<$ baseUrl $>/services#consulting" class="db bg-blue white pa2 f4 hover-white hover-shadow fw7 hover-gold">View Our Radon Projects</a>
+        <a href="<$ baseUrl $>/about#radon" class="db bg-blue white pa2 f4 hover-white hover-shadow fw7 mv4 hover-gold">Learn About<br>Radon Testing</a>
+        <a href="<$ baseUrl $>/services" class="db bg-blue white pa2 f4 hover-white hover-shadow fw7 hover-gold">View Our Radon Projects</a>
       </div>
     </div>
   </div>
 </section>
-<section id="certifications" class="relative pv5 ph3">
+<section id="stats" class="relative pv4 pv6-ns mt4 ph3 bg-blue">
+  <div class="mw8 center">
+    <div class="flex flex-wrap justify-between-ns justify-center fw7">
+      <div class="stat mh5 tc flex-0">
+        <div class="f-6-ns f-5 white">3,600</div>
+        <div class="f3 gold">Units</div>
+      </div>
+      <div class="stat mh5 tc flex-0">
+        <div class="f-6-ns f-5 white">60+</div>
+        <div class="f3 gold">Projects</div>
+      </div>
+      <div class="stat mh5 tc flex-0">
+        <div class="f-6-ns f-5 white">9</div>
+        <div class="f3 gold">States</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="certifications" class="relative pt5 ph3">
   <div class="mw7 center">
-    <h2 class="f2 green">Certifications</h2>
+    <h2 class="f2 f1-ns green tc">Certifications</h2>
     <p>We have the expertise and the certifcations to back it up. Don't trust anyone else with your project who isn't qualified as we are</p>
     <div class="flex flex-wrap justify-center items-center">
-      <div class="image-container mh2">
+      <div class="image-container mh2 mw5">
         <img class="db center mb4" src="<$ baseUrl $>/images/BPI-certified.jpg" alt="BPI certified" />
       </div>
-      <div class="image-container mh4">
+      <div class="image-container mh4 mw5">
         <img class="db center mb4" src="<$ baseUrl $>/images/resnet-certified.jpg" alt="RESNET certified" />
       </div>
-      <div class="image-container mh4">
+      <div class="image-container mh4 mw5">
         <img class="db center mb4" src="<$ baseUrl $>/images/green-professional-certified.jpg" alt="Certified Green Professioal" />
       </div>
-      <div class="image-container mh4">
+      <div class="image-container mh4 mw5">
         <img class="db center mb4" src="<$ baseUrl $>/images/nahb-certified.jpg" alt="NAHB certified" />
       </div>
-      <div class="image-container mh4">
+      <div class="image-container mh4 mw5">
         <img class="db center mb4" src="<$ baseUrl $>/images/missouri-certified-home-energy-rater.jpg" alt="Missouri certified home energy rater" />
       </div>
-      <div class="image-container mh4">
+      <div class="image-container mh4 mw5">
         <img class="db center mb4" src="<$ baseUrl $>/images/leed.jpg" alt="Leed Green certified" />
       </div>
-      <div class="image-container mh4">
+      <div class="image-container mh4 mw5">
         <img class="db center mb4" src="<$ baseUrl $>/images/nrpp.jpg" alt="NEHA-NRPP certified" />
+      </div>
+      <div class="image-container mh4 mw5">
+        <img class="db center mb4" src="<$ baseUrl $>/images/ITC-Logo.jpg" alt="ITC certified" />
+      </div>
+      <div class="image-container mh4 mw5">
+        <img class="db center mb4" src="<$ baseUrl $>/images/certified_energy_auditor.jpg" alt="Certified energy auditor certified" />
       </div>
     </div>
   </div>
 </section>
 <section id="contact" class="relative pv5 ph3">
   <div class="mw7 center">
-    <h3 class="f2 green">Contact Us</h3>
+    <h3 class="f2 f1-ns green tc">Contact Us</h3>
     <div class="flex-ns justify-between">
       <div class="">
         <div class="fw7">ECOcentrix Consultants, LLC</div>

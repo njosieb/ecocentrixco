@@ -31,7 +31,7 @@
   line-height: 1.2;
   margin-top: 2rem;
 
-  @media (min-width: @tablet) {
+  @media (min-width: @mobile) {
     font-size: 3rem;
     line-height: 2;
   }
@@ -51,7 +51,7 @@
     font-style: normal;
   }
 
-  @media (min-width: @tablet) {
+  @media (min-width: @mobile) {
     font-size: 2.25rem;
     margin-bottom: 4rem;
   }
@@ -75,7 +75,7 @@
     font-size: 1.1rem;
     margin-bottom: 1rem;
 
-    @media (min-width: @tablet) {
+    @media (min-width: @mobile) {
       font-size: 1.6rem;
     }
   }
@@ -103,7 +103,7 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-  @media (min-width: @tablet) {
+  @media (min-width: @mobile) {
     background-image: none !important;
   }
 }
@@ -119,6 +119,14 @@
 #contact-map {
   height: 350px;
   max-width: 350px;
+}
+
+#home-hero {
+  height: 85vh;
+
+  @media (min-width: @mobile) {
+    height: 700px;
+  }
 }
 
 //  a {
