@@ -3,7 +3,7 @@ import React from 'react'
 import logo from '../img/logo.png'
 
 const Navbar = ({ nav }) => (
-  <header>
+  <header className="z-2">
     <div className="site-header db bg-white">
       <div className="header-wrapper pt3-ns pb3-ns flex justify-between items-center">
         <a href="/" className="db ml4-ns">
@@ -13,24 +13,26 @@ const Navbar = ({ nav }) => (
           {nav.map((item, i) => (
             <div key={i} className="menu-item">
               <a
-                title="item.label"
-                href="item.url"
+                title={item.label}
+                href={item.url}
                 className="underline-hover fw7"
               >
                 {item.label}
               </a>
-              {/* {nav.children &&
-                  nav.children.map((child, j) => (
-                    <div key={j} className="sub-menu absolute bg-black-60 pa2">
-                      <a
-                        title="child.label"
-                        href="child.url"
-                        className="db pv2 white nowrap hover-gold"
-                      >
-                        {child.label}
-                      </a>
-                    </div>
-                  ))} */}
+              {item.children && (
+                <div className="sub-menu absolute bg-black-80 pa2">
+                  {item.children.map((child, j) => (
+                    <a
+                      key={j}
+                      title={child.label}
+                      href={child.url}
+                      className="db pv2 white nowrap hover-gold"
+                    >
+                      {child.label}
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>
