@@ -1,0 +1,54 @@
+@mixin tachyons-override($class, $color) {
+  .#{$class} {
+    color: $color;
+  }
+  .bg-#{$class} {
+    background-color: $color;
+  }
+  .hover-#{$class} {
+    &:hover,
+    &:focus {
+      color: $color;
+    }
+  }
+  .hover-bg-#{$class} {
+    &:hover,
+    &:focus {
+      background-color: $color;
+    }
+  }
+  .b--#{$class} {
+    border-color: $color;
+  }
+}
+
+@include tachyons-override("green", $green-color);
+@include tachyons-override("green-light", $green-light);
+@include tachyons-override("green-lighter", $green-lighter);
+@include tachyons-override("green-lightest", $green-lightest);
+@include tachyons-override("gold", $gold-color);
+@include tachyons-override("gold-light", $gold-light);
+@include tachyons-override("gold-lighter", $gold-lighter);
+@include tachyons-override("gold-lightest", $gold-lightest);
+@include tachyons-override("off-black", $offBlack);
+@include tachyons-override("blue", $blue-logo);
+
+.hover-shadow {
+  transition: box-shadow .2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+}
+
+.text-outline {
+  text-shadow: 1px 1px $offBlack, 1px -1px $offBlack, -1px -1px $offBlack, -1px 1px $offBlack;
+}
+
+.flex-50 {
+  flex: 1 1 50%;
+}
+
+.flex-0 {
+  flex: 1 1 0%;
+}

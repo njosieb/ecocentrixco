@@ -1,0 +1,19 @@
+.page-header {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top 20%;
+}
+
+#services-map {
+  height: 375px;
+
+  @media (min-width: $mobile) {
+    height: inherit;
+  }
+}
+
+.active-tag {
+  background-color: $blue-logo;
+  color: $gold-color;
+  border-color: $blue-logo;
+}

@@ -1,0 +1,174 @@
+.site-footer {
+  color: white;
+
+  h3 {
+    line-height: 1;
+    margin-bottom: 2rem;
+  }
+
+  .footer-top {
+    background-color: $black;
+    padding-top: 0rem;
+  }
+  .footer-bottom {
+    background-color: $black;
+  }
+
+}
+
+.links {
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: block;
+  }
+}
+
+.footer-columns {
+  display: block;
+
+  .footer-column {
+    flex: 0 0 33%;
+
+    @media (max-width: $mobile) {
+      padding: 1rem;
+      text-align: center;
+      width: 100%;
+
+      .logo {
+        text-align: center;
+        width: 100%;
+        background: transparent;
+      }
+    }
+  }
+
+  @media (min-width: $mobile) {
+    display: flex;
+  }
+}
+
+#contact-us {
+  position: relative;
+  padding: 2rem 1rem;
+  text-align: center;
+
+  i {
+    display: block;
+    position: relative;
+
+    @media (min-width: $mobile) {
+      position: absolute;
+      left: -1.5rem;
+      display: inline;
+    }
+  }
+
+  a {
+    color: white;
+
+    &:hover {
+      color: $focus-color;
+
+      i {
+        color: white;
+      }
+    }
+  }
+
+  @media (min-width: $mobile) {
+    padding: inherit;
+    text-align: left;
+  }
+}
+
+.important-links.links {
+  li:first-child a {
+    border-top: 1px dotted $white;
+  }
+
+  a {
+    color: $white;
+    display: block;
+    border-bottom: 1px dotted $white;
+    text-align: center;
+    padding: 1.2rem;
+
+    &:hover {
+      background-color: fade($blue-logo, 75%);
+      text-decoration: underline;
+    }
+
+    @media (min-width: $mobile) {
+      text-align: left;
+      padding: .5rem .5rem;
+    }
+  }
+
+  &.first-column {
+    margin-top: 2rem;
+
+    li {
+      max-width: 100%;
+
+      @media (min-width: $mobile) {
+        max-width: 250px;
+      }
+    }
+  }
+}
+
+.social-media.links {
+  display: flex;
+  justify-content: space-around;
+  // margin: 0 0 2rem;
+
+  li {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 100%;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.social-media-link {
+  background-color: $blue-logo;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.7s $timing-function;
+
+  i {
+    color: $offBlack;
+    font-size: 2.5rem;
+    transition: all 0.7s $timing-function;
+  }
+
+  &:hover {
+    background-color: $offBlack;
+
+    i {
+      color: $blue-logo;
+    }
+  }
+}
+
+.copyright-row {
+  margin: 0;
+  justify-content: space-between;
+  line-height: 2;
+  display: block;
+  color: $grey-light;
+
+  @media (min-width: $mobile) {
+    display: flex;
+    line-height: 1;
+  }
+}
