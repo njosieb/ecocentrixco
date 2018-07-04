@@ -1,41 +1,53 @@
+import PropTypes from 'prop-types'
 import React from 'react'
-import Link from 'gatsby-link'
+import logo from '../img/logo.png'
 
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
-
-const Navbar = () => (
-  <nav className="navbar is-transparent">
-    <div className="container">
-      <div className="navbar-brand">
-        <Link to="/" className="navbar-item">
-          <figure className="image">
-            <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-          </figure>
-        </Link>
-      </div>
-      <div className="navbar-start">
-        <Link className="navbar-item" to="/about">
-          About
-        </Link>
-        <Link className="navbar-item" to="/products">
-          Products
-        </Link>
-      </div>
-      <div className="navbar-end">
-        <a
-          className="navbar-item"
-          href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className="icon">
-            <img src={github} alt="Github" />
-          </span>
+const Navbar = ({ nav }) => (
+  <header>
+    <div className="site-header db bg-white">
+      <div className="header-wrapper pt3-ns pb3-ns flex justify-between items-center">
+        <a href="/" className="db ml4-ns">
+          <img src={logo} className="ph3 pv2" />
         </a>
+        <div className="menu">
+          {nav.map((item, i) => (
+            <div key={i} className="menu-item">
+              <a
+                title="item.label"
+                href="item.url"
+                className="underline-hover fw7"
+              >
+                {item.label}
+              </a>
+              {/* {nav.children &&
+                  nav.children.map((child, j) => (
+                    <div key={j} className="sub-menu absolute bg-black-60 pa2">
+                      <a
+                        title="child.label"
+                        href="child.url"
+                        className="db pv2 white nowrap hover-gold"
+                      >
+                        {child.label}
+                      </a>
+                    </div>
+                  ))} */}
+            </div>
+          ))}
+        </div>
+        <div
+          id="menu-reveal"
+          className="menu-button-container right f4 mt3 blue"
+        >
+          Menu&nbsp;
+          <i className="fa fa-bars" />
+        </div>
       </div>
     </div>
-  </nav>
+  </header>
 )
+
+Navbar.propTypes = {
+  nav: PropTypes.array
+}
 
 export default Navbar
