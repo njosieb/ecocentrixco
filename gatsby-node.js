@@ -1,3 +1,4 @@
+const _ = require('lodash')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
@@ -26,23 +27,40 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    const posts = result.data.allMarkdownRemark.edges
+    const pages = result.data.allMarkdownRemark.edges
 
-    posts.forEach(edge => {
+    pages.forEach(edge => {
       const id = edge.node.id
       createPage({
         path: edge.node.fields.slug,
-        tags: edge.node.frontmatter.tags,
         component: path.resolve(
           `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
         ),
         // additional data can be passed via context
         context: {
-          id,
+          id
         },
       })
     })
   })
+}
+
+const adjustImagePath = nodePath => image => {
+  if (_.isString(image)) {
+    if (image.indexOf('/img') === 0) {
+      const nextImage = path.relative(
+        path.dirname(nodePath),
+        path.join(
+          __dirname,
+          'static/img',
+          image.substr('/img'.length)
+        )
+      )
+      console.log('Adjusted image path', nextImage)
+      return nextImage
+    }
+  }
+  return image
 }
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
@@ -55,5 +73,18 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
       node,
       value,
     })
+
+    // This is where we convert NetlifyCMS img path strings into ImageSharp objects
+    const { frontmatter } = node
+    if (frontmatter) {
+      const adjust = adjustImagePath(node.fileAbsolutePath)
+      const { certifications } = frontmatter
+      // Image location string -> ImageSharp objects
+      if (certifications) {
+        node.frontmatter.certifications.forEach(cert => {
+          cert.certImage = adjust(cert.certImage)
+        })
+      }
+    }
   }
 }

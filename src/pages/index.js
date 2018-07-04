@@ -1,3 +1,4 @@
+import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import windmillMp4 from '../videos/windmill.mp4'
@@ -151,10 +152,11 @@ export class IndexPageTemplate extends Component {
             </p>
             <div className="flex flex-wrap justify-center items-center">
               {certifications.map((cert, i) => (
-                <div key={i} className="image-container mh2 mw5">
-                  <img
+                <div key={i} className="image-container mh3">
+                  <Img
                     className="db center mb4"
-                    src={cert.certImage}
+                    resolutions={cert.certImage.childImageSharp.resolutions}
+                    fadeIn={true}
                     alt={cert.description}
                   />
                 </div>
@@ -211,7 +213,13 @@ export const indexPageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "home-page" } }) {
       frontmatter {
         certifications {
-          certImage
+          certImage {
+            childImageSharp {
+              resolutions(width: 300) {
+                ...GatsbyImageSharpResolutions
+              }
+            }
+          }
           description
         }
       }

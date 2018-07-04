@@ -15,5 +15,7 @@ certifications:
     description: Leed Green certified
   - certImage: /img/nrpp.jpg
     description: NEHA-NRPP certified
-  - certImage: /img/ITC-logo.jpg
+  - certImage: /img/ITC-Logo.jpg
     description: ITC certified
+  - certImage: /img/certified_energy_auditor.jpg
+    description: Certified energy auditor
