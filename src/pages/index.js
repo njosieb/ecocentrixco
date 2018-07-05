@@ -1,14 +1,46 @@
 import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
+import Helmet from 'react-helmet'
 import windmillMp4 from '../videos/windmill.mp4'
 import windmillWebm from '../videos/windmill.webm'
 
 export class IndexPageTemplate extends Component {
+  componentDidMount() {
+    window.initContactLocation = function() {
+      const map = new window.google.maps.Map(
+        document.getElementById('contact-map'),
+        {
+          zoom: 12,
+          center: { lat: 38.636834, lng: -90.213108 },
+          mapTypeControl: false,
+          fullscreenControl: false,
+          streetViewControl: false,
+          draggable: false
+        }
+      )
+
+      new window.google.maps.Marker({
+        position: { lat: 38.636834, lng: -90.213108 },
+        map: map
+      })
+    }
+  }
+
   render() {
     const { certifications } = this.props
     return (
       <main className="home-main">
+        <Helmet
+          script={[
+            {
+              src:
+                'https://maps.googleapis.com/maps/api/js?key=AIzaSyBsuCjHZUuNmjtfjwxYsFGj8aouf18e9aU&callback=initContactLocation',
+              async: true,
+              defer: true
+            }
+          ]}
+        />
         <section id="home-hero" className="relative overflow-hidden">
           <div className="video-wrapper h-100">
             <video
@@ -188,7 +220,7 @@ export class IndexPageTemplate extends Component {
   }
 }
 
-IndexPageTemplate.PropTypes = {
+IndexPageTemplate.propTypes = {
   certifications: PropTypes.array
 }
 

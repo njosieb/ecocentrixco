@@ -17,3 +17,29 @@
   color: $gold-color;
   border-color: $blue-logo;
 }
+
+.markdown-content {
+  h2 {
+    @extend .green, .lh-solid;
+  }
+
+  h3 {
+    @extend .blue, .mt0, .mb3, .lh-solid;
+  }
+
+  p {
+    @extend .f5, .lh-copy;
+  }
+
+  h2 + p,
+  h3 + p {
+    @extend .f4;
+  }
+
+  ul {
+    li {
+      display: list-item;
+      list-style-type: disc;
+    }
+  }
+}

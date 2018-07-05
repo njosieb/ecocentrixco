@@ -20,13 +20,29 @@ collections:
       - {label: Template Key, name: templateKey, widget: hidden, default: settings}
       - {label: Navigation Menu, name: nav, widget: list, fields: [{label: Label, name: label, widget: string}, {label: URL, name: url, widget: string}, {label: Child Menu, name: children, widget: list, fields: [{label: Label, name: label, widget: string}, {label: URL, name: url, widget: string}]}]}
 
-  - name: pages
-    label: Pages
-    folder: src/pages/pages
-    create: true
-    slug: "{{slug}}"
+  - name: about-page
+    label: About
+    file: src/pages/about/index.md
     fields:
-      - {label: Template Key, name: templateKey, widget: hidden, default: page}
+      - {label: Template Key, name: templateKey, widget: hidden, default: about-page}
+      - {label: Title, name: title, widget: string}
+      - {label: Subtitle, name: subtitle, widget: string}
+      - {label: Body, name: body, widget: markdown}
+
+  - name: certifications-page
+    label: Certifications
+    file: src/pages/certifications/index.md
+    fields:
+      - {label: Template Key, name: templateKey, widget: hidden, default: certifications-page}
+      - {label: Title, name: title, widget: string}
+      - {label: Subtitle, name: subtitle, widget: string}
+      - {label: Body, name: body, widget: markdown}
+
+  - name: faq-page
+    label: FAQ
+    file: src/pages/faq/index.md
+    fields:
+      - {label: Template Key, name: templateKey, widget: hidden, default: faq-page}
       - {label: Title, name: title, widget: string}
       - {label: Subtitle, name: subtitle, widget: string}
       - {label: Body, name: body, widget: markdown}
@@ -39,5 +55,16 @@ collections:
       - {label: Title, name: title, widget: string}
       - {label: Subtitle, name: subtitle, widget: string}
       - {label: Projects, name: projects, widget: list, fields: [{label: Name, name: name, widget: string}, {label: Location, name: location, widget: object, fields: [{label: Latitude, name: lat, widget: string}, {label: Longitude, name: long, widget: string}]}, {label: Units, name: units, widget: number}, {label: Type, name: type, widget: select, options: ["Energy Audit", "Energy Audit Review", "Energy Star", "National Green Building Standard"]}]}
+      - {label: Body, name: body, widget: markdown}
+
+  - name: contact-page
+    label: Contact
+    file: src/pages/contact/index.md
+    fields:
+      - {label: Template Key, name: templateKey, widget: hidden, default: contact-page}
+      - {label: Title, name: title, widget: string}
+      - {label: Subtitle, name: subtitle, widget: string}
+      - {label: Address, name: address, widget: text}
+      - {label: Email, name: email, widget: string}
       - {label: Body, name: body, widget: markdown}
 
