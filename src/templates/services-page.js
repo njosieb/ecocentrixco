@@ -3,42 +3,76 @@ import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 
 class ServicesPageTemplate extends Component {
+  state = {
+    activeTag: 'All',
+    filteredProjects: [],
+    map: null,
+    markers: [],
+    markerCluster: null
+  }
+
+  filterProjects = function(tag) {
+    const { projects } = this.props
+    const filteredProjects =
+      tag === 'All' ? projects : projects.filter(proj => proj.type === tag)
+
+    this.state.markers.forEach(marker => marker.setMap(null))
+
+    const markers = filteredProjects.map(project => {
+      return new window.google.maps.Marker({
+        position: project.position,
+        map: this.state.map
+      })
+    })
+
+    if (this.state.markerCluster) {
+      this.state.markerCluster.clearMarkers()
+    }
+
+    const markerCluster = new window.MarkerClusterer(this.state.map, markers, {
+      imagePath: `/img/m`
+    })
+
+    this.setState({
+      ...this.state,
+      activeTag: tag,
+      markers,
+      markerCluster,
+      filteredProjects
+    })
+  }
+
   componentDidMount() {
     window.initMap = () => {
-      const map = new window.google.maps.Map(
-        document.getElementById('services-map'),
-        {
-          zoom: 5,
-          center: { lat: 38.628141, lng: -90.209818 },
-          mapTypeControl: false,
-          fullscreenControl: false,
-          streetViewControl: false
-        }
-      )
-
-      const markers = this.props.projects.map((project, i) => {
-        return new window.google.maps.Marker({
-          position: project.position,
-          // label: project.title,
-          map: map
-        })
+      this.setState({
+        ...this.state,
+        map: new window.google.maps.Map(
+          document.getElementById('services-map'),
+          {
+            zoom: 5,
+            center: { lat: 38.628141, lng: -90.209818 },
+            mapTypeControl: false,
+            fullscreenControl: false,
+            streetViewControl: false
+          }
+        )
       })
 
-      new window.MarkerClusterer(map, markers, {
-        imagePath: `/img/m`
-      })
+      this.filterProjects('All')
     }
   }
 
   render() {
     const tagList = [
+      { label: 'All', value: 'All' },
       { label: 'Energy Audit', value: 'EA' },
       { label: 'Energy Audit Review', value: 'EAR' },
       { label: 'Energy Star', value: 'ES' },
       { label: 'National Green Building Standard', value: 'NGBS' },
       { label: 'Home Energy Rating System', value: 'HERS' }
     ]
-    const { title, subtitle, projects } = this.props
+    const { title, subtitle } = this.props
+    const { activeTag, filteredProjects } = this.state
 
     return (
       <div className="services-main">
@@ -46,9 +80,7 @@ class ServicesPageTemplate extends Component {
           script={[
             {
               src:
-                'https://maps.googleapis.com/maps/api/js?key=AIzaSyBsuCjHZUuNmjtfjwxYsFGj8aouf18e9aU&callback=initMap',
-              async: true,
-              defer: true
+                'https://maps.googleapis.com/maps/api/js?key=AIzaSyBsuCjHZUuNmjtfjwxYsFGj8aouf18e9aU&callback=initMap'
             },
             {
               src: '/scripts/markerclusterer.js'
@@ -65,16 +97,13 @@ class ServicesPageTemplate extends Component {
         </div>
         <div className="portfoilo-body ">
           <div className="filtering-tags mw8 center dn flex-ns flex-wrap justify-center mv3 tc items-center pv4">
-            <span
-              id="all-projects"
-              className="project-filter mh3 pointer f4 blue fw7 br-pill bg-white ba ph3 pv2 b--gold mb3"
-            >
-              All
-            </span>
             {tagList.map(tag => (
               <span
                 key={tag.value}
-                className="project-filter clickable mh3 pointer f4 blue fw7 br-pill bg-white ba ph3 pv2 b--gold mb3"
+                onClick={() => this.filterProjects(tag.value)}
+                className={`${
+                  activeTag === tag.value ? 'active-tag ' : ''
+                }project-filter clickable mh3 pointer f4 blue fw7 br-pill bg-white ba ph3 pv2 b--gold mb3`}
               >
                 {tag.label}
               </span>
@@ -83,7 +112,7 @@ class ServicesPageTemplate extends Component {
           <div className="services-area flex-ns vh-50-ns overflow-hidden-ns">
             <div id="services-map" className="h-100 w-100 flex-50" />
             <div className="services-container flex-50 pb4 overflow-auto h-100">
-              {projects.map((project, i) => (
+              {filteredProjects.map((project, i) => (
                 <div
                   key={i}
                   className="project pointer flex items-center relative mb2 ph3 ph4-ns"
