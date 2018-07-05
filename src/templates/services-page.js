@@ -1,36 +1,133 @@
 import PropTypes from 'prop-types'
-import React from 'react'
-import Content, { HTMLContent } from '../components/Content'
+import React, { Component } from 'react'
+import Helmet from 'react-helmet'
 
-const ServicesPageTemplate = ({
-  title,
-  subtitle,
-  content,
-  contentComponent
-}) => {
-  const PageContent = contentComponent || Content
+class ServicesPageTemplate extends Component {
+  componentDidMount() {
+    window.initMap = () => {
+      const map = new window.google.maps.Map(
+        document.getElementById('services-map'),
+        {
+          zoom: 5,
+          center: { lat: 38.628141, lng: -90.209818 },
+          mapTypeControl: false,
+          fullscreenControl: false,
+          streetViewControl: false
+        }
+      )
 
-  return (
-    <div className="services-main">
-      <div className="pt3 bg-blue">
-        <h1 className="mw8 ph4 f1 f-5-ns center white mv0 lh-copy">{title}</h1>
-        <p className="f3 ma0 mw7 center pt2 ph4 ph0-ns pb5-ns white">
-          {subtitle}
-        </p>
+      const markers = this.props.projects.map((project, i) => {
+        return new window.google.maps.Marker({
+          position: project.position,
+          // label: project.title,
+          map: map
+        })
+      })
+
+      new window.MarkerClusterer(map, markers, {
+        imagePath: `/img/m`
+      })
+    }
+  }
+
+  render() {
+    const tagList = [
+      { label: 'Energy Audit', value: 'EA' },
+      { label: 'Energy Audit Review', value: 'EAR' },
+      { label: 'Energy Star', value: 'ES' },
+      { label: 'National Green Building Standard', value: 'NGBS' },
+      { label: 'Home Energy Rating System', value: 'HERS' }
+    ]
+    const { title, subtitle, projects } = this.props
+
+    return (
+      <div className="services-main">
+        <Helmet
+          script={[
+            {
+              src:
+                'https://maps.googleapis.com/maps/api/js?key=AIzaSyBsuCjHZUuNmjtfjwxYsFGj8aouf18e9aU&callback=initMap',
+              async: true,
+              defer: true
+            },
+            {
+              src: '/scripts/markerclusterer.js'
+            }
+          ]}
+        />
+        <div className="pt3 bg-blue">
+          <h1 className="mw8 ph4 f1 f-5-ns center white mv0 lh-copy">
+            {title}
+          </h1>
+          <p className="f3 ma0 mw7 center pt2 ph4 ph0-ns pb5-ns white">
+            {subtitle}
+          </p>
+        </div>
+        <div className="portfoilo-body ">
+          <div className="filtering-tags mw8 center dn flex-ns flex-wrap justify-center mv3 tc items-center pv4">
+            <span
+              id="all-projects"
+              className="project-filter mh3 pointer f4 blue fw7 br-pill bg-white ba ph3 pv2 b--gold mb3"
+            >
+              All
+            </span>
+            {tagList.map(tag => (
+              <span
+                key={tag.value}
+                className="project-filter clickable mh3 pointer f4 blue fw7 br-pill bg-white ba ph3 pv2 b--gold mb3"
+              >
+                {tag.label}
+              </span>
+            ))}
+          </div>
+          <div className="services-area flex-ns vh-50-ns overflow-hidden-ns">
+            <div id="services-map" className="h-100 w-100 flex-50" />
+            <div className="services-container flex-50 pb4 overflow-auto h-100">
+              {projects.map((project, i) => (
+                <div
+                  key={i}
+                  className="project pointer flex items-center relative mb2 ph3 ph4-ns"
+                >
+                  <h3
+                    className="project-title f5 f4-ns ma0 green lh-solid pr2 pr0-ns"
+                    style={{ flexBasis: '50%' }}
+                  >
+                    <span className="project-title-text underline-hover lh-copy">
+                      {project.title}
+                    </span>
+                  </h3>
+                  <div
+                    className="project-location f6 f5-ns flex-auto"
+                    style={{ flexBasis: '25%' }}
+                  >
+                    {project.city}, {project.state}
+                  </div>
+                  <div
+                    className="project-units flex-auto f6 f5-ns"
+                    style={{ flexBasis: '15%' }}
+                  >
+                    {project.units} units
+                  </div>
+                  <div
+                    className="type tc flex-auto dn db-ns"
+                    style={{ flexBasis: '10%' }}
+                  >
+                    {project.type}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
-      <PageContent
-        className="markdown-content pv5 mw7 center ph4"
-        content={content}
-      />
-    </div>
-  )
+    )
+  }
 }
 
 ServicesPageTemplate.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func
+  projects: PropTypes.array
 }
 
 const ServicesPage = ({ data }) => {
@@ -40,8 +137,7 @@ const ServicesPage = ({ data }) => {
     <ServicesPageTemplate
       title={page.frontmatter.title}
       subtitle={page.frontmatter.subtitle}
-      content={page.html}
-      contentComponent={HTMLContent}
+      projects={page.frontmatter.projects}
     />
   )
 }
@@ -55,10 +151,21 @@ export default ServicesPage
 export const ServicesPageQuery = graphql`
   query ServicesQuery {
     markdownRemark(frontmatter: { templateKey: { eq: "services-page" } }) {
-      html
       frontmatter {
         title
         subtitle
+        projects {
+          id
+          title
+          city
+          state
+          position {
+            lat
+            lng
+          }
+          units
+          type
+        }
       }
     }
   }
