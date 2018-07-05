@@ -1,46 +1,16 @@
-import Img from 'gatsby-image'
-import PropTypes from 'prop-types'
-import React, { Component } from 'react'
-import Helmet from 'react-helmet'
-import windmillMp4 from '../videos/windmill.mp4'
-import windmillWebm from '../videos/windmill.webm'
+import Img from 'gatsby-image';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import ContactBox from '../components/Contact';
+import windmillMp4 from '../videos/windmill.mp4';
+import windmillWebm from '../videos/windmill.webm';
 
 export class IndexPageTemplate extends Component {
-  componentDidMount() {
-    window.initContactLocation = function() {
-      const map = new window.google.maps.Map(
-        document.getElementById('contact-map'),
-        {
-          zoom: 12,
-          center: { lat: 38.636834, lng: -90.213108 },
-          mapTypeControl: false,
-          fullscreenControl: false,
-          streetViewControl: false,
-          draggable: false
-        }
-      )
-
-      new window.google.maps.Marker({
-        position: { lat: 38.636834, lng: -90.213108 },
-        map: map
-      })
-    }
-  }
-
   render() {
-    const { certifications } = this.props
+    const { certifications, contactInfo } = this.props
+    const { address, email, phone } = contactInfo
     return (
       <main className="home-main">
-        <Helmet
-          script={[
-            {
-              src:
-                'https://maps.googleapis.com/maps/api/js?key=AIzaSyBsuCjHZUuNmjtfjwxYsFGj8aouf18e9aU&callback=initContactLocation',
-              async: true,
-              defer: true
-            }
-          ]}
-        />
         <section id="home-hero" className="relative overflow-hidden">
           <div className="video-wrapper h-100">
             <video
@@ -196,23 +166,18 @@ export class IndexPageTemplate extends Component {
             </div>
           </div>
         </section>
-        <section id="contact" className="relative pv5 ph3">
+        <section id="contact" className="relative pb5 ph3">
           <div className="mw7 center">
             <h3 className="f2 f1-ns green tc">Contact Us</h3>
-            <div className="flex-ns justify-between">
-              <div className="">
-                <div className="fw7">ECOcentrix Consultants, LLC</div>
-                <div className="fw5">2612 Delmar Blvd</div>
-                <div className="fw5">St. Louis, MO. 631013</div>
-                <div className="pv2">
-                  <a className="fw7" href="mailto:mollie@ecocentrixco.com">
-                    mollie@ecocentrixco.com
-                  </a>
-                </div>
-                <div className="fw5">314.409.1684</div>
-              </div>
-              <div id="contact-map" className="w-100" />
-            </div>
+            <ContactBox
+              street1={address.street1}
+              street2={address.street2}
+              city={address.city}
+              state={address.state}
+              zip={address.zip}
+              email={email}
+              phone={phone}
+            />
           </div>
         </section>
       </main>
@@ -221,13 +186,22 @@ export class IndexPageTemplate extends Component {
 }
 
 IndexPageTemplate.propTypes = {
-  certifications: PropTypes.array
+  certifications: PropTypes.array,
+  contactInfo: PropTypes.object
 }
 
 const IndexPage = ({ data }) => {
   const { certifications } = data.markdownRemark.frontmatter
+  const settingsEdge = data.allMarkdownRemark.edges.find(
+    edge => edge.node.frontmatter.templateKey === 'settings'
+  )
 
-  return <IndexPageTemplate certifications={certifications} />
+  return (
+    <IndexPageTemplate
+      certifications={certifications}
+      contactInfo={settingsEdge.node.frontmatter}
+    />
+  )
 }
 
 IndexPage.propTypes = {
@@ -242,6 +216,7 @@ export default IndexPage
 
 export const indexPageQuery = graphql`
   query IndexPage {
+    ...ContactDetails
     markdownRemark(frontmatter: { templateKey: { eq: "home-page" } }) {
       frontmatter {
         certifications {

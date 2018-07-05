@@ -12,6 +12,7 @@
     - [x] List of projects
     - [x] Restore Google maps
     - [x] Filter list
+- [x] Make Contact block and map reusable component
 - [ ] Fix color scheme and layout
 - [ ] Replace header video with high quality photo
 - [ ] Make home page numbers animate up on scroll

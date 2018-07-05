@@ -33,4 +33,12 @@ nav:
     url: '/faq'
   - label: 'Contact Us'
     url: '/contact'
+address:
+  street1: 2612 Delmar Blvd
+  street2: ''
+  city: St. Louis
+  state: MO
+  zip: 63013
+email: mollie@ecocentrixco.com
+phone: 314.409.1684
 ---

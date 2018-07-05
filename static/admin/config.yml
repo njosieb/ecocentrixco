@@ -12,6 +12,9 @@ collections:
     fields:
       - {label: Template Key, name: templateKey, widget: hidden, default: home-page}
       - {label: Certifications List, name: certifications, widget: list, fields: [{label: Image, name: certImage, widget: image}, {label: Description, name: description, widget: string}]}
+      - {label: Address, name: address, widget: object, fields: [{label: Street 1, name: street1, widget: string},{label: Street 2, name: street2, widget: string},{label: City, name: city, widget: string},{label: State, name: state, widget: string},{label: Zip, name: zip, widget: string}]}
+      - {label: Email, name: email, widget: string}
+      - {label: Phone, name: phone, widget: string}
 
   - name: settings
     label: Settings
@@ -63,7 +66,5 @@ collections:
       - {label: Template Key, name: templateKey, widget: hidden, default: contact-page}
       - {label: Title, name: title, widget: string}
       - {label: Subtitle, name: subtitle, widget: string}
-      - {label: Address, name: address, widget: text}
-      - {label: Email, name: email, widget: string}
       - {label: Body, name: body, widget: markdown}
 
