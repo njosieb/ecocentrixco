@@ -2,6 +2,23 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 
+const tagList = [
+  { label: 'All', value: 'All', href: 'all' },
+  { label: 'Energy Audit', value: 'EA', href: 'energy-audit' },
+  { label: 'Energy Audit Review', value: 'EAR', href: 'energy-audit-review' },
+  { label: 'Energy Star', value: 'ES', href: 'energy-start' },
+  {
+    label: 'National Green Building Standard',
+    value: 'NGBS',
+    href: 'national-green-building-standard'
+  },
+  {
+    label: 'Home Energy Rating System',
+    value: 'HERS',
+    href: 'home-energy-rating-system'
+  }
+]
+
 class ServicesPageTemplate extends Component {
   state = {
     activeTag: 'All',
@@ -11,17 +28,37 @@ class ServicesPageTemplate extends Component {
     markerCluster: null
   }
 
-  filterProjects = function(tag) {
+  constructor(props) {
+    super(props)
+
+    this.initMap = this.initMap.bind(this)
+  }
+
+  componentDidMount() {
+    const activeTag = tagList.filter(
+      tag => tag.href === window.location.hash.replace('#', '')
+    )[0]
+    this.setState({
+      ...this.state,
+      activeTag: activeTag ? activeTag.value : 'All'
+    })
+  }
+
+  filterProjects = function(tag, map) {
+    const mapToUse = map || this.state.map
     const { projects } = this.props
     const filteredProjects =
       tag === 'All' ? projects : projects.filter(proj => proj.type === tag)
+
+    const foundTag = tagList.filter(item => item.value === tag)[0]
+    window.location.hash = tag === 'All' ? '' : `#${foundTag.href}`
 
     this.state.markers.forEach(marker => marker.setMap(null))
 
     const markers = filteredProjects.map(project => {
       return new window.google.maps.Marker({
         position: project.position,
-        map: this.state.map
+        map: mapToUse
       })
     })
 
@@ -29,12 +66,12 @@ class ServicesPageTemplate extends Component {
       this.state.markerCluster.clearMarkers()
     }
 
-    const markerCluster = new window.MarkerClusterer(this.state.map, markers, {
+    const markerCluster = new window.MarkerClusterer(mapToUse, markers, {
       imagePath: `/img/m`
     })
 
     this.setState({
-      ...this.state,
+      map: mapToUse,
       activeTag: tag,
       markers,
       markerCluster,
@@ -42,35 +79,29 @@ class ServicesPageTemplate extends Component {
     })
   }
 
-  componentDidMount() {
-    window.initMap = () => {
-      this.setState({
-        ...this.state,
-        map: new window.google.maps.Map(
-          document.getElementById('services-map'),
-          {
-            zoom: 5,
-            center: { lat: 38.628141, lng: -90.209818 },
-            mapTypeControl: false,
-            fullscreenControl: false,
-            streetViewControl: false
-          }
-        )
-      })
-
-      this.filterProjects('All')
+  setGoogleMapOnLoad = function({ scriptTags }) {
+    if (scriptTags) {
+      const googleMapScript = scriptTags[0]
+      googleMapScript.onload = this.initMap
     }
   }
 
+  initMap = function() {
+    const map = new window.google.maps.Map(
+      document.getElementById('services-map'),
+      {
+        zoom: 5,
+        center: { lat: 38.628141, lng: -90.209818 },
+        mapTypeControl: false,
+        fullscreenControl: false,
+        streetViewControl: false
+      }
+    )
+
+    this.filterProjects(this.state.activeTag, map)
+  }
+
   render() {
-    const tagList = [
-      { label: 'All', value: 'All' },
-      { label: 'Energy Audit', value: 'EA' },
-      { label: 'Energy Audit Review', value: 'EAR' },
-      { label: 'Energy Star', value: 'ES' },
-      { label: 'National Green Building Standard', value: 'NGBS' },
-      { label: 'Home Energy Rating System', value: 'HERS' }
-    ]
     const { title, subtitle } = this.props
     const { activeTag, filteredProjects } = this.state
 
@@ -80,12 +111,17 @@ class ServicesPageTemplate extends Component {
           script={[
             {
               src:
-                'https://maps.googleapis.com/maps/api/js?key=AIzaSyBsuCjHZUuNmjtfjwxYsFGj8aouf18e9aU&callback=initMap'
+                'https://maps.googleapis.com/maps/api/js?key=AIzaSyBsuCjHZUuNmjtfjwxYsFGj8aouf18e9aU',
+              async: true,
+              defer: true
             },
             {
               src: '/scripts/markerclusterer.js'
             }
           ]}
+          onChangeClientState={(newState, addedTags) =>
+            this.setGoogleMapOnLoad(addedTags)
+          }
         />
         <div className="pt3 bg-blue">
           <h1 className="mw8 ph4 f1 f-5-ns center white mv0 lh-copy">

@@ -3,25 +3,30 @@ import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 
 class ContactBox extends Component {
-  componentDidMount() {
-    window.initContactLocation = function() {
-      const map = new window.google.maps.Map(
-        document.getElementById('contact-map'),
-        {
-          zoom: 12,
-          center: { lat: 38.636834, lng: -90.213108 },
-          mapTypeControl: false,
-          fullscreenControl: false,
-          streetViewControl: false,
-          draggable: false
-        }
-      )
-
-      new window.google.maps.Marker({
-        position: { lat: 38.636834, lng: -90.213108 },
-        map: map
-      })
+  setGoogleMapOnLoad = function({ scriptTags }) {
+    if (scriptTags) {
+      const googleMapScript = scriptTags[0]
+      googleMapScript.onload = this.initContactLocation
     }
+  }
+
+  initContactLocation = function() {
+    const map = new window.google.maps.Map(
+      document.getElementById('contact-map'),
+      {
+        zoom: 12,
+        center: { lat: 38.636834, lng: -90.213108 },
+        mapTypeControl: false,
+        fullscreenControl: false,
+        streetViewControl: false,
+        draggable: false
+      }
+    )
+
+    new window.google.maps.Marker({
+      position: { lat: 38.636834, lng: -90.213108 },
+      map: map
+    })
   }
 
   render() {
@@ -32,11 +37,14 @@ class ContactBox extends Component {
           script={[
             {
               src:
-                'https://maps.googleapis.com/maps/api/js?key=AIzaSyBsuCjHZUuNmjtfjwxYsFGj8aouf18e9aU&callback=initContactLocation',
+                'https://maps.googleapis.com/maps/api/js?key=AIzaSyBsuCjHZUuNmjtfjwxYsFGj8aouf18e9aU',
               async: true,
               defer: true
             }
           ]}
+          onChangeClientState={(newState, addedTags) =>
+            this.setGoogleMapOnLoad(addedTags)
+          }
         />
         <div className="">
           <div className="fw7">ECOcentrix Consultants, LLC</div>

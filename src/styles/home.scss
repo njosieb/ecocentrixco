@@ -122,10 +122,10 @@
 }
 
 #home-hero {
-  height: 85vh;
+  max-height: 80vh;
 
   @media (min-width: $mobile) {
-    height: 700px;
+    max-height: 700px;
   }
 }
 

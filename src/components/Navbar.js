@@ -6,8 +6,13 @@ const Navbar = ({ nav }) => (
   <header className="z-2">
     <div className="site-header db bg-white">
       <div className="header-wrapper pt3-ns pb3-ns flex justify-between items-center">
-        <a href="/" className="db ml4-ns">
-          <img src={logo} className="ph3 pv2" />
+        <a href="/" className="db ml5-ns">
+          <img
+            src={logo}
+            className="db"
+            title="ECOcentrix Co logo"
+            alt="ECOcentrix Co logo"
+          />
         </a>
         <div className="menu">
           {nav.map((item, i) => (

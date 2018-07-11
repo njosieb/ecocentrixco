@@ -78,13 +78,18 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     const { frontmatter } = node
     if (frontmatter) {
       const adjust = adjustImagePath(node.fileAbsolutePath)
-      const { certifications } = frontmatter
+      const { certifications, headerImage } = frontmatter
       // Image location string -> ImageSharp objects
       if (certifications) {
         node.frontmatter.certifications.forEach(cert => {
           cert.certImage = adjust(cert.certImage)
         })
       }
+      if (headerImage) {
+        node.frontmatter.headerImage = adjust(headerImage)
+      }
     }
   }
 }
+
+// exports.modifyWebpackConfig

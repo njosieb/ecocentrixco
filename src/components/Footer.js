@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types'
 import React from 'react'
 
-const Footer = () => (
+const Footer = ({ socialMediaLinks }) => (
   <section className="bt section-border">
     <div className="site-footer section-border">
       <div className="footer-top">
@@ -9,30 +10,13 @@ const Footer = () => (
             <div className="footer-column" />
             <div className="footer-column">
               <ul className="social-media links">
-                <li>
-                  <a
-                    className="social-media-link"
-                    href="https://www.facebook.com/ECOcentrix-Consulting-LLC-225325200871400/"
-                  >
-                    <i className="fa fa-facebook" />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="social-media-link"
-                    href="https://twitter.com/ecocentrixco"
-                  >
-                    <i className="fa fa-twitter" />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="social-media-link"
-                    href="mailto:mollie@ecocentrixco.com"
-                  >
-                    <i className="fa fa-envelope-o" />
-                  </a>
-                </li>
+                {socialMediaLinks.map((link, i) => (
+                  <li key={i}>
+                    <a className="social-media-link" href={link.url}>
+                      <i className={`fa ${link.icon}`} />
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="footer-column" />
@@ -59,5 +43,9 @@ const Footer = () => (
     </div>
   </section>
 )
+
+Footer.propTypes = {
+  socialMediaLinks: PropTypes.array
+}
 
 export default Footer

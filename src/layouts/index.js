@@ -6,13 +6,13 @@ import Navbar from '../components/Navbar'
 import './all.scss'
 
 const TemplateWrapper = ({ children, data }) => {
-  const { nav } = data.markdownRemark.frontmatter
+  const { nav, socialMediaLinks } = data.markdownRemark.frontmatter
   return (
     <div className="main-container">
       <Helmet title="ECOCentrix Co." />
       <Navbar nav={nav} />
       {children()}
-      <Footer />
+      <Footer socialMediaLinks={socialMediaLinks} />
     </div>
   )
 }
@@ -35,6 +35,10 @@ export const LayoutQuery = graphql`
             label
             url
           }
+        }
+        socialMediaLinks {
+          icon
+          url
         }
       }
     }

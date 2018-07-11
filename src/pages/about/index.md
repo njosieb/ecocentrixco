@@ -12,7 +12,7 @@ Founded in 2011, ECOcentrix conducts independent energy audits and provides ener
 
 ECOcentrix is headquartered at 2612 Delmar Boulevard in Saint Louis, Missouri, and is a licensed energy auditing and consulting firm in the State of Missouri (#LC9698154). Our Federal Employer Identification Number is 43-3680210, and we are a Woman-Owned Business Enterprise (WBE) in the State of Missouri (#04506) and city of Saint Louis (#1833). ECOcentrix carries general liability, automobile liability, worker’s compensation, employer’s liability and errors and omissions insurance.
 
-![Energy saving](/images/energy_saving.png)
+![Energy saving](/img/energy_saving.png)
 
 ## What We Do
 
