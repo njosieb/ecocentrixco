@@ -94,7 +94,8 @@ class ServicesPageTemplate extends Component {
         center: { lat: 38.628141, lng: -90.209818 },
         mapTypeControl: false,
         fullscreenControl: false,
-        streetViewControl: false
+        streetViewControl: false,
+        draggable: true
       }
     )
 
@@ -123,23 +124,23 @@ class ServicesPageTemplate extends Component {
             this.setGoogleMapOnLoad(addedTags)
           }
         />
-        <div className="pt3 bg-blue">
-          <h1 className="mw8 ph4 f1 f-5-ns center white mv0 lh-copy">
+        <div className="pt3 pb0-ns pb3 bg-blue">
+          <h1 className="mw8 pl5 f2 f-5-ns center white mv0 lh-copy">
             {title}
           </h1>
-          <p className="f3 ma0 mw7 center pt2 ph4 ph0-ns pb5-ns white">
+          <p className="f3-ns f5 ma0 mw7 center pt2 ph4 ph0-ns pb5-ns white">
             {subtitle}
           </p>
         </div>
         <div className="portfoilo-body ">
-          <div className="filtering-tags mw8 center dn flex-ns flex-wrap justify-center mv3 tc items-center pv4">
+          <div className="filtering-tags mw8 center flex flex-wrap justify-center mv3-ns mv2 tc items-center pv4-ns pv3">
             {tagList.map(tag => (
               <span
                 key={tag.value}
                 onClick={() => this.filterProjects(tag.value)}
                 className={`${
                   activeTag === tag.value ? 'active-tag ' : ''
-                }project-filter clickable mh3 pointer f4 blue fw7 br-pill bg-white ba ph3 pv2 b--gold mb3`}
+                }project-filter clickable mh3-ns mh1 pointer f4-ns f5 blue fw7 br-pill bg-white ba ph3 pv2 b--gold mb3`}
               >
                 {tag.label}
               </span>

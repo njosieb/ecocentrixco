@@ -2,6 +2,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import Helmet from 'react-helmet'
 import Footer from '../components/Footer'
+import MobileMenu from '../components/MobileMenu'
 import Navbar from '../components/Navbar'
 import './all.scss'
 
@@ -11,6 +12,7 @@ const TemplateWrapper = ({ children, data }) => {
     <div className="main-container">
       <Helmet title="ECOCentrix Co." />
       <Navbar nav={nav} />
+      <MobileMenu nav={nav} />
       {children()}
       <Footer socialMediaLinks={socialMediaLinks} />
     </div>

@@ -32,7 +32,7 @@
 @include tachyons-override("gold-lightest", $gold-lightest);
 @include tachyons-override("off-black", $offBlack);
 @include tachyons-override("blue", $blue-logo);
-@include tachyons-override("grey-60", rgba(148, 160, 148, 0.2));
+@include tachyons-override("gold-80", fade_out($gold-color, 0.8));
 
 .hover-shadow {
   transition: box-shadow .2s ease-in-out;

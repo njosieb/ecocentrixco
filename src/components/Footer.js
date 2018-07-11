@@ -26,7 +26,7 @@ const Footer = ({ socialMediaLinks }) => (
       <div className="footer-bottom">
         <div className="container">
           <p className="copyright-row">
-            <span className="copyright">Copyright 2017</span>
+            <span className="copyright db di-ns">Copyright 2017</span>
             <span className="made-by">
               Site built by{' '}
               <a

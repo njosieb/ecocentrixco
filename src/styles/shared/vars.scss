@@ -72,8 +72,8 @@ $content-width:    1080px;
 
 $mobile:          450px;
 $tablet:          600px;
-$laptop:          1000px;
-$desktop:         1400px;
+$laptop:          800px;
+$desktop:         1000px;
 
 @media (min-width: $mobile) {
   $header-height: 60px;

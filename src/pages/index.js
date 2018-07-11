@@ -17,30 +17,33 @@ export class IndexPageTemplate extends Component {
     const { address, email, phone } = contactInfo
     return (
       <main className="home-main">
-        <section id="home-hero" className="relative overflow-hidden">
-          <div className="h-100 relative z-1">
-            <div className="bg-grey-60 absolute cover h-100 w-100 z-2" />
-            <Img
-              sizes={headerImage.childImageSharp.sizes}
-              className="bg-video db mw-100 w-100 h-100"
-              style={{ objectFit: 'cover', objectPosition: 'center' }}
-            />
-          </div>
-          <div className="top-content absolute top-0 w-100 pt5 h-100 flex flex-column z-3">
-            <div className="mb4 pt3 pl5 relative flex-auto mw7">
+        <section id="home-hero" className="relative z-1">
+          <div className="bg-gold-80 absolute cover h-100 w-100 z-2" />
+          <Img
+            sizes={headerImage.childImageSharp.sizes}
+            style={{
+              position: 'absolute',
+              left: 0,
+              top: 0,
+              width: '100%',
+              height: '100%'
+            }}
+          />
+          <div className="top-content relative w-100 tc tl-ns pt5-ns pb5-ns pb2 h-100 flex flex-column z-3">
+            <div className="mb6-ns mb4 pb4-ns pt3 ph1 ph5-ns relative flex-auto mw7">
               <p className="f3 f2-ns white fw7">{headerText}</p>
               <p className="f4 f3-ns white fw7">{headerSubtext}</p>
             </div>
             <a
               href="/services"
-              className="db bg-blue white pv2 ph3 f4 tc f3-ns mw6 center hover-white hover-shadow fw7 mb5"
+              className="db bg-blue white pv2 ph4 f4 tc f3-ns mw6 center hover-gold hover-shadow fw7"
             >
               Check Out The Work We Do
             </a>
           </div>
         </section>
-        <section id="work" className="relative pt6 ph3">
-          <div className="mw8 center flex-ns items-stretch justify-around">
+        <section id="work" className="relative pt5 ph3">
+          <div className="mw8-l mw6 center flex-l items-stretch justify-around">
             {servicesList.map((service, i) => (
               <div
                 className="work-type flex flex-column flex-50 mb4 tc mr3-ns"
@@ -53,7 +56,7 @@ export class IndexPageTemplate extends Component {
                 </div>
                 <a
                   href={service.buttonLink}
-                  className="db bg-blue white pa2 nowrap f4 hover-white hover-shadow fw7 mv4 hover-gold"
+                  className="db bg-blue white pa2 nowrap f4 hover-shadow fw7 mv4 hover-gold"
                 >
                   {service.buttonText}
                 </a>

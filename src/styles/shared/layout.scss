@@ -157,9 +157,9 @@ main {
     right: 0;
     width: calc(100vw - 300px);
     height: 100%;
-    background: fade($black, 85);
+    background: fade_out($black, .15);
     display: block;
-    z-index: 9;
+    z-index: 3;
     opacity: 0;
     transform: translate3d(100vw, 0, 0);
     transition: opacity 0.5s $timing-function, transform 0.5s $timing-function;

@@ -96,7 +96,7 @@
     padding: 1.2rem;
 
     &:hover {
-      background-color: fade($blue-logo, 75%);
+      background-color: fade_out($blue-logo, .3);
       text-decoration: underline;
     }
 

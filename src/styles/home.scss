@@ -123,9 +123,11 @@
 
 #home-hero {
   max-height: 80vh;
+  min-height: 50vh;
 
   @media (min-width: $mobile) {
     max-height: 700px;
+    min-height: 0;
   }
 }
 

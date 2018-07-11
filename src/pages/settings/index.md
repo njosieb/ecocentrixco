@@ -1,8 +1,6 @@
 ---
 templateKey: settings
 nav:
-  - label: 'Home'
-    url: '/'
   - label: 'About Us'
     url: '/about'
     children:
