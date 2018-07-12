@@ -6,71 +6,74 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: homepage
-    label: Homepage
-    file: src/pages/homepage/index.md
-    fields:
-      - {label: Template Key, name: templateKey, widget: hidden, default: home-page}
-      - {label: Header Image, name: headerImage, widget: image}
-      - {label: Header Text, name: headerText, widget: string}
-      - {label: Header Subtext, name: headerSubtext, widget: string}
-      - {label: Services List, name: servicesList, widget: list, fields: [{label: Icon, name: icon, widget: string}, {label: Service Name, name: name, widget: string}, {label: Service Description, name: description, widget: text}, {label: Action Button Text, name: buttonText, widget: string}, {label: Action Button Link, name: buttonLink, widget: string}]}
-      - {label: Stats List, name: statsList, widget: list, fields: [{label: Stat, name: statNum, widget: string}, {label: Label, name: label, widget: string}]}
-      - {label: Certifications List, name: certifications, widget: list, fields: [{label: Image, name: certImage, widget: image}, {label: Description, name: description, widget: string}]}
+  - name: pages
+    label: Pages
+    files:
+    - name: homepage
+      label: Homepage
+      file: src/pages/homepage/index.md
+      fields:
+        - {label: Template Key, name: templateKey, widget: hidden, default: home-page}
+        - {label: Header Image, name: headerImage, widget: image}
+        - {label: Header Text, name: headerText, widget: string}
+        - {label: Header Subtext, name: headerSubtext, widget: string}
+        - {label: Services List, name: servicesList, widget: list, fields: [{label: Icon, name: icon, widget: string}, {label: Service Name, name: name, widget: string}, {label: Service Description, name: description, widget: text}, {label: Action Button Text, name: buttonText, widget: string}, {label: Action Button Link, name: buttonLink, widget: string}]}
+        - {label: Stats List, name: statsList, widget: list, fields: [{label: Stat, name: statNum, widget: string}, {label: Label, name: label, widget: string}]}
+        - {label: Certifications List, name: certifications, widget: list, fields: [{label: Image, name: certImage, widget: image}, {label: Description, name: description, widget: string}]}
 
-  - name: settings
-    label: Settings
-    file: src/pages/settings/index.md
-    fields:
-      - {label: Template Key, name: templateKey, widget: hidden, default: settings}
-      - {label: Navigation Menu, name: nav, widget: list, fields: [{label: Label, name: label, widget: string}, {label: URL, name: url, widget: string}, {label: Child Menu, name: children, widget: list, fields: [{label: Label, name: label, widget: string}, {label: URL, name: url, widget: string}]}]}
-      - {label: Address, name: address, widget: object, fields: [{label: Street 1, name: street1, widget: string},{label: Street 2, name: street2, widget: string},{label: City, name: city, widget: string},{label: State, name: state, widget: string},{label: Zip, name: zip, widget: string}]}
-      - {label: Email, name: email, widget: string}
-      - {label: Phone, name: phone, widget: string}
-      - {label: Social Media, name: socialMediaLinks, widget: list, fields: [{label: Icon, name: icon, widget: string}, {label: URL, name: url, widget: string}]}
+    - name: settings
+      label: Settings
+      file: src/pages/settings/index.md
+      fields:
+        - {label: Template Key, name: templateKey, widget: hidden, default: settings}
+        - {label: Navigation Menu, name: nav, widget: list, fields: [{label: Label, name: label, widget: string}, {label: URL, name: url, widget: string}, {label: Child Menu, name: children, widget: list, fields: [{label: Label, name: label, widget: string}, {label: URL, name: url, widget: string}]}]}
+        - {label: Address, name: address, widget: object, fields: [{label: Street 1, name: street1, widget: string},{label: Street 2, name: street2, widget: string},{label: City, name: city, widget: string},{label: State, name: state, widget: string},{label: Zip, name: zip, widget: string}]}
+        - {label: Email, name: email, widget: string}
+        - {label: Phone, name: phone, widget: string}
+        - {label: Social Media, name: socialMediaLinks, widget: list, fields: [{label: Icon, name: icon, widget: string}, {label: URL, name: url, widget: string}]}
 
-  - name: about-page
-    label: About
-    file: src/pages/about/index.md
-    fields:
-      - {label: Template Key, name: templateKey, widget: hidden, default: about-page}
-      - {label: Title, name: title, widget: string}
-      - {label: Subtitle, name: subtitle, widget: string}
-      - {label: Body, name: body, widget: markdown}
+    - name: about-page
+      label: About
+      file: src/pages/about/index.md
+      fields:
+        - {label: Template Key, name: templateKey, widget: hidden, default: about-page}
+        - {label: Title, name: title, widget: string}
+        - {label: Subtitle, name: subtitle, widget: string}
+        - {label: Body, name: body, widget: markdown}
 
-  - name: certifications-page
-    label: Certifications
-    file: src/pages/certifications/index.md
-    fields:
-      - {label: Template Key, name: templateKey, widget: hidden, default: certifications-page}
-      - {label: Title, name: title, widget: string}
-      - {label: Subtitle, name: subtitle, widget: string}
-      - {label: Body, name: body, widget: markdown}
+    - name: certifications-page
+      label: Certifications
+      file: src/pages/certifications/index.md
+      fields:
+        - {label: Template Key, name: templateKey, widget: hidden, default: certifications-page}
+        - {label: Title, name: title, widget: string}
+        - {label: Subtitle, name: subtitle, widget: string}
+        - {label: Body, name: body, widget: markdown}
 
-  - name: faq-page
-    label: FAQ
-    file: src/pages/faq/index.md
-    fields:
-      - {label: Template Key, name: templateKey, widget: hidden, default: faq-page}
-      - {label: Title, name: title, widget: string}
-      - {label: Subtitle, name: subtitle, widget: string}
-      - {label: Body, name: body, widget: markdown}
+    - name: faq-page
+      label: FAQ
+      file: src/pages/faq/index.md
+      fields:
+        - {label: Template Key, name: templateKey, widget: hidden, default: faq-page}
+        - {label: Title, name: title, widget: string}
+        - {label: Subtitle, name: subtitle, widget: string}
+        - {label: Body, name: body, widget: markdown}
 
-  - name: services-page
-    label: Services
-    file: "src/pages/services/index.md"
-    fields:
-      - {label: Template Key, name: templateKey, widget: hidden, default: services-page}
-      - {label: Title, name: title, widget: string}
-      - {label: Subtitle, name: subtitle, widget: string}
-      - {label: Projects, name: projects, widget: list, fields: [{label: Id, name: id, widget: number}, {label: Title, name: title, widget: string}, {label: City, name: city, widget: string}, {label: State, name: state, widget: string}, {label: Location, name: position, widget: object, fields: [{label: Latitude, name: lat, widget: string}, {label: Longitude, name: long, widget: string}]}, {label: Units, name: units, widget: number}, {label: Type, name: type, widget: select, options: [{label: "Energy Audit", value: "EA"}, {label: "Energy Audit Review", value: "EAR"}, {label: "Energy Star", value: "ES"}, {label: "National Green Building Standard", value: "NGBS"}, {label: "Home Energy Rating System", value: "HERS"}]}]}
+    - name: services-page
+      label: Services
+      file: "src/pages/services/index.md"
+      fields:
+        - {label: Template Key, name: templateKey, widget: hidden, default: services-page}
+        - {label: Title, name: title, widget: string}
+        - {label: Subtitle, name: subtitle, widget: string}
+        - {label: Projects, name: projects, widget: list, fields: [{label: Id, name: id, widget: number}, {label: Title, name: title, widget: string}, {label: City, name: city, widget: string}, {label: State, name: state, widget: string}, {label: Location, name: position, widget: object, fields: [{label: Latitude, name: lat, widget: string}, {label: Longitude, name: long, widget: string}]}, {label: Units, name: units, widget: number}, {label: Type, name: type, widget: select, options: [{label: "Energy Audit", value: "EA"}, {label: "Energy Audit Review", value: "EAR"}, {label: "Energy Star", value: "ES"}, {label: "National Green Building Standard", value: "NGBS"}, {label: "Home Energy Rating System", value: "HERS"}]}]}
 
-  - name: contact-page
-    label: Contact
-    file: src/pages/contact/index.md
-    fields:
-      - {label: Template Key, name: templateKey, widget: hidden, default: contact-page}
-      - {label: Title, name: title, widget: string}
-      - {label: Subtitle, name: subtitle, widget: string}
-      - {label: Body, name: body, widget: markdown}
+    - name: contact-page
+      label: Contact
+      file: src/pages/contact/index.md
+      fields:
+        - {label: Template Key, name: templateKey, widget: hidden, default: contact-page}
+        - {label: Title, name: title, widget: string}
+        - {label: Subtitle, name: subtitle, widget: string}
+        - {label: Body, name: body, widget: markdown}
 
