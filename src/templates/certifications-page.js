@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import Content, { HTMLContent } from '../components/Content'
 
-const CertificationsPageTemplate = ({
+export const CertificationsPageTemplate = ({
   title,
   subtitle,
   content,

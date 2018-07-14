@@ -3,7 +3,7 @@ import React from 'react'
 import ContactBox from '../components/Contact'
 import Content, { HTMLContent } from '../components/Content'
 
-const ContactPageTemplate = ({
+export const ContactPageTemplate = ({
   title,
   subtitle,
   content,

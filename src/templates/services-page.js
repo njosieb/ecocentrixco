@@ -19,7 +19,7 @@ const tagList = [
   }
 ]
 
-class ServicesPageTemplate extends Component {
+export class ServicesPageTemplate extends Component {
   state = {
     activeTag: 'All',
     filteredProjects: [],

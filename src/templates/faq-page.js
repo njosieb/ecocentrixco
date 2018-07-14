@@ -2,7 +2,12 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import Content, { HTMLContent } from '../components/Content'
 
-const FaqPageTemplate = ({ title, subtitle, content, contentComponent }) => {
+export const FaqPageTemplate = ({
+  title,
+  subtitle,
+  content,
+  contentComponent
+}) => {
   const PageContent = contentComponent || Content
 
   return (
