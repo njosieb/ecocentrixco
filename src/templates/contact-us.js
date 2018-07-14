@@ -74,7 +74,7 @@ export default ContactPage
 export const ContactPageQuery = graphql`
   query ContactQueryk {
     ...ContactDetails
-    markdownRemark(frontmatter: { templateKey: { eq: "contact-page" } }) {
+    markdownRemark(frontmatter: { templateKey: { eq: "contact-us" } }) {
       html
       frontmatter {
         title

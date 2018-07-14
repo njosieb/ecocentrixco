@@ -7,7 +7,15 @@ import Navbar from '../components/Navbar'
 import './all.scss'
 
 const TemplateWrapper = ({ children, data }) => {
-  const { nav, socialMediaLinks } = data.markdownRemark.frontmatter
+  const settingsEdges = data.allMarkdownRemark.edges.filter(
+    edge => edge.node.frontmatter.templateKey === 'settings'
+  )
+  const nav = settingsEdges.filter(edge => !!edge.node.frontmatter.nav)[0].node
+    .frontmatter.nav
+  const socialMediaLinks = settingsEdges.filter(
+    edge => !!edge.node.frontmatter.socialMediaLinks
+  )[0].node.frontmatter.socialMediaLinks
+
   return (
     <div className="main-container">
       <Helmet title="ECOCentrix Co." />
@@ -28,19 +36,24 @@ export default TemplateWrapper
 
 export const LayoutQuery = graphql`
   query LayoutQuery {
-    markdownRemark(frontmatter: { templateKey: { eq: "settings" } }) {
-      frontmatter {
-        nav {
-          label
-          url
-          children {
-            label
-            url
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            templateKey
+            nav {
+              label
+              url
+              children {
+                label
+                url
+              }
+            }
+            socialMediaLinks {
+              icon
+              url
+            }
           }
-        }
-        socialMediaLinks {
-          icon
-          url
         }
       }
     }

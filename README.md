@@ -13,9 +13,7 @@
     - [x] Restore Google maps
     - [x] Filter list
 - [x] Make Contact block and map reusable component
-- [ ] Fix color scheme and layout
-- [ ] Replace header video with high quality photo
-- [ ] Make home page numbers animate up on scroll
-- [ ] Dynamically render menu from H2 tags in markdown
-- [ ] Make mobile friendly
+- [x] Fix color scheme and layout
+- [x] Replace header video with high quality photo
+- [x] Make mobile friendly
 - [ ] Host on Netlify
