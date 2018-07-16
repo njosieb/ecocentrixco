@@ -4,28 +4,35 @@ headerImage: /img/raul-petri-174167-unsplash.jpg
 headerText: Energy auditors and consultants for residential and commercial spaces
 headerSubtext: Need an audit? Want to save money and be green?
 servicesList:
-  - icon: fa-check-square-o
-    name: Energy Auditing
-    description: Invite us to visit your existing buildings to identify energy saving opportunities, conducting specialized and nationally recognized energy audits
+  - buttonLink: '/about#auditing'
     buttonText: Learn About Energy Auditing
-    buttonLink: /about#auditing
-  - icon: fa-handshake-o
+    description: >-
+      Invite us to visit your existing buildings to identify energy saving
+      opportunities, conducting specialized and nationally recognized energy
+      audits
+    icon: fa-check-square-o
+    name: Energy Auditing
+  - buttonLink: '/about#consulting'
+    buttonText: Learn About Energy Consulting
+    description: >-
+      Bring us on early in your project to work side-by-side with your
+      architects and implement sustainable enery solutions within your budget
+    icon: fa-handshake-o
     name: Energy Consulting
-    description: Bring us on early in your project to work side-by-side with your architects and implement sustainable enery solutions within your budget
-    buttonText: Learn About Energy Counseling
-    buttonLink: /about#consulting
-  - icon: fa-dashboard
-    name: Radon Testing
-    description: Buying a home or need to evaluate an older property? We can measure radon levels and give you solutions for keeping your basements free of radon
+  - buttonLink: '/about#radon'
     buttonText: Learn About Radon Testing
-    buttonLink: /about#radon
+    description: >-
+      Buying a home or need to evaluate an older property? We can measure radon
+      levels and give you solutions for keeping your basements free of radon
+    icon: fa-dashboard
+    name: Radon Testing
 statsList:
   - label: units
-    statNum: "3,600"
+    statNum: '3,600'
   - label: projects
-    statNum: "60+"
+    statNum: 60+
   - label: states
-    statNum: "9"
+    statNum: '9'
 certifications:
   - certImage: /img/BPI-certified.jpg
     description: BPI certified
@@ -46,3 +53,4 @@ certifications:
   - certImage: /img/certified_energy_auditor.jpg
     description: Certified energy auditor
 ---
+
