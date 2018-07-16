@@ -10,7 +10,6 @@ const HomepagePreview = ({ entry }) => (
     servicesList={entry.getIn(['data', 'servicesList'])}
     statsList={entry.getIn(['data', 'statsList'])}
     certifications={entry.getIn(['data', 'certifications'])}
-    contactInfo={entry.getIn(['data', 'contactInfo'])}
   />
 )
 

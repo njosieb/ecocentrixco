@@ -11,7 +11,6 @@ export const ContactPageTemplate = ({
   contactInfo
 }) => {
   const PageContent = contentComponent || Content
-  const { address, email, phone } = contactInfo
 
   return (
     <div className="contact-main">
@@ -25,17 +24,19 @@ export const ContactPageTemplate = ({
         className="markdown-content pt5 mw7 center ph4"
         content={content}
       />
-      <section className="pb5 mw7 center ph4">
-        <ContactBox
-          street1={address.street1}
-          street2={address.street2}
-          city={address.city}
-          state={address.state}
-          zip={address.zip}
-          email={email}
-          phone={phone}
-        />
-      </section>
+      {contactInfo && (
+        <section className="pb5 mw7 center ph4">
+          <ContactBox
+            street1={contactInfo.address.street1}
+            street2={contactInfo.address.street2}
+            city={contactInfo.address.city}
+            state={contactInfo.address.state}
+            zip={contactInfo.address.zip}
+            email={contactInfo.email}
+            phone={contactInfo.phone}
+          />
+        </section>
+      )}
     </div>
   )
 }

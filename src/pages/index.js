@@ -14,7 +14,6 @@ export class IndexPageTemplate extends Component {
       certifications,
       contactInfo
     } = this.props
-    const { address, email, phone } = contactInfo
     return (
       <main className="home-main">
         <section id="home-hero" className="relative z-1">
@@ -97,20 +96,22 @@ export class IndexPageTemplate extends Component {
             </div>
           </div>
         </section>
-        <section id="contact" className="relative pb5 ph3">
-          <div className="mw7 center">
-            <h3 className="f2 f1-ns green tc">Contact Us</h3>
-            <ContactBox
-              street1={address.street1}
-              street2={address.street2}
-              city={address.city}
-              state={address.state}
-              zip={address.zip}
-              email={email}
-              phone={phone}
-            />
-          </div>
-        </section>
+        {contactInfo && (
+          <section id="contact" className="relative pb5 ph3">
+            <div className="mw7 center">
+              <h3 className="f2 f1-ns green tc">Contact Us</h3>
+              <ContactBox
+                street1={contactInfo.address.street1}
+                street2={contactInfo.address.street2}
+                city={contactInfo.address.city}
+                state={contactInfo.address.state}
+                zip={contactInfo.address.zip}
+                email={contactInfo.email}
+                phone={contactInfo.phone}
+              />
+            </div>
+          </section>
+        )}
       </main>
     )
   }

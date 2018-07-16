@@ -9,7 +9,6 @@ const ContactPagePreview = ({ entry, widgetFor }) => (
     subtitle={entry.getIn(['data', 'subtitle'])}
     content={widgetFor('body')}
     contentComponent={HTMLContent}
-    contactInfo={entry.getIn(['data', 'contactInfo'])}
   />
 )
 
