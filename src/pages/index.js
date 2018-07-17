@@ -4,6 +4,14 @@ import React, { Component } from 'react'
 import ContactBox from '../components/Contact'
 
 export class IndexPageTemplate extends Component {
+  heroImageStyle = {
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    width: '100%',
+    height: '100%'
+  }
+
   render() {
     const {
       headerImage,
@@ -18,16 +26,15 @@ export class IndexPageTemplate extends Component {
       <main className="home-main">
         <section id="home-hero" className="relative z-1">
           <div className="bg-gold-80 absolute cover h-100 w-100 z-2" />
-          <Img
-            sizes={headerImage.childImageSharp.sizes}
-            style={{
-              position: 'absolute',
-              left: 0,
-              top: 0,
-              width: '100%',
-              height: '100%'
-            }}
-          />
+          {headerImage.childImageSharp && (
+            <Img
+              sizes={headerImage.childImageSharp.sizes}
+              style={this.heroImageStyle}
+            />
+          )}
+          {!headerImage.childImageSharp && (
+            <img src={headerImage} style={this.heroImageStyle} />
+          )}
           <div className="top-content relative w-100 tc tl-ns pt5-ns pb5-ns pb2 h-100 flex flex-column z-3">
             <div className="mb6-ns mb4 pb4-ns pt3 ph1 ph5-ns relative flex-auto mw7">
               <p className="f3 f2-ns white fw7">{headerText}</p>
