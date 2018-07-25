@@ -1,11 +1,15 @@
 ---
 templateKey: certifications-page
 title: Certifications
-subtitle: We are professional green energy consultants and auditors with the expertise to help any of your projects
+subtitle: >-
+  We are professional green energy consultants and auditors with the expertise
+  to help any of your projects
 ---
-### BPI certified building analyst professional
-### BPI certified building envelope professional
-### BPI certified multi-family building analyst professional
+### Building Analyst Professional
+
+### Building Envelope Professional
+
+### Multi-family Building Analyst Professional
 
 ![BPI certified](/img/BPI-certified.jpg)
 
@@ -13,7 +17,7 @@ Building Performance Institute (BPI) certified professionals are highly skilled 
 
 For many homeowners and tenants, energy bills account for far too much of the monthly budget. Stringent technical standards and requirements mean that BPI certified professionals are individuals who have been trained to meet these problems head-on. BPI professionals are certified in blower door and duct blaster operation, as well as testing and analysis of combustion appliances in your home.
 
-### RESNET certified hers rater
+### HERS Rater
 
 ![RESNET certified](/img/resnet-certified.jpg)
 
@@ -22,6 +26,7 @@ A home energy rating involves an analysis of a home's construction plans and ons
 Upon completion of the plan review, the rater will work with the builder to identify the energy efficiency improvements needed to ensure the house will meet ENERGY STAR performance guidelines. The rater then conducts onsite inspections, typically including a blower door test (to test the leakiness of the house) and a duct test (to test the leakiness of the ducts). Results of these tests, along with inputs derived from the plan review, are used to generate the HERS Index for the home. The HERS Index makes it easy to compare relative energy efficiency of different homes.
 
 ### NAHB certified green professional (cgp)
+
 ### NGBS green verifier
 
 ![Certified Green Professioal](/img/green-professional-certified.jpg)
@@ -38,7 +43,7 @@ NGBS helps builders, remodelers, developers and home owners/buyers build and und
 
 Missouri taxpayers can claim an individual income tax deduction for the cost of a home energy audit and the cost of implementing energy-efficiency recommendations contained in an energy audit. The tax deduction ends December 31, 2013. The maximum deduction is $1,000 per year or $2,000 cumulatively for multiple years. The audit must be performed by an energy auditor certified by the Missouri Department of Natural Resources.
 
-*Source MO DNR
+\*Source MO DNR
 
 ### Leed Green Associate
 
