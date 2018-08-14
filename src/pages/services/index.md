@@ -1,492 +1,442 @@
 ---
 templateKey: services-page
-title: Services
-subtitle: Energy needs are different for every type of project, and we've covered a lot of them in several locations across the country. Click the filters below to see the variety of projects we've worked with in the past.
+title: Projects
+subtitle: >-
+  Energy needs are different for every type of project, and we've covered a lot
+  of them in several locations across the country. Click the filters below to
+  see the variety of projects we've worked with in the past.
 projects:
-  - id: 12040
-    title: "Pine Lawn Homes"
-    city: "Pine Lawn"
-    state: "MO"
-    position: { "lat": 38.695841, "lng": -90.274396 }
+  - city: Pine Lawn
+    id: 12040
+    position:
+      lat: 38.695841
+    state: MO
+    title: Pine Lawn Homes
+    type: NGBS
     units: 31
-    type: "NGBS"
-    tags: 
-      - National Green Building Standard
-  - id: 12085
-    title: "The Court at Washington Square"
-    city: "Harrisburg"
-    state: "PA"
-    position: { "lat":40.273758, "lng": -76.889696 }
+  - city: Harrisburg
+    id: 12085
+    position:
+      lat: 40.273758
+    state: PA
+    title: The Court at Washington Square
+    type: EAR
     units: 100
-    type: "EAR"
-    tags: 
-      - Energy Audit Review
-  - id: 13015
-    title: "Pine Lawn Homes II"
-    city: "Pine Lawn"
-    state: "MO"
-    position: { "lat": 38.695841, "lng": -90.274396 }
+  - city: Pine Lawn
+    id: 13015
+    position:
+      lat: 38.695841
+    state: MO
+    title: Pine Lawn Homes II
+    type: NGBS
     units: 10
-    type: "NGBS"
-    tags: 
-      - National Green Building Standard
-  - id: 13043
-    title: "Windfall Trace II"
-    city: "St. Louis"
-    state: "MO"
-    position: { "lat": 38.628141, "lng": -90.209818 }
+  - city: St. Louis
+    id: 13043
+    position:
+      lat: 38.628141
+    state: MO
+    title: Windfall Trace II
+    type: ES
     units: 47
-    type: "ES"
-    tags: 
-      - Energy Star
-  - id: 13089
-    title: "3010 Apartments"
-    city: "St. Louis"
-    state: "MO"
-    position: { "lat": 38.628141, "lng": -90.209818 }
+  - city: St. Louis
+    id: 13089
+    position:
+      lat: 38.628141
+    state: MO
+    title: 3010 Apartments
+    type: HERS
     units: 58
-    type: "HERS"
-    tags: 
-      - Home Energy Rating System
-  - id: 13416
-    title: "Etzel Place"
-    city: "St. Louis"
-    state: "MO"
-    position: { "lat": 38.628141, "lng": -90.209818 }
+  - city: St. Louis
+    id: 13416
+    position:
+      lat: 38.628141
+    state: MO
+    title: Etzel Place
+    type: HERS
     units: 62
-    type: "HERS"
-    tags: 
-      - Home Energy Rating System
-  - id: 13418
-    title: "Village at Delmar"
-    city: "St. Louis"
-    state: "MO"
-    position: { "lat": 38.628141, "lng": -90.209818 }
+  - city: St. Louis
+    id: 13418
+    position:
+      lat: 38.628141
+    state: MO
+    title: Village at Delmar
+    type: ES
     units: 40
-    type: "ES"
-    tags: 
-      - Energy Star
-  - id: 14004
-    title: "Booth Manor Minneapolis"
-    city: "Minneapolis"
-    state: "MN"
-    position: { "lat": 44.978933, "lng": -93.265943 }
+  - city: Minneapolis
+    id: 14004
+    position:
+      lat: 44.978933
+    state: MN
+    title: Booth Manor Minneapolis
+    type: EA
     units: 157
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 14004
-    title: "Booth Manor Columbus"
-    city: "Columbus"
-    state: "IN"
-    position: { "lat": 39.201198, "lng": -85.919815 }
+  - city: Columbus
+    id: 14004
+    position:
+      lat: 39.201198
+    state: IN
+    title: Booth Manor Columbus
+    type: EA
     units: 20
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 14004
-    title: "Carpenter Apartments"
-    city: "Indianapolis"
-    state: "IN"
-    position: { "lat": 38.695841, "lng": -90.274396 }
+  - city: Indianapolis
+    id: 14004
+    position:
+      lat: 38.695841
+    state: IN
+    title: Carpenter Apartments
+    type: EA
     units: 52
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 14004
-    title: "Booth Manor Indiana"
-    city: "Indianapolis"
-    state: "IN"
-    position: { "lat": 39.767034, "lng": -86.176702 }
+  - city: Indianapolis
+    id: 14004
+    position:
+      lat: 39.767034
+    state: IN
+    title: Booth Manor Indiana
+    type: EA
     units: 74
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 14004
-    title: "Barton Center"
-    city: "Indianapolis"
-    state: "IN"
-    position: { "lat": 39.767034, "lng": -86.176702 }
+  - city: Indianapolis
+    id: 14004
+    position:
+      lat: 39.767034
+    state: IN
+    title: Barton Center
+    type: EA
     units: 38
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 14004
-    title: "Booth Manor Missouri"
-    city: "Grandview"
-    state: "MO"
-    position: { "lat": 38.881888, "lng": -94.523543 }
+  - city: Grandview
+    id: 14004
+    position:
+      lat: 38.881888
+    state: MO
+    title: Booth Manor Missouri
+    type: EA
     units: 80
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 14004
-    title: "Booth Manor Kansas"
-    city: "Kansas City"
-    state: "KS"
-    position: { "lat": 39.098524, "lng": -94.562599 }
+  - city: Kansas City
+    id: 14004
+    position:
+      lat: 39.098524
+    state: KS
+    title: Booth Manor Kansas
+    type: EA
     units: 35
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 14004
-    title: "Booth Manor Chicago"
-    city: "Chicago"
-    state: "IL"
-    position: { "lat": 41.878654, "lng": -87.632407 }
+  - city: Chicago
+    id: 14004
+    position:
+      lat: 41.878654
+    state: IL
+    title: Booth Manor Chicago
+    type: EA
     units: 58
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 14004
-    title: "Booth Manor Oak Creek"
-    city: "Oak Creek"
-    state: "WI"
-    position: { "lat": 38.695841, "lng": -90.274396 }
+  - city: Oak Creek
+    id: 14004
+    position:
+      lat: 38.695841
+    state: WI
+    title: Booth Manor Oak Creek
+    type: EA
     units: 40
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 14004
-    title: "Booth Manor Oak Creek II"
-    city: "Oak Creek"
-    state: "WI"
-    position: { "lat": 42.885757, "lng": -87.864303 }
+  - city: Oak Creek
+    id: 14004
+    position:
+      lat: 42.885757
+    state: WI
+    title: Booth Manor Oak Creek II
+    type: EA
     units: 40
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 14004
-    title: "Durham Booth Manor"
-    city: "Omaha"
-    state: "NE"
-    position: { "lat": 41.253907, "lng": -95.997136 }
+  - city: Omaha
+    id: 14004
+    position:
+      lat: 41.253907
+    state: NE
+    title: Durham Booth Manor
+    type: EA
     units: 48
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 14004
-    title: "Castleview Apartments"
-    city: "Rochester"
-    state: "MN"
-    position: { "lat": 44.011524, "lng": -92.479457 }
+  - city: Rochester
+    id: 14004
+    position:
+      lat: 44.011524
+    state: MN
+    title: Castleview Apartments
+    type: EA
     units: 32
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 14004
-    title: "Hope Harbor"
-    city: "Minneapolis"
-    state: "MN"
+  - city: Minneapolis
+    id: 14004
+    position:
+      lat: 44.978933
+    state: MN
+    title: Hope Harbor
+    type: EA
     units: 96
-    position: { "lat": 44.978933, "lng": -93.265943 }
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 14004
-    title: "Booth Brown House"
-    city: "St. Paul"
-    state: "MN"
-    position: { "lat": 44.953674, "lng": -93.087858 }
+  - city: St. Paul
+    id: 14004
+    position:
+      lat: 44.953674
+    state: MN
+    title: Booth Brown House
+    type: EA
     units: 35
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 14004
-    title: "Harbor Light"
-    city: "Minneapolis"
-    state: "MN"
-    position: { "lat": 44.978933, "lng": -93.265943 }
+  - city: Minneapolis
+    id: 14004
+    position:
+      lat: 44.978933
+    state: MN
+    title: Harbor Light
+    type: EA
     units: 55
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 14004
-    title: "Harvest Hills"
-    city: "Coon Rapids"
-    state: "MN"
-    position: { "lat": 45.173567, "lng": -93.307468 }
+  - city: Coon Rapids
+    id: 14004
+    position:
+      lat: 45.173567
+    state: MN
+    title: Harvest Hills
+    type: EA
     units: 8
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 14004
-    title: "Booth Manor St. Louis"
-    city: "St. Louis"
-    state: "MO"
-    position: { "lat": 38.628141, "lng": -90.209818 }
+  - city: St. Louis
+    id: 14004
+    position:
+      lat: 38.628141
+    state: MO
+    title: Booth Manor St. Louis
+    type: EA
     units: 74
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 14004
-    title: "Railton Residence"
-    city: "St. Louis"
-    state: "MO"
-    position: { "lat": 38.628141, "lng": -90.209818 }
+  - city: St. Louis
+    id: 14004
+    position:
+      lat: 38.628141
+    state: MO
+    title: Railton Residence
+    type: EA
     units: 96
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 14034
-    title: "DeSales Impact"
-    city: "St. Louis"
-    state: "MO"
-    position: { "lat": 38.628141, "lng": -90.209818 }
+  - city: St. Louis
+    id: 14034
+    position:
+      lat: 38.628141
+    state: MO
+    title: DeSales Impact
+    type: HERS
     units: 18
-    type: "HERS"
-    tags: 
-      - Home Energy Rating System
-  - id: 14076
-    title: "Stuart Parker"
-    city: "Columbia"
-    state: "MO"
-    position: { "lat": 38.952881, "lng": -92.333244 }
+  - city: Columbia
+    id: 14076
+    position:
+      lat: 38.952881
+    state: MO
+    title: Stuart Parker
+    type: HERS
     units: 84
-    type: "HERS"
-    tags: 
-      - Home Energy Rating System
-  - id: 14096
-    title: "Callyn Project"
-    city: "Kirksville"
-    state: "MO"
-    position: { "lat": 40.194752, "lng": -92.583136 }
+  - city: Kirksville
+    id: 14096
+    position:
+      lat: 40.194752
+    state: MO
+    title: Callyn Project
+    type: HERS
     units: 25
-    type: "HERS"
-    tags: 
-      - Home Energy Rating System
-  - id: 14100
-    title: "Lemay Homes"
-    city: "Lemay"
-    state: "MO"
-    position: { "lat": 38.531805, "lng": -90.284146 }
+  - city: Lemay
+    id: 14100
+    position:
+      lat: 38.531805
+    state: MO
+    title: Lemay Homes
+    type: NGBS
     units: 40
-    type: "NGBS"
-    tags: 
-      - National Green Building Standard
-  - id: 15001
-    title: "Oak View Village"
-    city: "Union"
-    state: "MO"
-    position: { "lat": 38.449765, "lng": -91.008211 }
+  - city: Union
+    id: 15001
+    position:
+      lat: 38.449765
+    state: MO
+    title: Oak View Village
+    type: NGBS
     units: 49
-    type: "NGBS"
-    tags: 
-      - National Green Building Standard
-  - id: 15005
-    title: "East Fox Homes"
-    city: "St. Louis"
-    state: "MO"
-    position: { "lat": 38.628141, "lng": -90.209818 }
+  - city: St. Louis
+    id: 15005
+    position:
+      lat: 38.628141
+    state: MO
+    title: East Fox Homes
+    type: HERS
     units: 47
-    type: "HERS"
-    tags: 
-      - Home Energy Rating System
-  - id: 15006
-    title: "Friendship Manor"
-    city: "Blue Springs"
-    state: "MO"
-    position: { "lat": 39.016585, "lng": -94.278637 }
+  - city: Blue Springs
+    id: 15006
+    position:
+      lat: 39.016585
+    state: MO
+    title: Friendship Manor
+    type: EA
     units: 60
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 15007
-    title: "Scott Manor Apartments"
-    city: "Sikeston"
-    state: "MO"
-    position: { "lat": 36.877346, "lng": -89.585609 }
+  - city: Sikeston
+    id: 15007
+    position:
+      lat: 36.877346
+    state: MO
+    title: Scott Manor Apartments
+    type: EA
     units: 72
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 15009
-    title: "Woodbridge Apartments"
-    city: "Kansas City"
-    state: "MO"
-    position: { "lat": 39.098524, "lng": -94.562599 }
+  - city: Kansas City
+    id: 15009
+    position:
+      lat: 39.098524
+    state: MO
+    title: Woodbridge Apartments
+    type: EA
     units: 115
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 15010
-    title: "North Webster Manor"
-    city: "Webster Groves"
-    state: "MO"
-    position: { "lat": 38.592130, "lng": -90.356182 }
+  - city: Webster Groves
+    id: 15010
+    position:
+      lat: 38.59213
+    state: MO
+    title: North Webster Manor
+    type: EA
     units: 24
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 15012
-    title: "DeSales Preservation"
-    city: "St. Louis"
-    state: "MO"
-    position: { "lat": 38.628141, "lng": -90.209818 }
+  - city: St. Louis
+    id: 15012
+    position:
+      lat: 38.628141
+    state: MO
+    title: DeSales Preservation
+    type: EA
     units: 63
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 15013
-    title: "Bryant Walkway"
-    city: "Columbia"
-    state: "MO"
-    position: { "lat": 38.952881, "lng": -92.333244 }
+  - city: Columbia
+    id: 15013
+    position:
+      lat: 38.952881
+    state: MO
+    title: Bryant Walkway
+    type: EA
     units: 36
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 15014
-    title: "Oak Tower"
-    city: "Columbia"
-    state: "MO"
-    position: { "lat": 38.952881, "lng": -92.333244 }
+  - city: Columbia
+    id: 15014
+    position:
+      lat: 38.952881
+    state: MO
+    title: Oak Tower
+    type: EA
     units: 147
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 15015
-    title: "St. Regis Apartments"
-    city: "Kansas City"
-    state: "MO"
-    position: { "lat": 39.098524, "lng": -94.562599 }
+  - city: Kansas City
+    id: 15015
+    position:
+      lat: 39.098524
+    state: MO
+    title: St. Regis Apartments
+    type: EA
     units: 85
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 15016
-    title: "The Lane Apartments"
-    city: "Neosho"
-    state: "MO"
-    position: { "lat": 36.868501, "lng": -94.368824 }
+  - city: Neosho
+    id: 15016
+    position:
+      lat: 36.868501
+    state: MO
+    title: The Lane Apartments
+    type: EA
     units: 48
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 16001
-    title: "Rolla Apartments"
-    city: "Rolla"
-    position: { "lat": 37.949194, "lng": -91.772744 }
-    state: "MO"
+  - city: Rolla
+    id: 16001
+    position:
+      lat: 37.949194
+    state: MO
+    title: Rolla Apartments
+    type: EA
     units: 150
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 16002
-    title: "4446 Clarence"
-    city: "St. Louis"
-    state: "MO"
-    position: { "lat": 38.628141, "lng": -90.209818 }
+  - city: St. Louis
+    id: 16002
+    position:
+      lat: 38.628141
+    state: MO
+    title: 4446 Clarence
+    type: ES
     units: 1
-    type: "ES"
-    tags: 
-      - Energy Star
-  - id: 16003
-    title: "Adam’s Grove"
-    city: "St. Louis"
-    state: "MO"
-    position: { "lat": 38.628141, "lng": -90.209818 }
+  - city: St. Louis
+    id: 16003
+    position:
+      lat: 38.628141
+    state: MO
+    title: Adam’s Grove
+    type: ES
     units: 50
-    type: "ES"
-    tags: 
-      - Energy Star
-  - id: 16004
-    title: "Metro @ 70 Apartments"
-    city: "St. Louis"
-    state: "MO"
-    position: { "lat": 38.628141, "lng": -90.209818 }
+  - city: St. Louis
+    id: 16004
+    position:
+      lat: 38.628141
+    state: MO
+    title: Metro @ 70 Apartments
+    type: EA
     units: 208
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 16005
-    title: "Chippewa Park"
-    city: "St. Louis"
-    state: "MO"
-    position: { "lat": 38.628141, "lng": -90.209818 }
+  - city: St. Louis
+    id: 16005
+    position:
+      lat: 38.628141
+    state: MO
+    title: Chippewa Park
+    type: HERS
     units: 46
-    type: "HERS"
-    tags: 
-      - Home Energy Rating System
-  - id: 16006
-    title: "Gotham Apartments"
-    city: "Kansas City"
-    state: "MO"
-    position: { "lat": 39.098524, "lng": -94.562599 }
+  - city: Kansas City
+    id: 16006
+    position:
+      lat: 39.098524
+    state: MO
+    title: Gotham Apartments
+    type: EA
     units: 105
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 16007
-    title: "Pioneer House"
-    city: "Lexington"
-    state: "MO"
-    position: { "lat": 39.184214, "lng": -93.880890 }
+  - city: Lexington
+    id: 16007
+    position:
+      lat: 39.184214
+    state: MO
+    title: Pioneer House
+    type: EA
     units: 47
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 16008
-    title: "Hyde Park"
-    city: "St. Louis"
-    state: "MO"
-    position: { "lat": 38.628141, "lng": -90.209818 }
+  - city: St. Louis
+    id: 16008
+    position:
+      lat: 38.628141
+    state: MO
+    title: Hyde Park
+    type: EA
     units: 48
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 16009
-    title: "Englewood"
-    city: "Kansas City"
-    state: "MO"
-    position: { "lat": 39.098524, "lng": -94.562599 }
+  - city: Kansas City
+    id: 16009
+    position:
+      lat: 39.098524
+    state: MO
+    title: Englewood
+    type: EA
     units: 152
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 16010
-    title: "Valley Park Apartments"
-    city: "Valley Park"
-    state: "MO"
-    position: { "lat": 38.549397, "lng": -90.493697 }
+  - city: Valley Park
+    id: 16010
+    position:
+      lat: 38.549397
+    state: MO
+    title: Valley Park Apartments
+    type: EA
     units: 42
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 16011
-    title: "Preservation Square"
-    city: "St. Louis"
-    state: "MO"
-    position: { "lat": 38.628141, "lng": -90.209818 }
+  - city: St. Louis
+    id: 16011
+    position:
+      lat: 38.628141
+    state: MO
+    title: Preservation Square
+    type: EA
     units: 44
-    type: "EA"
-    tags: 
-      - Energy Audit
-  - id: 16012
-    title: "Charless Village"
-    city: "St. Louis"
-    state: "MO"
-    position: { "lat": 38.628141, "lng": -90.209818 }
+  - city: St. Louis
+    id: 16012
+    position:
+      lat: 38.628141
+    state: MO
+    title: Charless Village
+    type: ES
     units: 5
-    type: "ES"
-    tags: 
-      - Energy Star
-  - id: 16013
-    title: "Eastern Creek"
-    city: "Memphis"
-    state: "TN"
-    position: { "lat": 35.149320, "lng": -90.056625 }
+  - city: Memphis
+    id: 16013
+    position:
+      lat: 35.14932
+    state: TN
+    title: Eastern Creek
+    type: HERS
     units: 226
-    type: "HERS"
-    tags: 
-      - Home Energy Rating System
-  - id: 17001
-    title: "Pine Lawn Manor"
-    city: "Pine Lawn"
-    state: "MO"
-    position: { "lat": 38.695841, "lng": -90.274396 }
+  - city: Pine Lawn
+    id: 17001
+    position:
+      lat: 38.695841
+    state: MO
+    title: Pine Lawn Manor
+    type: NGBS
     units: 41
-    type: "NGBS"
-    tags: 
-      - National Green Building Standard
 ---
+
