@@ -45,7 +45,7 @@ certifications:
   - certImage: /img/nahb-certified.jpg
     description: NAHB certified
   - certImage: /img/missouri-certified-home-energy-rater.jpg
-    description: Missouri certified home energy rater
+    description: Missouri Certified Home Energy Rater
   - certImage: /img/leed.jpg
     description: Leed Green certified
   - certImage: /img/nrpp.jpg
@@ -53,6 +53,6 @@ certifications:
   - certImage: /img/ITC-Logo.jpg
     description: ITC certified
   - certImage: /img/certified_energy_auditor.jpg
-    description: Certified energy auditor
+    description: Certified Energy Auditor
 ---
 
