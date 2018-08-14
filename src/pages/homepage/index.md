@@ -1,8 +1,8 @@
 ---
 templateKey: home-page
 headerImage: /img/raul-petri-174167-unsplash.jpg
-headerText: Energy auditors and consultants for residential and commercial spaces
-headerSubtext: Need an audit? Want to save money and be green?
+headerText: '  '
+headerSubtext: '  '
 servicesList:
   - buttonLink: '/about#auditing'
     buttonText: Learn About Energy Auditing
