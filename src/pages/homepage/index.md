@@ -19,6 +19,8 @@ servicesList:
       architects and implement sustainable enery solutions within your budget
     icon: fa-handshake-o
     name: Energy Consulting
+  - icon: fa-building-o
+    name: Energy Modeling
   - buttonLink: '/about#radon'
     buttonText: Learn About Radon Testing
     description: >-
@@ -26,8 +28,6 @@ servicesList:
       levels and give you solutions for keeping your basements free of radon
     icon: fa-dashboard
     name: Radon Testing
-  - icon: fa-building-o
-    name: Energy Modeling
 statsList:
   - label: units
     statNum: '3,600'
