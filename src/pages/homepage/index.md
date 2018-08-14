@@ -26,6 +26,8 @@ servicesList:
       levels and give you solutions for keeping your basements free of radon
     icon: fa-dashboard
     name: Radon Testing
+  - icon: fa-building-o
+    name: Energy Modeling
 statsList:
   - label: units
     statNum: '3,600'
