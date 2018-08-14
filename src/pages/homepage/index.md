@@ -1,6 +1,6 @@
 ---
 templateKey: home-page
-headerImage: /img/raul-petri-174167-unsplash.jpg
+headerImage: /img/adams-grove.jpg
 headerText: '  '
 headerSubtext: '  '
 servicesList:
