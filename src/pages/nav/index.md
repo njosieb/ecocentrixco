@@ -1,6 +1,17 @@
 ---
 templateKey: settings
 nav:
+  - children:
+      - label: Who We Are
+        url: /about
+      - label: Energy Auditing
+        url: '/about#auditing'
+      - label: Energy Consulting
+        url: '/about#consulting'
+      - label: Radon Testing
+        url: '/about#radon'
+    label: Our Services
+    url: /about
   - label: Certifications
     url: /certifications
   - children:
@@ -18,17 +29,6 @@ nav:
     url: /services
   - label: FAQ
     url: /faq
-  - children:
-      - label: Who We Are
-        url: /about
-      - label: Energy Auditing
-        url: '/about#auditing'
-      - label: Energy Consulting
-        url: '/about#consulting'
-      - label: Radon Testing
-        url: '/about#radon'
-    label: About Us
-    url: /about
   - label: Contact Us
     url: /contact-us
 ---
