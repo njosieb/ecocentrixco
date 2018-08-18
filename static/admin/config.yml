@@ -55,7 +55,7 @@ collections:
         - {label: Template Key, name: templateKey, widget: hidden, default: services-page}
         - {label: Title, name: title, widget: string}
         - {label: Subtitle, name: subtitle, widget: string}
-        - {label: Projects, name: projects, widget: list, fields: [{label: Title, name: title, widget: string}, {label: Id, name: id, widget: number}, {label: City, name: city, widget: string}, {label: State, name: state, widget: string}, {label: Location, name: position, widget: object, fields: [{label: Latitude, name: lat, widget: string}, {label: Longitude, name: long, widget: string}]}, {label: Units, name: units, widget: number}, {label: Type, name: type, widget: select, options: [{label: "Energy Audit", value: "EA"}, {label: "Energy Audit Review", value: "EAR"}, {label: "Energy Star", value: "ES"}, {label: "National Green Building Standard", value: "NGBS"}, {label: "Home Energy Rating System", value: "HERS"}]}]}
+        - {label: Projects, name: projects, widget: list, fields: [{label: Title, name: title, widget: string}, {label: Id, name: id, widget: number}, {label: City, name: city, widget: string}, {label: State, name: state, widget: string}, {label: Location, name: position, widget: object, fields: [{label: Latitude, name: lat, widget: string}, {label: Longitude, name: lng, widget: string}]}, {label: Units, name: units, widget: number}, {label: Type, name: type, widget: select, options: [{label: "Energy Audit", value: "EA"}, {label: "Energy Audit Review", value: "EAR"}, {label: "Energy Star", value: "ES"}, {label: "National Green Building Standard", value: "NGBS"}, {label: "Home Energy Rating System", value: "HERS"}]}]}
 
     - name: contact-us
       label: Contact

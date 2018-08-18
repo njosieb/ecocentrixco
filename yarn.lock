@@ -8702,7 +8702,7 @@ preserve@^0.2.0:
     jest-docblock "23.2.0"
     json-stable-stringify "1.0.1"
     leven "2.1.0"
-    linguist-languages "6.2.0"
+    linguist-languages "6.2.1-dev.20180706"
     lodash.uniqby "4.7.0"
     mem "1.1.0"
     minimatch "3.0.4"
@@ -8719,7 +8719,7 @@ preserve@^0.2.0:
     semver "5.4.1"
     string-width "2.1.1"
     typescript "3.0.0-dev.20180626"
-    typescript-eslint-parser eslint/typescript-eslint-parser#42f29a1db5c51262fd9ed2d6105015da8925ba2d
+    typescript-eslint-parser eslint/typescript-eslint-parser#6eec85b1466fbef087838203b246f70fa71ac0ac
     unicode-regex "1.0.1"
     unified "6.1.6"
     yaml "1.0.0-rc.4"
@@ -11073,10 +11073,6 @@ tachyons-sass@^4.9.3:
   resolved "https://registry.yarnpkg.com/tachyons-sass/-/tachyons-sass-4.9.3.tgz#a411a6416f1dfa88efb16ba498ace108eefe4aa3"
   dependencies:
     tachyons-custom "^4.9.2"
-
-tachyons@~4.8.1:
-  version "4.8.1"
-  resolved "https://registry.yarnpkg.com/tachyons/-/tachyons-4.8.1.tgz#9a3183feecb3240c4dcefee7feecc8259acd7381"
 
 tapable@^0.1.8, tapable@~0.1.8:
   version "0.1.10"

@@ -7,6 +7,7 @@ import Navbar from '../components/Navbar'
 import './all.scss'
 
 const TemplateWrapper = ({ children, data }) => {
+  console.log(data)
   const settingsEdges = data.allMarkdownRemark.edges.filter(
     edge => edge.node.frontmatter.templateKey === 'settings'
   )
