@@ -1,7 +1,7 @@
-import Img from 'gatsby-image'
-import PropTypes from 'prop-types'
-import React, { Component } from 'react'
-import ContactBox from '../components/Contact'
+import Img from 'gatsby-image';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import ContactBox from '../components/Contact';
 
 export class IndexPageTemplate extends Component {
   heroImageStyle = {
@@ -49,10 +49,10 @@ export class IndexPageTemplate extends Component {
           </div>
         </section>
         <section id="work" className="relative pt5 ph3">
-          <div className="mw8-l mw6 center flex-l items-stretch justify-around">
+          <div className="work-types mw8-l mw6 center items-stretch justify-around">
             {servicesList.map((service, i) => (
               <div
-                className="work-type flex flex-column flex-50 mb4 tc mr3-ns"
+                className="work-type pv2 tc ph2-ns"
                 key={i}
               >
                 <div className="h-100">

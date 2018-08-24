@@ -131,6 +131,11 @@
   }
 }
 
+.work-types {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr;
+}
+
 //  a {
 //    text-shadow: 1px 1px @green-color, 1px -1px @green-color, -1px -1px @green-color, -1px 1px @green-color;
 //  }
