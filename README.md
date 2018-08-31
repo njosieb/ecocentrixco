@@ -17,3 +17,5 @@
 - [x] Replace header video with high quality photo
 - [x] Make mobile friendly
 - [ ] Host on Netlify
+
+Why hello there
