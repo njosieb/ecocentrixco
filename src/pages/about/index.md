@@ -1,7 +1,6 @@
 ---
 templateKey: about-page
 title: About
-headerImage: ' '
 ---
 
 ## Organization History

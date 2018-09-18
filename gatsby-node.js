@@ -39,7 +39,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         // additional data can be passed via context
         context: {
           id
-        },
+        }
       })
     })
   })
@@ -50,13 +50,8 @@ const adjustImagePath = nodePath => image => {
     if (image.indexOf('/img') === 0) {
       const nextImage = path.relative(
         path.dirname(nodePath),
-        path.join(
-          __dirname,
-          'static/img',
-          image.substr('/img'.length)
-        )
+        path.join(__dirname, 'static/img', image.substr('/img'.length))
       )
-      console.log('Adjusted image path', nextImage)
       return nextImage
     }
   }
@@ -71,7 +66,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value,
+      value
     })
 
     // This is where we convert NetlifyCMS img path strings into ImageSharp objects

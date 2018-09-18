@@ -183,7 +183,6 @@ export const indexPageQuery = graphql`
         servicesList {
           icon
           name
-          description
           serviceLink
           background
         }
