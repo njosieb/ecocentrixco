@@ -1,19 +1,19 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { ServicesPageTemplate } from '../../templates/services-page'
+import { ProjectsPageTemplate } from '../../templates/projects-page'
 
-const ServicesPagePreview = ({ entry }) => (
-  <ServicesPageTemplate
+const ProjectsPagePreview = ({ entry }) => (
+  <ProjectsPageTemplate
     title={entry.getIn(['data', 'title'])}
     subtitle={entry.getIn(['data', 'subtitle'])}
     projects={entry.getIn(['data', 'projects'])}
   />
 )
 
-ServicesPagePreview.propTypes = {
+ProjectsPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func
   })
 }
 
-export default ServicesPagePreview
+export default ProjectsPagePreview

@@ -3,24 +3,24 @@ templateKey: home-page
 headerImage: /img/adams-grove.jpg
 headerText: '  '
 headerSubtext: '  '
+servicesHeader: 'What We Do'
 servicesList:
-  - buttonLink: '/about#auditing'
-    buttonText: ''
-    description: ''
+  - serviceLink: '/about#auditing'
     icon: fa-check-square-o
     name: Energy Auditing
-  - buttonLink: '/about#consulting'
-    buttonText: ''
-    description: ''
+    background: ' '
+  - serviceLink: '/about#consulting'
     icon: fa-handshake-o
     name: Energy Consulting
-  - icon: fa-building-o
+    background: ' '
+  - serviceLink: '/about#energy'
+    icon: fa-building-o
     name: Energy Modeling
-  - buttonLink: '/about#radon'
-    buttonText: ''
-    description: ''
+    background: ' '
+  - serviceLink: '/about#radon'
     icon: fa-dashboard
     name: Radon Testing
+    background: ' '
 statsList:
   - label: units
     statNum: '3,600'
@@ -28,6 +28,20 @@ statsList:
     statNum: 60+
   - label: states
     statNum: '9'
+whoHeader: 'Who We Help'
+whoList:
+  - whoLink: '/services'
+    background: ''
+    name: 'Developers'
+  - whoLink: '/services'
+    background: ''
+    name: 'Architects'  
+  - whoLink: '/services'
+    background: ''
+    name: 'Builders'
+  - whoLink: '/services'
+    background: ''
+    name: 'Homeowners'
 certifications:
   - certImage: /img/BPI-certified.jpg
     description: BPI certified

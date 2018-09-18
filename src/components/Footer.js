@@ -12,7 +12,12 @@ const Footer = ({ socialMediaLinks }) => (
               <ul className="social-media links">
                 {socialMediaLinks.map((link, i) => (
                   <li key={i}>
-                    <a className="social-media-link" href={link.url}>
+                    <a
+                      className="social-media-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={link.url}
+                    >
                       <i className={`fa ${link.icon}`} />
                     </a>
                   </li>

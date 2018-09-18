@@ -6380,9 +6380,9 @@ lines-and-columns@^1.1.6:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
 
-linguist-languages@6.2.0:
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/linguist-languages/-/linguist-languages-6.2.0.tgz#90c4d74d29828ccc8c08f59b36b62df6d33b2b7f"
+linguist-languages@6.2.1-dev.20180706:
+  version "6.2.1-dev.20180706"
+  resolved "https://registry.yarnpkg.com/linguist-languages/-/linguist-languages-6.2.1-dev.20180706.tgz#119766ff7e753654a06a6ae64364483458fa6664"
 
 linked-list@0.1.0:
   version "0.1.0"
@@ -8702,7 +8702,7 @@ preserve@^0.2.0:
     jest-docblock "23.2.0"
     json-stable-stringify "1.0.1"
     leven "2.1.0"
-    linguist-languages "6.2.1-dev.20180706"
+    linguist-languages "6.2.0"
     lodash.uniqby "4.7.0"
     mem "1.1.0"
     minimatch "3.0.4"
@@ -8719,7 +8719,7 @@ preserve@^0.2.0:
     semver "5.4.1"
     string-width "2.1.1"
     typescript "3.0.0-dev.20180626"
-    typescript-eslint-parser eslint/typescript-eslint-parser#6eec85b1466fbef087838203b246f70fa71ac0ac
+    typescript-eslint-parser eslint/typescript-eslint-parser#42f29a1db5c51262fd9ed2d6105015da8925ba2d
     unicode-regex "1.0.1"
     unified "6.1.6"
     yaml "1.0.0-rc.4"
@@ -11393,9 +11393,9 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-typescript-eslint-parser@eslint/typescript-eslint-parser#42f29a1db5c51262fd9ed2d6105015da8925ba2d:
+typescript-eslint-parser@eslint/typescript-eslint-parser#6eec85b1466fbef087838203b246f70fa71ac0ac:
   version "16.0.1"
-  resolved "https://codeload.github.com/eslint/typescript-eslint-parser/tar.gz/42f29a1db5c51262fd9ed2d6105015da8925ba2d"
+  resolved "https://codeload.github.com/eslint/typescript-eslint-parser/tar.gz/6eec85b1466fbef087838203b246f70fa71ac0ac"
   dependencies:
     lodash.unescape "4.0.1"
     semver "5.5.0"

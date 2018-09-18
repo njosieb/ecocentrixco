@@ -26,6 +26,9 @@ collections:
           - label: Header Subtext
             name: headerSubtext
             widget: string
+          - label: Services Header
+            name: servicesHeader
+            widget: string
           - label: Services List
             name: servicesList
             widget: list
@@ -36,14 +39,11 @@ collections:
               - label: Icon
                 name: icon
                 widget: string
-              - label: Service Description
-                name: description
-                widget: text
-              - label: Action Button Text
-                name: buttonText
-                widget: string
-              - label: Action Button Link
-                name: buttonLink
+              - label: Background
+                name: background
+                widget: image
+              - label: Button Link
+                name: serviceLink
                 widget: string
           - label: Stats List
             name: statsList
@@ -56,6 +56,22 @@ collections:
               - label: Stat
                 name: statNum
                 widget: string
+          - label: Who We Help Header
+            name: whoHeader
+            widget: string
+          - label: Who We Help List
+            name: whoList
+            widget: list
+            fields:
+              - label: Name
+                name: name
+                widget: string
+              - label: Link URL
+                name: whoLink
+                widget: string
+              - label: Background
+                name: background
+                widget: image
           - label: Certifications List
             name: certifications
             widget: list

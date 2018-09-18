@@ -11,9 +11,11 @@ module.exports = {
     modules: true
   },
   extends: [
-    "prettier",
     "eslint:recommended",
     "plugin:react/recommended",
+  ],
+  plugins: [
+    "prettier",
   ],
   overrides: [
     {

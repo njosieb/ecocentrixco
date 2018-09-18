@@ -1,7 +1,8 @@
-import PropTypes from 'prop-types'
-import React, { Component } from 'react'
-import Helmet from 'react-helmet'
-import logo from '../img/logo.png'
+import GatsbyLink from 'gatsby-link';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import Helmet from 'react-helmet';
+import logo from '../img/logo.png';
 
 class Navbar extends Component {
   state = {
@@ -24,35 +25,35 @@ class Navbar extends Component {
         </Helmet>
         <div className="site-header db bg-white">
           <div className="header-wrapper pt3-ns pb3-ns flex justify-between items-center">
-            <a href="/" className="db ml5-ns pb2">
+            <GatsbyLink to="/" className="db ml5-ns pb2">
               <img
                 src={logo}
                 className="db"
                 title="ECOcentrix Co logo"
                 alt="ECOcentrix Co logo"
               />
-            </a>
+            </GatsbyLink>
             <div className="menu">
               {nav.map((item, i) => (
                 <div key={i} className="menu-item">
-                  <a
+                  <GatsbyLink
                     title={item.label}
-                    href={item.url}
-                    className="underline-hover fw7"
+                    to={item.url}
+                    className="underline-hover fw5 ttu tracked"
                   >
                     {item.label}
-                  </a>
+                  </GatsbyLink>
                   {item.children && (
-                    <div className="sub-menu absolute bg-black-80 pa2">
+                    <div className="sub-menu absolute bg-white pa3">
                       {item.children.map((child, j) => (
-                        <a
+                        <GatsbyLink
                           key={j}
                           title={child.label}
-                          href={child.url}
-                          className="db pv2 white nowrap hover-gold"
+                          to={child.url}
+                          className="db pv2 nowrap underline-hover fw5"
                         >
                           {child.label}
-                        </a>
+                        </GatsbyLink>
                       ))}
                     </div>
                   )}

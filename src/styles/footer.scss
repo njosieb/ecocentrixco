@@ -7,11 +7,11 @@
   }
 
   .footer-top {
-    background-color: $black;
+    background-color: $offBlack;
     padding-top: 0rem;
   }
   .footer-bottom {
-    background-color: $black;
+    background-color: $offBlack;
   }
 
 }
@@ -165,7 +165,7 @@
   justify-content: space-between;
   line-height: 2;
   display: block;
-  color: $grey-light;
+  color: $white;
 
   @media (min-width: $mobile) {
     display: flex;
