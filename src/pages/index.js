@@ -1,4 +1,5 @@
 import Img from 'gatsby-image'
+import Link from 'gatsby-link'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import ContactBox from '../components/Contact'
@@ -35,38 +36,32 @@ export class IndexPageTemplate extends Component {
           {!headerImage.childImageSharp && (
             <img src={headerImage} style={this.heroImageStyle} />
           )}
-          <div className="top-content relative w-100 tc tl-ns pt5-ns pb5-ns pb2 h-100 flex flex-column z-3">
-            <div className="mb6-ns mb4 pb4-ns pt3 ph1 ph5-ns relative flex-auto mw7">
+          <div className="top-content relative w-100 tc tl-ns pt6-ns pb5-ns pb2 h-100 flex flex-column z-3">
+            <div className="mb6-ns mb4 pb4-ns pt3 ph1 ph5-ns relative flex-auto center mw7">
               <p className="f3 f2-ns white fw7">{headerText}</p>
               <p className="f4 f3-ns white fw7">{headerSubtext}</p>
             </div>
-            <a
-              href="/services"
+            <Link
+              to="/services"
               className="db bg-blue white pv2 ph4 f4 tc f3-ns mw6 center hover-gold hover-shadow fw7"
             >
               Check Out The Work We Do
-            </a>
+            </Link>
           </div>
         </section>
         <section id="work" className="relative pt5 ph3">
-          <div className="mw8-l mw6 center flex-l items-stretch justify-around">
+          <div className="work-types mw8-l mw6 center items-stretch justify-around">
             {servicesList.map((service, i) => (
-              <div
-                className="work-type flex flex-column flex-50 mb4 tc mr3-ns"
+              <Link
+                to={service.serviceLink}
+                className="work-type db mh5 mv4 tc hover-shadow"
                 key={i}
               >
-                <div className="h-100">
+                <div className="h-100 pa3">
                   <i className={`fa ${service.icon} f-6 dib green`} />
-                  <h3 className="f2 green nowrap">{service.name}</h3>
-                  <p className="f4">{service.description}</p>
+                  <h3 className="f2 mb0 green nowrap">{service.name}</h3>
                 </div>
-                <a
-                  href={service.buttonLink}
-                  className="db bg-blue white pa2 nowrap f4 hover-shadow fw7 mv4 hover-gold"
-                >
-                  {service.buttonText}
-                </a>
-              </div>
+              </Link>
             ))}
           </div>
         </section>
@@ -184,16 +179,23 @@ export const indexPageQuery = graphql`
         }
         headerText
         headerSubtext
+        servicesHeader
         servicesList {
           icon
           name
           description
-          buttonText
-          buttonLink
+          serviceLink
+          background
         }
         statsList {
           statNum
           label
+        }
+        whoHeader
+        whoList {
+          name
+          whoLink
+          background
         }
         certifications {
           certImage {

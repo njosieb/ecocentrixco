@@ -1,5 +1,4 @@
 module.exports = {
-  root: true,
   env: {
     browser: true,
     node: true,
@@ -11,11 +10,12 @@ module.exports = {
     jsx: true,
     modules: true
   },
-  plugins: ["prettier"],
   extends: [
     "eslint:recommended",
     "plugin:react/recommended",
-    require.resolve("eslint-config-prettier")
+  ],
+  plugins: [
+    "prettier",
   ],
   overrides: [
     {

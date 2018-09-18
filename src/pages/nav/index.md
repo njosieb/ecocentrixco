@@ -1,7 +1,9 @@
 ---
 templateKey: settings
 nav:
-  - children:
+  - label: Our Services
+    url: /about
+    children:
       - label: Who We Are
         url: /about
       - label: Energy Auditing
@@ -10,11 +12,9 @@ nav:
         url: '/about#consulting'
       - label: Radon Testing
         url: '/about#radon'
-    label: Our Services
-    url: /about
-  - label: Certifications
-    url: /certifications
-  - children:
+  - label: Projects
+    url: /projects
+    children:
       - label: Energy Audits
         url: '/services#energy-audit'
       - label: Energy Audit Reviews
@@ -25,8 +25,8 @@ nav:
         url: '/services#national-green-building-standard'
       - label: Home Energy Rating System
         url: '/services#home-energy-rating-system'
-    label: Projects
-    url: /services
+  - label: Certifications
+    url: /certifications
   - label: FAQ
     url: /faq
   - label: Contact Us
