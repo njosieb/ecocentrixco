@@ -52,7 +52,6 @@ const adjustImagePath = nodePath => image => {
         path.dirname(nodePath),
         path.join(__dirname, 'static/img', image.substr('/img'.length))
       )
-      console.log('Adjusted image path', nextImage)
       return nextImage
     }
   }
