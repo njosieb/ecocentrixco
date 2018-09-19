@@ -1,6 +1,6 @@
 ---
 templateKey: home-page
-headerImage: /img/adams-grove.jpg
+headerImage: /img/ng-55633-unsplash.jpg
 headerText: '  '
 headerSubtext: '  '
 servicesHeader: 'What We Do'
@@ -21,6 +21,7 @@ servicesList:
     icon: fa-dashboard
     name: Radon Testing
     background: ' '
+statsBackground: /img/rodion-kutsaev-956-unsplash.jpg
 statsList:
   - label: units
     statNum: '3,600'
@@ -35,7 +36,7 @@ whoList:
     name: 'Developers'
   - whoLink: '/services'
     background: ''
-    name: 'Architects'  
+    name: 'Architects'
   - whoLink: '/services'
     background: ''
     name: 'Builders'
@@ -62,4 +63,3 @@ certifications:
   - certImage: /img/certified_energy_auditor.jpg
     description: Certified Energy Auditor
 ---
-

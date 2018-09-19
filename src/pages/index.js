@@ -5,7 +5,7 @@ import React, { Component } from 'react'
 import ContactBox from '../components/Contact'
 
 export class IndexPageTemplate extends Component {
-  heroImageStyle = {
+  backgroundImageStyle = {
     position: 'absolute',
     left: 0,
     top: 0,
@@ -19,6 +19,7 @@ export class IndexPageTemplate extends Component {
       headerText,
       headerSubtext,
       servicesList,
+      statsBackground,
       statsList,
       certifications,
       contactInfo
@@ -30,11 +31,8 @@ export class IndexPageTemplate extends Component {
           {headerImage.childImageSharp && (
             <Img
               sizes={headerImage.childImageSharp.sizes}
-              style={this.heroImageStyle}
+              style={this.backgroundImageStyle}
             />
-          )}
-          {!headerImage.childImageSharp && (
-            <img src={headerImage} style={this.heroImageStyle} />
           )}
           <div className="top-content relative w-100 tc tl-ns pt6-ns pb5-ns pb2 h-100 flex flex-column z-3">
             <div className="mb6-ns mb4 pb4-ns pt3 ph1 ph5-ns relative flex-auto center mw7">
@@ -65,8 +63,15 @@ export class IndexPageTemplate extends Component {
             ))}
           </div>
         </section>
-        <section id="stats" className="relative pv4 pv6-ns mt4 ph3 bg-blue">
-          <div className="mw8 center">
+        <section id="stats" className="relative pv4 pv6-ns mt4 ph3 z-1">
+          <div className="bg-gold-80 absolute cover h-100 w-100 z-2 top-0 left-0" />
+          {statsBackground.childImageSharp && (
+            <Img
+              sizes={statsBackground.childImageSharp.sizes}
+              style={this.backgroundImageStyle}
+            />
+          )}
+          <div className="mw8 center z-3 relative">
             <div className="flex-ns flex-wrap justify-between-ns justify-center fw7">
               {statsList.map((stat, i) => (
                 <div className="stat mh5-ns tc flex-0 center" key={i}>
@@ -124,6 +129,7 @@ IndexPageTemplate.propTypes = {
   headerText: PropTypes.string,
   headerSubtext: PropTypes.string,
   servicesList: PropTypes.array,
+  statsBackground: PropTypes.object,
   statsList: PropTypes.array,
   certifications: PropTypes.array,
   contactInfo: PropTypes.object
@@ -136,6 +142,7 @@ const IndexPage = ({ data }) => {
     headerText,
     headerSubtext,
     servicesList,
+    statsBackground,
     statsList
   } = data.markdownRemark.frontmatter
   const settingsEdge = data.allMarkdownRemark.edges.find(
@@ -148,6 +155,7 @@ const IndexPage = ({ data }) => {
       headerText={headerText}
       headerSubtext={headerSubtext}
       servicesList={servicesList}
+      statsBackground={statsBackground}
       statsList={statsList}
       certifications={certifications}
       contactInfo={settingsEdge.node.frontmatter}
@@ -183,9 +191,15 @@ export const indexPageQuery = graphql`
         servicesList {
           icon
           name
-          description
           serviceLink
           background
+        }
+        statsBackground {
+          childImageSharp {
+            sizes(maxWidth: 1400) {
+              ...GatsbyImageSharpSizes
+            }
+          }
         }
         statsList {
           statNum

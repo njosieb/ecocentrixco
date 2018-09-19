@@ -1,10 +1,12 @@
 ---
 templateKey: certifications-page
+image: /img/rawpixel-559744-unsplash.jpg
 title: Certifications
 subtitle: >-
   We are professional green energy consultants and auditors with the expertise
   to help any of your projects
 ---
+
 ### Building Analyst Professional
 
 ### Building Envelope Professional
@@ -35,13 +37,13 @@ Upon completion of the plan review, the rater will work with the builder to iden
 The National Association of Home Builders (NAHB) is a trade promotion that helps promote policies that make housing a priority. The Environmental Protection Agency (EPA) estimates that building in the US account for 39 percent of total energy use, 12 percent of the total water consumption, 68 percent of total electricity consumptions, and 38 percent of the carbon dioxide emissions. Certified Green Professionals (CGP) incorporate environmental considerations and resource efficiency into every step of the land development and home building process to minimize the environmental impact. Starting with lot development through the design, construction, and operations of a home, green building requires intentional decisions that positively impact energy and resource efficiency, as well as indoor environmental quality. The goal is to build the best, most sustainable and practical homes we can build for customers and the environment.
 
 NGBS helps builders, remodelers, developers and home owners/buyers build and understand high performance construction and development. A Green Verifier is the one who is present on the job sites and verifies that the work is being completed properly to receive certification. A Green Verifier is an expert in the 2012 ICC-700 National Green Building Standards.
-*Source NAHB
+\*Source NAHB
 
 ### Missouri Department of Natural Resources certified home energy rater
 
 ![Missouri certified home energy rater](/img/missouri-certified-home-energy-rater.jpg)
 
-Missouri taxpayers can claim an individual income tax deduction for the cost of a home energy audit and the cost of implementing energy-efficiency recommendations contained in an energy audit. The tax deduction ends December 31, 2013. The maximum deduction is $1,000 per year or $2,000 cumulatively for multiple years. The audit must be performed by an energy auditor certified by the Missouri Department of Natural Resources.
+Missouri taxpayers can claim an individual income tax deduction for the cost of a home energy audit and the cost of implementing energy-efficiency recommendations contained in an energy audit. The tax deduction ends December 31, 2013. The maximum deduction is $1,000 per year or$2,000 cumulatively for multiple years. The audit must be performed by an energy auditor certified by the Missouri Department of Natural Resources.
 
 \*Source MO DNR
 

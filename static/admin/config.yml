@@ -45,6 +45,9 @@ collections:
               - label: Button Link
                 name: serviceLink
                 widget: string
+          - label: Stats Background Image
+            name: statsBackground
+            widget: image
           - label: Stats List
             name: statsList
             widget: list
