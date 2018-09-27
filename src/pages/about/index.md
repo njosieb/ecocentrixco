@@ -1,6 +1,7 @@
 ---
 templateKey: about-page
-title: About
+aboutUsBackground: '/img/grant-ritchie-338179-unsplash.jpg'
+title: About Us
 ---
 
 ## Organization History

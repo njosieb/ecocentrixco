@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
+import Img from 'gatsby-image'
 
 const tagList = [
   { label: 'All', value: 'All', href: 'all' },
@@ -103,11 +104,19 @@ export class ProjectsPageTemplate extends Component {
   }
 
   render() {
-    const { title, subtitle } = this.props
+    const { title, projectsBackground } = this.props
     const { activeTag, filteredProjects } = this.state
 
+    const backgroundImageStyle = {
+      position: 'absolute',
+      left: 0,
+      top: 0,
+      width: '100%',
+      height: '100%'
+    }
+
     return (
-      <div className="projects-main">
+      <div className="projects-page">
         <Helmet
           script={[
             {
@@ -116,21 +125,21 @@ export class ProjectsPageTemplate extends Component {
               async: true,
               defer: true
             },
-            {
-              src: '/scripts/markerclusterer.js'
-            }
+            { src: '/scripts/markerclusterer.js' }
           ]}
           onChangeClientState={(newState, addedTags) =>
             this.setGoogleMapOnLoad(addedTags)
           }
         />
-        <div className="pt3 pb0-ns pb3 bg-blue">
-          <h1 className="mw8 pl5 f2 f-5-ns center white mv0 lh-copy">
+        <div className="pb0-ns z-1 h5 relative">
+          <div className="bg-grey-color-80 absolute cover h-100 w-100 z-2" />
+          <Img
+            sizes={projectsBackground.childImageSharp.sizes}
+            style={backgroundImageStyle}
+          />
+          <h1 className="mw8 pl5 f2 f-5-ns center white mv0 lh-copy z-5">
             {title}
           </h1>
-          <p className="f3-ns f5 ma0 mw7 center pt2 ph4 ph0-ns pb5-ns white">
-            {subtitle}
-          </p>
         </div>
         <div className="portfoilo-body ">
           <div className="filtering-tags mw8 center flex flex-wrap justify-center mv3-ns mv2 tc items-center pv4-ns pv3">
@@ -192,8 +201,8 @@ export class ProjectsPageTemplate extends Component {
 
 ProjectsPageTemplate.propTypes = {
   title: PropTypes.string,
-  subtitle: PropTypes.string,
-  projects: PropTypes.array
+  projects: PropTypes.array,
+  projectsBackground: PropTypes.object
 }
 
 const ProjectsPage = ({ data }) => {
@@ -202,14 +211,15 @@ const ProjectsPage = ({ data }) => {
   return (
     <ProjectsPageTemplate
       title={page.frontmatter.title}
-      subtitle={page.frontmatter.subtitle}
       projects={page.frontmatter.projects}
+      projectsBackground={page.frontmatter.projectsBackground}
     />
   )
 }
 
 ProjectsPage.propTypes = {
-  data: PropTypes.object
+  data: PropTypes.object,
+  projectsBackground: PropTypes.object
 }
 
 export default ProjectsPage
@@ -219,7 +229,13 @@ export const ProjectsPageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "projects-page" } }) {
       frontmatter {
         title
-        subtitle
+        projectsBackground {
+          childImageSharp {
+            sizes(maxWidth: 1400) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
         projects {
           id
           title

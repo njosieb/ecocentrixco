@@ -1,10 +1,7 @@
 ---
 templateKey: certifications-page
-image: /img/rawpixel-559744-unsplash.jpg
+certificationBackground: '/img/rawpixel-423665-unsplash.jpg'
 title: Certifications
-subtitle: >-
-  We are professional green energy consultants and auditors with the expertise
-  to help any of your projects
 ---
 
 ### Building Analyst Professional

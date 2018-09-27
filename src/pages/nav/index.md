@@ -2,10 +2,10 @@
 templateKey: settings
 nav:
   - label: Our Services
-    url: /about
+    url: /services
     children:
       - label: Who We Are
-        url: /about
+        url: /
       - label: Energy Auditing
         url: '/about#auditing'
       - label: Energy Consulting
@@ -27,8 +27,8 @@ nav:
         url: '/services#home-energy-rating-system'
   - label: Certifications
     url: /certifications
-  - label: FAQ
-    url: /faq
+  - label: About Us
+    url: /about
   - label: Contact Us
     url: /contact-us
 ---

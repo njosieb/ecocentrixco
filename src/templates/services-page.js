@@ -1,22 +1,35 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import Content, { HTMLContent } from '../components/Content'
+import Img from 'gatsby-image'
 
 export const ServicesPageTemplate = ({
   title,
-  subtitle,
   content,
-  contentComponent
+  contentComponent,
+  servicesBackground
 }) => {
   const PageContent = contentComponent || Content
 
+  const backgroundImageStyle = {
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    width: '100%',
+    height: '100%'
+  }
+
   return (
-    <div className="faq-main">
-      <div className="pt3 pb0-ns pb3 bg-blue">
-        <h1 className="mw8 pl5 f2 f-5-ns center white mv0 lh-copy">{title}</h1>
-        <p className="f3-ns f5 ma0 mw7 center pt2 ph4 ph0-ns pb5-ns white">
-          {subtitle}
-        </p>
+    <div className="services-page">
+      <div className="pb0-ns z-1 h5 relative">
+        <div className="bg-grey-color-80 absolute cover h-100 w-100 z-2" />
+        <Img
+          sizes={servicesBackground.childImageSharp.sizes}
+          style={backgroundImageStyle}
+        />
+        <h1 className="mw8 pl5 f2 f-5-ns center white mv0 lh-copy z-5 relative">
+          {title}
+        </h1>
       </div>
       <PageContent
         className="markdown-content pv5 mw7 center ph4"
@@ -28,9 +41,9 @@ export const ServicesPageTemplate = ({
 
 ServicesPageTemplate.propTypes = {
   title: PropTypes.string,
-  subtitle: PropTypes.string,
   content: PropTypes.string,
-  contentComponent: PropTypes.func
+  contentComponent: PropTypes.func,
+  servicesBackground: PropTypes.object
 }
 
 const ServicesPage = ({ data }) => {
@@ -39,15 +52,16 @@ const ServicesPage = ({ data }) => {
   return (
     <ServicesPageTemplate
       title={page.frontmatter.title}
-      subtitle={page.frontmatter.subtitle}
       content={page.html}
       contentComponent={HTMLContent}
+      servicesBackground={page.frontmatter.servicesBackground}
     />
   )
 }
 
 ServicesPage.propTypes = {
   data: PropTypes.object
+  //servicesBackground: PropTypes.object
 }
 
 export default ServicesPage
@@ -58,7 +72,13 @@ export const ServicesPageQuery = graphql`
       html
       frontmatter {
         title
-        subtitle
+        servicesBackground {
+          childImageSharp {
+            sizes(maxWidth: 1400) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
       }
     }
   }

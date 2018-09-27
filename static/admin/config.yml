@@ -87,18 +87,18 @@ collections:
                 widget: image
 
       - name: about-page
-        label: About
+        label: Our Services
         file: src/pages/about/index.md
         fields:
           - label: Template Key
             name: templateKey
             widget: hidden
             default: about-page
+          - label: Services Image
+            name: servicesBackground
+            widget: image
           - label: Title
             name: title
-            widget: string
-          - label: Subtitle
-            name: subtitle
             widget: string
           - label: Body
             name: body
@@ -112,47 +112,47 @@ collections:
             name: templateKey
             widget: hidden
             default: certifications-page
+          - label: Certifications Picture
+            name: certificationBackground
+            widget: image
           - label: Title
             name: title
-            widget: string
-          - label: Subtitle
-            name: subtitle
             widget: string
           - label: Body
             name: body
             widget: markdown
 
       - name: faq-page
-        label: FAQ
+        label: About Us
         file: src/pages/faq/index.md
         fields:
           - label: Template Key
             name: templateKey
             widget: hidden
             default: faq-page
+          - label: About Us Background
+            name: aboutUsBackground
+            widget: image
           - label: Title
             name: title
-            widget: string
-          - label: Subtitle
-            name: subtitle
             widget: string
           - label: Body
             name: body
             widget: markdown
 
       - name: projects-page
-        label: Services
+        label: Projects
         file: 'src/pages/projects/index.md'
         fields:
           - label: Template Key
             name: templateKey
             widget: hidden
             default: projects-page
+         - label: Projects Background Picture
+            name: projectsBackground
+            widget: image
           - label: Title
             name: title
-            widget: string
-          - label: Subtitle
-            name: subtitle
             widget: string
           - label: Projects
             name: projects
@@ -199,7 +199,7 @@ collections:
                     value: 'HERS'
 
       - name: contact-us
-        label: Contact
+        label: Contact Us
         file: src/pages/contact-us/index.md
         fields:
           - label: Template Key
@@ -208,9 +208,6 @@ collections:
             default: contact-us
           - label: Title
             name: title
-            widget: string
-          - label: Subtitle
-            name: subtitle
             widget: string
           - label: Body
             name: body
@@ -258,6 +255,9 @@ collections:
             name: templateKey
             widget: hidden
             default: settings
+            - label: Contact Us Image
+            name: contactBackground
+            widget: image
           - label: Address
             name: address
             widget: object

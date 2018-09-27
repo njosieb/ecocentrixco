@@ -1,22 +1,36 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import Content, { HTMLContent } from '../components/Content'
+import Img from 'gatsby-image'
 
 export const CertificationsPageTemplate = ({
   title,
-  subtitle,
   content,
-  contentComponent
+  contentComponent,
+  certificationBackground
 }) => {
   const PageContent = contentComponent || Content
 
+  const backgroundImageStyle = {
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    width: '100%',
+    height: '100%'
+  }
+
   return (
     <div className="certifications-main">
-      <div className="pt3 pb0-ns pb3 bg-blue">
-        <h1 className="mw8 pl5 f2 f-5-ns center white mv0 lh-copy">{title}</h1>
-        <p className="f3-ns f5 ma0 mw7 center pt2 ph4 ph0-ns pb5-ns white">
-          {subtitle}
-        </p>
+      <div className="pb0-ns relative z-1 h5">
+        <div className="bg-gold-80 absolute cover h-100 w-100 z-5" />
+
+        <Img
+          sizes={certificationBackground.childImageSharp.sizes}
+          style={backgroundImageStyle}
+        />
+        <h1 className="mw8 pl5 f2 f-5-ns center white mv0 lh-copy z-5 relative">
+          {title}
+        </h1>
       </div>
       <PageContent
         className="markdown-content pv5 mw7 center ph4"
@@ -28,9 +42,9 @@ export const CertificationsPageTemplate = ({
 
 CertificationsPageTemplate.propTypes = {
   title: PropTypes.string,
-  subtitle: PropTypes.string,
   content: PropTypes.string,
-  contentComponent: PropTypes.func
+  contentComponent: PropTypes.func,
+  certificationBackground: PropTypes.object
 }
 
 const CertificationsPage = ({ data }) => {
@@ -39,15 +53,16 @@ const CertificationsPage = ({ data }) => {
   return (
     <CertificationsPageTemplate
       title={page.frontmatter.title}
-      subtitle={page.frontmatter.subtitle}
       content={page.html}
       contentComponent={HTMLContent}
+      certificationBackground={page.frontmatter.certificationBackground}
     />
   )
 }
 
 CertificationsPage.propTypes = {
-  data: PropTypes.object
+  data: PropTypes.object,
+  certificationBackground: PropTypes.object
 }
 
 export default CertificationsPage
@@ -60,7 +75,13 @@ export const CertificationsPageQuery = graphql`
       html
       frontmatter {
         title
-        subtitle
+        certificationBackground {
+          childImageSharp {
+            sizes(maxWidth: 1400) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
       }
     }
   }

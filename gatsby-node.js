@@ -73,7 +73,17 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     const { frontmatter } = node
     if (frontmatter) {
       const adjust = adjustImagePath(node.fileAbsolutePath)
-      const { certifications, headerImage, statsBackground } = frontmatter
+      const {
+        certifications,
+        headerImage,
+        statsBackground,
+        certificationBackground,
+        contactBackground,
+        aboutUsBackground,
+        servicesBackground,
+        projectsBackground
+      } = frontmatter
+
       // Image location string -> ImageSharp objects
       if (certifications) {
         node.frontmatter.certifications.forEach(cert => {
@@ -85,6 +95,23 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
       }
       if (statsBackground) {
         node.frontmatter.statsBackground = adjust(statsBackground)
+      }
+      if (certificationBackground) {
+        node.frontmatter.certificationBackground = adjust(
+          certificationBackground
+        )
+      }
+      if (contactBackground) {
+        node.frontmatter.contactBackground = adjust(contactBackground)
+      }
+      if (aboutUsBackground) {
+        node.frontmatter.aboutUsBackground = adjust(aboutUsBackground)
+      }
+      if (servicesBackground) {
+        node.frontmatter.servicesBackground = adjust(servicesBackground)
+      }
+      if (projectsBackground) {
+        node.frontmatter.projectsBackground = adjust(projectsBackground)
       }
     }
   }
