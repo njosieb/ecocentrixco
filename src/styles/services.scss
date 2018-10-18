@@ -43,3 +43,18 @@
     }
   }
 }
+
+.marker-info-window {
+  .marker-picture {
+    max-width: 100%;
+    max-height: 250px;
+    overflow: hidden;
+    padding-bottom: .75rem;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+}
