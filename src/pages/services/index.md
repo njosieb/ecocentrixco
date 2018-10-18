@@ -8,7 +8,7 @@ title: Our Services
 
 ### <a name="consulting"></a>Energy Consulting
 
-Throughout the new construction process, ECOcentrix is there every step of the way, from the design phase to building turnover. ECOcentrix is brought on early in the process to work side by side with the architects to implement sustainable solutions for any budget. During this design phase, ECOcentrix creates an energy model of the proposed building to demonstrate the projected energy performance.
+Throughout the new construction process, ECOcentrix is there every step of the way, starting with the design phase to building turnover. ECOcentrix is brought on early in the process to work along with the architects to implement sustainable solutions for any budget. During this design phase, ECOcentrix creates an energy model of the proposed building to demonstrate the projected energy performance.
 
 During the construction process, ECOcentrix conducts preconstruction meetings with all necessary trades and completes multiple on-site inspections. During those on-site inspections, ECOcentrix verifies the installation of complete, fully-aligned air and thermal barriers, properly sealed HVAC equipment and duct work, and verifying efficiency through the use of diagnostic testing (blower door and duct blaster tests).
 
