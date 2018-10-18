@@ -41,6 +41,7 @@ export const ContactPageTemplate = ({
         <form
           name="contact-us-form"
           data-netlify="true"
+          method="post"
           action="/contact-us/success"
         >
           <p>
@@ -63,6 +64,7 @@ export const ContactPageTemplate = ({
             />
           </p>
           <p>
+            <input type="hidden" name="form-name" value="contact-us-form" />
             <button
               className="f5 no-underline br-pill pointer b--none ph3 pv2 mb2 dib white bg-blue"
               type="submit"
