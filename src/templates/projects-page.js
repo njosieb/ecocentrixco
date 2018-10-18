@@ -1,7 +1,7 @@
-import Img from 'gatsby-image'
-import PropTypes from 'prop-types'
-import React, { Component } from 'react'
-import Helmet from 'react-helmet'
+import Img from 'gatsby-image';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import Helmet from 'react-helmet';
 
 const tagList = [
   { label: 'All', value: 'All', href: 'all' },
@@ -141,8 +141,7 @@ export class ProjectsPageTemplate extends Component {
                 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBsuCjHZUuNmjtfjwxYsFGj8aouf18e9aU',
               async: true,
               defer: true
-            },
-            { src: '/scripts/markerclusterer.js' }
+            }
           ]}
           onChangeClientState={(newState, addedTags) =>
             this.setGoogleMapOnLoad(addedTags)
