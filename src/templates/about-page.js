@@ -32,7 +32,7 @@ export const AboutPageTemplate = ({
         </h1>
       </div>
       <PageContent
-        className="markdown-content pv5 mw7 center ph4"
+        className="markdown-content pv5 mw7 center ph4 tj"
         content={content}
       />
     </div>
