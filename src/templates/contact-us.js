@@ -28,7 +28,7 @@ export const ContactPageTemplate = ({
           sizes={contactBackground.childImageSharp.sizes}
           style={backgroundImageStyle}
         />
-        <h1 className="mw8 pl5 f2 f-5-ns center white mv0 lh-copy z-5">
+        <h1 className="mw8 pl5 f2 f-5-ns center white mv0 lh-copy z-5 relative">
           {title}
         </h1>
       </div>
