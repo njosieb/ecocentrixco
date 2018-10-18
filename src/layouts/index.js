@@ -1,30 +1,56 @@
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 import Footer from '../components/Footer'
 import MobileMenu from '../components/MobileMenu'
 import Navbar from '../components/Navbar'
 import './all.scss'
 
-const TemplateWrapper = ({ children, data }) => {
-  const settingsEdges = data.allMarkdownRemark.edges.filter(
-    edge => edge.node.frontmatter.templateKey === 'settings'
-  )
-  const nav = settingsEdges.filter(edge => !!edge.node.frontmatter.nav)[0].node
-    .frontmatter.nav
-  const socialMediaLinks = settingsEdges.filter(
-    edge => !!edge.node.frontmatter.socialMediaLinks
-  )[0].node.frontmatter.socialMediaLinks
+class TemplateWrapper extends Component {
+  state = {
+    menuOpen: false
+  }
 
-  return (
-    <div className="main-container">
-      <Helmet title="ECOCentrix Co." />
-      <Navbar nav={nav} />
-      <MobileMenu nav={nav} />
-      {children()}
-      <Footer socialMediaLinks={socialMediaLinks} />
-    </div>
-  )
+  toggleMenu = () => {
+    this.setState({
+      menuOpen: !this.state.menuOpen
+    })
+  }
+
+  clickOut = () => {
+    if (this.state.menuOpen) {
+      this.setState({
+        menuOpen: false
+      })
+    }
+  }
+
+  render() {
+    const { data, children } = this.props
+
+    const settingsEdges = data.allMarkdownRemark.edges.filter(
+      edge => edge.node.frontmatter.templateKey === 'settings'
+    )
+    const nav = settingsEdges.filter(edge => !!edge.node.frontmatter.nav)[0]
+      .node.frontmatter.nav
+    const socialMediaLinks = settingsEdges.filter(
+      edge => !!edge.node.frontmatter.socialMediaLinks
+    )[0].node.frontmatter.socialMediaLinks
+
+    return (
+      <div onClick={this.clickOut} className="main-container">
+        <Helmet title="ECOCentrix Co." />
+        <Navbar
+          nav={nav}
+          menuOpen={this.state.menuOpen}
+          onMenuClick={this.toggleMenu}
+        />
+        <MobileMenu nav={nav} />
+        {children()}
+        <Footer socialMediaLinks={socialMediaLinks} />
+      </div>
+    )
+  }
 }
 
 TemplateWrapper.propTypes = {

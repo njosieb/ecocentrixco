@@ -2,21 +2,23 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 const MobileMenu = ({ nav }) => (
-  <nav id="main-menu" className="right nav-menu">
+  <nav
+    id="main-menu"
+    className="right nav-menu h-100"
+    onClick={e => e.stopPropagation()}
+  >
     <div className="menu-section pt3">
       {nav.map((item, i) => (
-        <div
+        <a
           key={i}
-          className="menu-item underline-hover tr hover-white pointer"
+          title={item.label}
+          href={item.url}
+          className="mobile-menu-link fw7"
         >
-          <a
-            title={item.label}
-            href={item.url}
-            className="mobile-menu-link fw7"
-          >
+          <div className="menu-item underline-hover tr hover-white pointer">
             {item.label}
-          </a>
-        </div>
+          </div>
+        </a>
       ))}
     </div>
   </nav>
