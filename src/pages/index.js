@@ -24,10 +24,19 @@ export class IndexPageTemplate extends Component {
       certifications,
       contactInfo
     } = this.props
+
+    const backgroundImageStyle = {
+      position: 'absolute',
+      left: 0,
+      top: 0,
+      width: '100%',
+      height: '100%'
+    }
+
     return (
       <main className="home-main">
         <section id="home-hero" className="relative z-1">
-          <div className="bg-gold-80 absolute cover h-100 w-100 z-2" />
+          <div className="bg-grey-color-80 absolute cover h-100 w-100 z-2" />
           {headerImage.childImageSharp && (
             <Img
               sizes={headerImage.childImageSharp.sizes}
@@ -36,7 +45,7 @@ export class IndexPageTemplate extends Component {
           )}
           <div className="top-content relative w-100 tc tl-ns pt6-ns pb5-ns pb2 h-100 flex flex-column z-3">
             <div className="mb6-ns mb4 pb4-ns pt3 ph1 ph5-ns relative flex-auto center mw7">
-              <p className="f3 f2-ns white fw7">{headerText}</p>
+              <p className="f3 f2-ns white fw7 tc">{headerText}</p>
               <p className="f4 f3-ns white fw7">{headerSubtext}</p>
             </div>
             <Link
@@ -47,17 +56,31 @@ export class IndexPageTemplate extends Component {
             </Link>
           </div>
         </section>
-        <section id="work" className="relative pt5 ph3">
-          <div className="work-types mw8-l mw6 center items-stretch justify-around">
+        <section id="work" className="relative pt4 pb4 ph3">
+          <h1 className="green pa1 mb0 pt0 tc">What We Do</h1>
+          <div className="work-types mw8-l mw6 center items-stretch justify-around pb4">
             {servicesList.map((service, i) => (
               <Link
                 to={service.serviceLink}
                 className="work-type db mh5 mv4 tc hover-shadow"
                 key={i}
               >
-                <div className="h-100 pa3">
-                  <i className={`fa ${service.icon} f-6 dib green`} />
-                  <h3 className="f2 mb0 green nowrap">{service.name}</h3>
+                <div className="h-100">
+                  <div className="bg-gold-light-80 absolute cover h-100 w-100 z-3" />
+                  <Img
+                    sizes={service.background.childImageSharp.sizes}
+                    style={backgroundImageStyle}
+                  />
+                  <div className="pa3 relative">
+                    <i
+                      className={`fa ${
+                        service.icon
+                      } f-6 dib white z-2 relative`}
+                    />
+                    <h3 className="f2 mb0 white nowrap z-3 relative">
+                      {service.name}
+                    </h3>
+                  </div>
                 </div>
               </Link>
             ))}
@@ -192,7 +215,13 @@ export const indexPageQuery = graphql`
           icon
           name
           serviceLink
-          background
+          background {
+            childImageSharp {
+              sizes(maxWidth: 300) {
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
         }
         statsBackground {
           childImageSharp {
