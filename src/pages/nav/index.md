@@ -4,8 +4,6 @@ nav:
   - label: Our Services
     url: /services
     children:
-      - label: Who We Are
-        url: /
       - label: Energy Auditing
         url: '/about#auditing'
       - label: Energy Consulting
