@@ -22,7 +22,10 @@ export class IndexPageTemplate extends Component {
       statsBackground,
       statsList,
       certifications,
-      contactInfo
+      contactInfo,
+      servicesHeader,
+      whoList,
+      whoHeader
     } = this.props
 
     const backgroundImageStyle = {
@@ -57,7 +60,7 @@ export class IndexPageTemplate extends Component {
           </div>
         </section>
         <section id="work" className="relative pt4 pb4 ph3">
-          <h1 className="green pa1 mb0 pt0 tc">What We Do</h1>
+          <h1 className="green pa1 mb0 pt0 tc">{servicesHeader}</h1>
           <div className="work-types mw8-l mw6 center items-stretch justify-around pb4">
             {servicesList.map((service, i) => (
               <Link
@@ -105,14 +108,41 @@ export class IndexPageTemplate extends Component {
             </div>
           </div>
         </section>
+
+        <section id="work" className="relative pt4 pb4 ph3">
+          <h1 className="green pa1 mb0 pt0 tc">{whoHeader}</h1>
+          <div className="work-types mw8-l mw6 center items-stretch justify-around pb4">
+            {whoList.map((client, i) => (
+              <Link
+                to={client.whoLink}
+                className="work-type db mh5 mv4 tc hover-shadow"
+                key={i}
+              >
+                <div className="h-100">
+                  <div className="bg-gold-light-80 absolute cover h-100 w-100 z-3" />
+                  <Img
+                    sizes={client.background.childImageSharp.sizes}
+                    style={backgroundImageStyle}
+                  />
+                  <div className="pa3 relative">
+                    <i
+                      className={`fa fa-beer f-6 dib transparent z-2 relative`}
+                    />
+                    <h3 className="f2 mb0 white nowrap z-3 relative">
+                      {client.name}
+                    </h3>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
         <section id="certifications" className="relative pt5 ph3">
           <div className="mw7 center">
-            <h2 className="f2 f1-ns green tc">Certifications</h2>
-            <p>
-              We have the expertise and the certifcations to back it up. Don't
-              trust anyone else with your project who isn't qualified as we are
-            </p>
-            <div className="flex flex-wrap justify-center items-center">
+            <h1 className="f2 f1-ns green tc">Certifications</h1>
+
+            <div className="flex flex-wrap justify-center items-center pt0">
               {certifications.map((cert, i) => (
                 <div key={i} className="image-container mh3">
                   <Img
@@ -129,7 +159,7 @@ export class IndexPageTemplate extends Component {
         {contactInfo && (
           <section id="contact" className="relative pb5 ph3">
             <div className="mw7 center">
-              <h3 className="f2 f1-ns green tc">Contact Us</h3>
+              <h1 className="f2 f1-ns green tc">Contact Us</h1>
               <ContactBox
                 street1={contactInfo.address.street1}
                 street2={contactInfo.address.street2}
@@ -155,7 +185,10 @@ IndexPageTemplate.propTypes = {
   statsBackground: PropTypes.object,
   statsList: PropTypes.array,
   certifications: PropTypes.array,
-  contactInfo: PropTypes.object
+  contactInfo: PropTypes.object,
+  servicesHeader: PropTypes.string,
+  whoList: PropTypes.array,
+  whoHeader: PropTypes.string
 }
 
 const IndexPage = ({ data }) => {
@@ -166,7 +199,10 @@ const IndexPage = ({ data }) => {
     headerSubtext,
     servicesList,
     statsBackground,
-    statsList
+    statsList,
+    servicesHeader,
+    whoList,
+    whoHeader
   } = data.markdownRemark.frontmatter
   const settingsEdge = data.allMarkdownRemark.edges.find(
     edge => edge.node.frontmatter.templateKey === 'settings'
@@ -182,6 +218,9 @@ const IndexPage = ({ data }) => {
       statsList={statsList}
       certifications={certifications}
       contactInfo={settingsEdge.node.frontmatter}
+      servicesHeader={servicesHeader}
+      whoList={whoList}
+      whoHeader={whoHeader}
     />
   )
 }
@@ -238,7 +277,13 @@ export const indexPageQuery = graphql`
         whoList {
           name
           whoLink
-          background
+          background {
+            childImageSharp {
+              sizes(maxWidth: 300) {
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
         }
         certifications {
           certImage {

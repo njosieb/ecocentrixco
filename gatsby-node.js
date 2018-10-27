@@ -82,7 +82,8 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
         aboutUsBackground,
         servicesBackground,
         projectsBackground,
-        servicesList
+        servicesList,
+        whoList
       } = frontmatter
 
       // Image location string -> ImageSharp objects
@@ -117,6 +118,11 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
       if (servicesList) {
         node.frontmatter.servicesList.forEach(service => {
           service.background = adjust(service.background)
+        })
+      }
+      if (whoList) {
+        node.frontmatter.whoList.forEach(client => {
+          client.background = adjust(client.background)
         })
       }
     }
