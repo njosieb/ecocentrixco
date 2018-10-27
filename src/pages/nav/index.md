@@ -5,11 +5,11 @@ nav:
     url: /services
     children:
       - label: Energy Auditing
-        url: '/about#auditing'
+        url: '/services#auditing'
       - label: Energy Consulting
-        url: '/about#consulting'
+        url: '/services#consulting'
       - label: Radon Testing
-        url: '/about#radon'
+        url: '/services#radon'
   - label: Projects
     url: /projects
     children:
