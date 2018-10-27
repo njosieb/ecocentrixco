@@ -1,7 +1,6 @@
-import Img from 'gatsby-image';
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import Helmet from 'react-helmet';
+import Img from 'gatsby-image'
+import PropTypes from 'prop-types'
+import React, { Component } from 'react'
 
 const tagList = [
   { label: 'All', value: 'All', href: 'all' },
@@ -21,6 +20,7 @@ const tagList = [
 ]
 
 export class ProjectsPageTemplate extends Component {
+  checkMapsLoaded = 0
   state = {
     activeTag: 'All',
     filteredProjects: [],
@@ -42,6 +42,13 @@ export class ProjectsPageTemplate extends Component {
       ...this.state,
       activeTag: activeTag ? activeTag.value : 'All'
     })
+
+    this.checkMapsLoaded = setInterval(() => {
+      if (window.google.maps.Map) {
+        clearInterval(this.checkMapsLoaded)
+        this.initMap()
+      }
+    }, 250)
   }
 
   filterProjects = function(tag, map) {
@@ -97,13 +104,6 @@ export class ProjectsPageTemplate extends Component {
     })
   }
 
-  setGoogleMapOnLoad = function({ scriptTags }) {
-    if (scriptTags) {
-      const googleMapScript = scriptTags[0]
-      googleMapScript.onload = this.initMap
-    }
-  }
-
   initMap = function() {
     const map = new window.google.maps.Map(
       document.getElementById('projects-map'),
@@ -134,19 +134,6 @@ export class ProjectsPageTemplate extends Component {
 
     return (
       <div className="projects-page">
-        <Helmet
-          script={[
-            {
-              src:
-                'https://maps.googleapis.com/maps/api/js?key=AIzaSyBsuCjHZUuNmjtfjwxYsFGj8aouf18e9aU',
-              async: true,
-              defer: true
-            }
-          ]}
-          onChangeClientState={(newState, addedTags) =>
-            this.setGoogleMapOnLoad(addedTags)
-          }
-        />
         <div className="pb0-ns z-1 h5 relative">
           <div className="bg-grey-warm-80 absolute cover h-100 w-100 z-3" />
           <Img
