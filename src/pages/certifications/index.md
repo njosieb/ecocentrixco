@@ -4,7 +4,7 @@ certificationBackground: '/img/rawpixel-423665-unsplash.jpg'
 title: Certifications
 ---
 
-<a id="BPI" href="http://www.bpi.org/certified-professionals/building-analyst">
+<a id="BPI" href="http://www.bpi.org/certified-professionals/building-analyst" target="_blank">
     <h3>Building Analyst Professional</h3>
     <h3>Building Envelope Professional</h3>
     <h3>Multi-family Building Analyst Professional</h3>
@@ -15,7 +15,7 @@ Building Performance Institute (BPI) certified professionals are highly skilled 
 
 For many homeowners and tenants, energy bills account for far too much of the monthly budget. Stringent technical standards and requirements mean that BPI certified professionals are individuals who have been trained to meet these problems head-on. BPI professionals are certified in blower door and duct blaster operation, as well as testing and analysis of combustion appliances in your home.
 
-<a id="HersRater" href="http://www.resnet.us/certified-auditor-rater">
+<a id="HersRater" href="http://www.resnet.us/certified-auditor-rater" target="_blank">
     <h3>HERS Rater</h3>
     <img alt="RESNET certified" src="/img/resnet-certified.jpg" />
 </a>
@@ -24,19 +24,23 @@ A home energy rating involves an analysis of a home's construction plans and ons
 
 Upon completion of the plan review, the rater will work with the builder to identify the energy efficiency improvements needed to ensure the house will meet ENERGY STAR performance guidelines. The rater then conducts onsite inspections, typically including a blower door test (to test the leakiness of the house) and a duct test (to test the leakiness of the ducts). Results of these tests, along with inputs derived from the plan review, are used to generate the HERS Index for the home. The HERS Index makes it easy to compare relative energy efficiency of different homes.
 
-<a id="NAHB" href="http://www.nahb.org">
+<a id="NAHB" href="http://www.nahb.org" target="_blank">
     <h3>NAHB Certified Green Professional (CHP)</h3>
-    <h3>NGBS Green Verifier</h3>
     <img alt="Certified Green Professioal" src="/img/green-professional-certified.jpg" />
-    <img alt="NAHB certified" src="/img/nahb-certified.jpg" />
 </a>
 
 The National Association of Home Builders (NAHB) is a trade promotion that helps promote policies that make housing a priority. The Environmental Protection Agency (EPA) estimates that building in the US account for 39 percent of total energy use, 12 percent of the total water consumption, 68 percent of total electricity consumptions, and 38 percent of the carbon dioxide emissions. Certified Green Professionals (CGP) incorporate environmental considerations and resource efficiency into every step of the land development and home building process to minimize the environmental impact. Starting with lot development through the design, construction, and operations of a home, green building requires intentional decisions that positively impact energy and resource efficiency, as well as indoor environmental quality. The goal is to build the best, most sustainable and practical homes we can build for customers and the environment.
 
-NGBS helps builders, remodelers, developers and home owners/buyers build and understand high performance construction and development. A Green Verifier is the one who is present on the job sites and verifies that the work is being completed properly to receive certification. A Green Verifier is an expert in the 2012 ICC-700 National Green Building Standards.
 \*Source NAHB
 
-<a id="MO-DNR" href="http://www.dnr.mo.gov">
+<a id="NCBS" href="https://www.homeinnovation.com/green" target="_blank">
+    <h3>NGBS Green Verifier</h3>
+    <img alt="NGBS Green Verifier" src="img/nahb-certified.jpg">
+</a>
+
+NGBS helps builders, remodelers, developers and home owners/buyers build and understand high performance construction and development. A Green Verifier is the one who is present on the job sites and verifies that the work is being completed properly to receive certification. A Green Verifier is an expert in the 2012 ICC-700 National Green Building Standards.
+
+<a id="MO-DNR" href="http://www.dnr.mo.gov" target="_blank">
     <h3>Missouri Department of Natural Resources - Certified Home Energy Rater</h3>
     <img alt="Missouri certified home energy rater" src="/img/missouri-certified-home-energy-rater.jpg" />
 </a>
@@ -45,16 +49,26 @@ Missouri taxpayers can claim an individual income tax deduction for the cost of 
 
 \*Source MO DNR
 
-<a id="LEED" href="http://www.usgbc.org/help/what-leed-green-associate">
+<a id="LEED" href="http://www.usgbc.org/help/what-leed-green-associate" target="_blank">
     <h3>LEED Green Associate</h3>
     <img alt="Leed Green certified" src="/img/leed.jpg" />
 </a>
 
 The LEED Green Associate credential demonstrates a solid and current foundation in green building principles and practices. It is designed for professionals who want to demonstrate green building expertise in non-technical fields of practice.
 
-<a id="NRPP" href="http://www.aarst-nrpp.com/wp/certification">
+<a id="NRPP" href="http://www.aarst-nrpp.com/wp/certification" target="_blank">
     <h3>NEHA-NRPP Residential Radon Measurement Provider</h3>
     <img alt="NEHA-NRPP Certified" src="/img/nrpp.jpg" />
 </a>
 
 The National Environmental Health Association - National Radon Proficiency Program is the leading certification program for radon professionals in North America. Individuals with NEHA-NRPP certifications have also met the requirements set forth by the EPA.
+
+<a id="ITC" href="https://www.infraredtraining.com/" target="_blank">
+    <h3>Infared Training Center Certification</h3>
+    <img alt="Infared Training" src="/img/itc.png" />
+</a>
+
+<a id="CEA" href="https://www.aeecenter.org/certifications/certifications/certified-energy-auditor">
+    <h3>Certified Energy Auditor</h3>
+    <img alt="Certified Energy Auditor" src="/img/cea.gif" />
+</a>
