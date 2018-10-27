@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types'
-import React, { Component } from 'react'
-import Helmet from 'react-helmet'
-import Img from 'gatsby-image'
+import Img from 'gatsby-image';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import Helmet from 'react-helmet';
 
 const tagList = [
   { label: 'All', value: 'All', href: 'all' },
@@ -25,8 +25,7 @@ export class ProjectsPageTemplate extends Component {
     activeTag: 'All',
     filteredProjects: [],
     map: null,
-    markers: [],
-    markerCluster: null
+    markers: []
   }
 
   constructor(props) {
@@ -57,25 +56,43 @@ export class ProjectsPageTemplate extends Component {
     this.state.markers.forEach(marker => marker.setMap(null))
 
     const markers = filteredProjects.map(project => {
-      return new window.google.maps.Marker({
+      const marker = new window.google.maps.Marker({
         position: project.position,
         map: mapToUse
       })
-    })
 
-    if (this.state.markerCluster) {
-      this.state.markerCluster.clearMarkers()
-    }
+      const infoWindow = new window.google.maps.InfoWindow({
+        content: `<div class="marker-info-window">
+                    ${
+                      project.picture
+                        ? `<div class="marker-picture">
+                          <img alt="${project.title}" src="${
+                            project.picture
+                          }" />
+                        </div>`
+                        : ''
+                    }
+                    <div class="marker-body">
+                      <h4 class="marker-title">${project.title}</h4>
+                      <p class="marker-description">
+                        ${project.description || ''}
+                      </p>
+                    </div>
+                  </div>
+                 `
+      })
 
-    const markerCluster = new window.MarkerClusterer(mapToUse, markers, {
-      imagePath: `/img/m`
+      marker.addListener('click', function() {
+        infoWindow.open(map, marker)
+      })
+
+      return marker
     })
 
     this.setState({
       map: mapToUse,
       activeTag: tag,
       markers,
-      markerCluster,
       filteredProjects
     })
   }
@@ -124,8 +141,7 @@ export class ProjectsPageTemplate extends Component {
                 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBsuCjHZUuNmjtfjwxYsFGj8aouf18e9aU',
               async: true,
               defer: true
-            },
-            { src: '/scripts/markerclusterer.js' }
+            }
           ]}
           onChangeClientState={(newState, addedTags) =>
             this.setGoogleMapOnLoad(addedTags)
@@ -239,6 +255,8 @@ export const ProjectsPageQuery = graphql`
         projects {
           id
           title
+          picture
+          description
           city
           state
           position {

@@ -148,7 +148,7 @@ collections:
             name: templateKey
             widget: hidden
             default: projects-page
-         - label: Projects Background Picture
+          - label: Projects Background Picture
             name: projectsBackground
             widget: image
           - label: Title
@@ -164,6 +164,12 @@ collections:
               - label: Id
                 name: id
                 widget: number
+              - label: Description
+                name: description
+                widget: string
+              - label: Picture
+                name: picture
+                widget: image
               - label: City
                 name: city
                 widget: string
