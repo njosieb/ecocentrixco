@@ -1,7 +1,7 @@
-import Img from 'gatsby-image';
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import Helmet from 'react-helmet';
+import Img from 'gatsby-image'
+import PropTypes from 'prop-types'
+import React, { Component } from 'react'
+import Helmet from 'react-helmet'
 
 const tagList = [
   { label: 'All', value: 'All', href: 'all' },
@@ -147,13 +147,13 @@ export class ProjectsPageTemplate extends Component {
             this.setGoogleMapOnLoad(addedTags)
           }
         />
-        <div className="pb0-ns z-1 h5 relative">
-          <div className="bg-grey-warm-80 absolute cover h-100 w-100 z-3" />
+        <div className="pb0-ns z-3 h5 relative">
+          <div className="bg-grey-color-80 absolute cover h-100 w-100 z-2" />
           <Img
             sizes={projectsBackground.childImageSharp.sizes}
             style={backgroundImageStyle}
           />
-          <h1 className="mw8 pl5 f2 f-5-ns center white mv0 lh-copy z-5 relative">
+          <h1 className="mw8 pl5 f2 f-5-ns center white mv0 lh-copy z-3 relative">
             {title}
           </h1>
         </div>
