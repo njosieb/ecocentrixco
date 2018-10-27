@@ -133,7 +133,11 @@
 
 .work-types {
   display: grid;
-  grid-template: 1fr 1fr / 1fr 1fr;
+  grid-template: 1fr / 1fr;
+
+  @media (min-width: $mobile) {
+    grid-template: 1fr 1fr / 1fr 1fr;
+  }
 }
 
 //  a {
