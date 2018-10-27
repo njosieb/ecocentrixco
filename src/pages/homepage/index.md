@@ -5,19 +5,19 @@ headerText: ' We Save Energy To Save Your Money! '
 headerSubtext: '  '
 servicesHeader: 'What We Do'
 servicesList:
-  - serviceLink: '/about#auditing'
+  - serviceLink: '/services#auditing'
     icon: fa-check-square-o
     name: Energy Auditing
     background: '/img/anton-darius-thesollers-424266-unsplash.jpg'
-  - serviceLink: '/about#consulting'
+  - serviceLink: '/services#consulting'
     icon: fa-handshake-o
     name: Energy Consulting
     background: '/img/patrick-hendry-775890-unsplash.jpg'
-  - serviceLink: '/about#energy'
+  - serviceLink: '/services#energy'
     icon: fa-line-chart
     name: Energy Modeling
     background: '/img/jakob-owens-130558-unsplash.jpg'
-  - serviceLink: '/about#radon'
+  - serviceLink: '/services#radon'
     icon: fa-dashboard
     name: Radon Testing
     background: '/img/elevate-755051-unsplash.jpg'
