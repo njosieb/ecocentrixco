@@ -28,14 +28,6 @@ export class IndexPageTemplate extends Component {
       whoHeader
     } = this.props
 
-    const backgroundImageStyle = {
-      position: 'absolute',
-      left: 0,
-      top: 0,
-      width: '100%',
-      height: '100%'
-    }
-
     return (
       <main className="home-main">
         <section id="home-hero" className="relative z-1">
@@ -72,7 +64,7 @@ export class IndexPageTemplate extends Component {
                   <div className="bg-gold-light-80 absolute cover h-100 w-100 z-3" />
                   <Img
                     sizes={service.background.childImageSharp.sizes}
-                    style={backgroundImageStyle}
+                    style={this.backgroundImageStyle}
                   />
                   <div className="pa3 relative">
                     <i
@@ -118,11 +110,15 @@ export class IndexPageTemplate extends Component {
                 className="work-type db mh5 mv4 tc hover-shadow"
                 key={i}
               >
-                <div className="h-100">
-                  <div className="bg-gold-light-80 absolute cover h-100 w-100 z-3" />
+                <div className="h-100 relative z-1">
+                  <div
+                    className={
+                      'bg-grey-color-80 absolute cover h-100 w-100 z-3'
+                    }
+                  />
                   <Img
                     sizes={client.background.childImageSharp.sizes}
-                    style={backgroundImageStyle}
+                    style={this.backgroundImageStyle}
                   />
                   <div className="pa3 relative">
                     <i
@@ -144,14 +140,18 @@ export class IndexPageTemplate extends Component {
 
             <div className="flex flex-wrap justify-center items-center pt0">
               {certifications.map((cert, i) => (
-                <div key={i} className="image-container mh3">
+                <Link
+                  to={`/certifications#${cert.certId}`}
+                  key={i}
+                  className="image-container flex items-center justify-center"
+                >
                   <Img
                     className="db center mb4"
                     resolutions={cert.certImage.childImageSharp.resolutions}
                     fadeIn={true}
                     alt={cert.description}
                   />
-                </div>
+                </Link>
               ))}
             </div>
           </div>
@@ -288,12 +288,13 @@ export const indexPageQuery = graphql`
         certifications {
           certImage {
             childImageSharp {
-              resolutions(width: 300) {
+              resolutions(width: 200) {
                 ...GatsbyImageSharpResolutions
               }
             }
           }
           description
+          certId
         }
       }
     }

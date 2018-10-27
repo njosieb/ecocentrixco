@@ -35,8 +35,9 @@
 @include tachyons-override('gold-80', fade_out($gold-color, 0.8));
 @include tachyons-override('grey-color-80', fade_out($grey-color, 0.8));
 @include tachyons-override('gold-lighter-80', fade_out($gold-lighter, 0.8));
-@include tachyons-override('grey-warm-80', fade_out($grey-warm, 0.8))
-  .hover-shadow {
+@include tachyons-override('grey-warm-80', fade_out($grey-warm, 0.4));
+@include tachyons-override('gold-light-80', fade_out($gold-light, 0.6));
+.hover-shadow {
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   transition: box-shadow 0.2s ease-in-out;
 

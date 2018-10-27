@@ -32,7 +32,7 @@ statsList:
 whoHeader: 'Who We Help'
 whoList:
   - whoLink: '/about'
-    background: '/img/rawpixel-250087-unsplash.jpg'
+    background: '/img/rawpixel-749494-unsplash.jpg'
     name: 'Developers'
   - whoLink: '/about'
     background: '/img/nik-macmillan-280300-unsplash.jpg'
@@ -46,20 +46,29 @@ whoList:
 certifications:
   - certImage: /img/BPI-certified.jpg
     description: BPI certified
+    certId: BPI
   - certImage: /img/resnet-certified.jpg
     description: RESNET certified
+    certId: HersRater
   - certImage: /img/green-professional-certified.jpg
     description: Certified Green Professional
+    certId: NAHB
   - certImage: /img/nahb-certified.jpg
     description: NAHB certified
+    certId: NAHB
   - certImage: /img/missouri-certified-home-energy-rater.jpg
     description: Missouri Certified Home Energy Rater
+    certId: MO-DNR
   - certImage: /img/leed.jpg
     description: Leed Green certified
+    certId: LEED
   - certImage: /img/nrpp.jpg
     description: NEHA-NRPP certified
+    certId: NRPP
   - certImage: /img/ITC-Logo.jpg
     description: ITC certified
+    certId: ITC
   - certImage: /img/certified_energy_auditor.jpg
     description: Certified Energy Auditor
+    certId: CEA
 ---
