@@ -7,7 +7,7 @@ const MobileMenu = ({ nav }) => (
     className="right nav-menu h-100"
     onClick={e => e.stopPropagation()}
   >
-    <div className="menu-section pt3">
+    <div className="menu-section pt4">
       {nav.map((item, i) => (
         <a
           key={i}
