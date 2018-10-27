@@ -40,7 +40,7 @@ export class IndexPageTemplate extends Component {
           )}
           <div className="top-content relative w-100 tc tl-ns pt6-ns pb5-ns pb2 h-100 flex flex-column z-3">
             <div className="mb6-ns mb4 pb4-ns pt3 ph1 ph5-ns relative flex-auto center mw7">
-              <p className="f3 f2-ns white fw7 tc">{headerText}</p>
+              <p className="f4 f2-ns white fw7 tc">{headerText}</p>
               <p className="f4 f3-ns white fw7">{headerSubtext}</p>
             </div>
             <Link
