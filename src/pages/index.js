@@ -36,6 +36,7 @@ export class IndexPageTemplate extends Component {
             <Img
               sizes={headerImage.childImageSharp.sizes}
               style={this.backgroundImageStyle}
+              imgStyle={{ objectPosition: 'top' }}
             />
           )}
           <div className="top-content relative w-100 tc tl-ns pt6-ns pb5-ns pb2 h-100 flex flex-column z-3">
@@ -70,7 +71,7 @@ export class IndexPageTemplate extends Component {
                     <i
                       className={`fa ${
                         service.icon
-                      } f-6 dib white z-2 relative`}
+                      } f-6 dib white z-3 relative`}
                     />
                     <h3 className="f2 mb0 white nowrap z-3 relative">
                       {service.name}
