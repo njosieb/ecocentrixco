@@ -1,13 +1,16 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-import Helmet from 'react-helmet'
 
 class ContactBox extends Component {
-  setGoogleMapOnLoad = function({ scriptTags }) {
-    if (scriptTags) {
-      const googleMapScript = scriptTags[0]
-      googleMapScript.onload = this.initContactLocation
-    }
+  checkMapsLoaded = 0
+
+  componentDidMount() {
+    this.checkMapsLoaded = setInterval(() => {
+      if (window.google.maps.Map) {
+        clearInterval(this.checkMapsLoaded)
+        this.initContactLocation()
+      }
+    }, 250)
   }
 
   initContactLocation = function() {
@@ -33,19 +36,6 @@ class ContactBox extends Component {
     const { street1, street2, city, state, zip, email, phone } = this.props
     return (
       <div className="flex-ns justify-between">
-        <Helmet
-          script={[
-            {
-              src:
-                'https://maps.googleapis.com/maps/api/js?key=AIzaSyBsuCjHZUuNmjtfjwxYsFGj8aouf18e9aU',
-              async: true,
-              defer: true
-            }
-          ]}
-          onChangeClientState={(newState, addedTags) =>
-            this.setGoogleMapOnLoad(addedTags)
-          }
-        />
         <div className="">
           <div className="fw7">ECOcentrix Consultants, LLC</div>
           <div className="fw5">{street1}</div>

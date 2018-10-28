@@ -39,9 +39,9 @@ export class IndexPageTemplate extends Component {
               imgStyle={{ objectPosition: 'top' }}
             />
           )}
-          <div className="top-content relative w-100 tc tl-ns pt6-ns pb5-ns pb2 h-100 flex flex-column z-3">
-            <div className="mb6-ns mb4 pb4-ns pt3 ph1 ph5-ns relative flex-auto center mw7">
-              <p className="f4 f2-ns white fw7 tc">{headerText}</p>
+          <div className="top-content relative w-100 tc tl-ns pt4 pt6-ns pb5-ns pb2 h-100 flex flex-column z-3">
+            <div className="mb6-ns mb4 pb3 pb4-ns pt4 ph1 ph5-ns relative flex-auto center mw7">
+              <p className="f2 f1-ns white fw7 tc">{headerText}</p>
               <p className="f4 f3-ns white fw7">{headerSubtext}</p>
             </div>
             <Link
@@ -58,11 +58,11 @@ export class IndexPageTemplate extends Component {
             {servicesList.map((service, i) => (
               <Link
                 to={service.serviceLink}
-                className="work-type db mh5 mv4 tc hover-shadow"
+                className="work-type db mh2 mh3-ns mv4 tc hover-shadow"
                 key={i}
               >
-                <div className="h-100">
-                  <div className="bg-gold-80 absolute cover h-100 w-100 z-3" />
+                <div className="h-100 relative z-1">
+                  <div className="bg-gold-light-80 absolute cover h-100 w-100 z-3" />
                   <Img
                     sizes={service.background.childImageSharp.sizes}
                     style={this.backgroundImageStyle}
@@ -108,15 +108,11 @@ export class IndexPageTemplate extends Component {
             {whoList.map((client, i) => (
               <Link
                 to={client.whoLink}
-                className="work-type db mh5 mv4 tc hover-shadow"
+                className="work-type db mh0 mh3-ns mv4 tc hover-shadow"
                 key={i}
               >
                 <div className="h-100 relative z-1">
-                  <div
-                    className={
-                      'bg-grey-color-80 absolute cover h-100 w-100 z-3'
-                    }
-                  />
+                  <div className="bg-grey-color-80 absolute cover h-100 w-100 z-3" />
                   <Img
                     sizes={client.background.childImageSharp.sizes}
                     style={this.backgroundImageStyle}
@@ -135,7 +131,7 @@ export class IndexPageTemplate extends Component {
           </div>
         </section>
 
-        <section id="certifications" className="relative pt5 ph3">
+        <section id="certifications" className="relative pt0 ph3">
           <div className="mw7 center">
             <h1 className="f2 f1-ns white bg-blue tc">Certifications</h1>
 

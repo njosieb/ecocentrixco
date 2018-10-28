@@ -23,10 +23,10 @@ servicesList:
     background: '/img/elevate-755051-unsplash.jpg'
 statsBackground: /img/rodion-kutsaev-956-unsplash.jpg
 statsList:
-  - label: units
-    statNum: '3,600'
   - label: projects
     statNum: 60+
+  - label: units
+    statNum: '3,600'
   - label: states
     statNum: '9'
 whoHeader: 'Who We Help'
