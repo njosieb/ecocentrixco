@@ -62,7 +62,7 @@ export class IndexPageTemplate extends Component {
                 key={i}
               >
                 <div className="h-100 relative z-1">
-                  <div className="bg-gold-light-80 absolute cover h-100 w-100 z-3" />
+                  <div className="bg-gold-lighter-80 absolute cover h-100 w-100 z-3" />
                   <Img
                     sizes={service.background.childImageSharp.sizes}
                     style={this.backgroundImageStyle}
