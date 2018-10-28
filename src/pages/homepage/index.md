@@ -1,7 +1,7 @@
 ---
 templateKey: home-page
 headerImage: /img/gustavo-quepon-129114-unsplash.jpg
-headerText: ' We Save Energy To Save Your Money! '
+headerText: ' We Save Energy To Save You Money! '
 headerSubtext: '  '
 servicesHeader: 'What We Do'
 servicesList:
