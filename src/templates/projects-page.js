@@ -158,7 +158,7 @@ export class ProjectsPageTemplate extends Component {
               </span>
             ))}
           </div>
-          <div className="projects-area flex-ns vh-50-ns overflow-hidden-ns">
+          <div className="projects-area flex-ns vh-50-ns overflow-hidden-ns pb5 pl5 pr5">
             <div id="projects-map" className="h-100 w-100 flex-50" />
             <div className="projects-container flex-50 pb4 overflow-auto h-100">
               {filteredProjects.map((project, i) => (
