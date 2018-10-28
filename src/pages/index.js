@@ -53,7 +53,7 @@ export class IndexPageTemplate extends Component {
           </div>
         </section>
         <section id="work" className="relative pt4 pb4 ph3">
-          <h1 className="green pa1 mb0 pt0 tc">{servicesHeader}</h1>
+          <h1 className="blue pa1 mb0 pt0 tc">{servicesHeader}</h1>
           <div className="work-types mw8-l mw6 center items-stretch justify-around pb4">
             {servicesList.map((service, i) => (
               <Link
@@ -62,7 +62,7 @@ export class IndexPageTemplate extends Component {
                 key={i}
               >
                 <div className="h-100">
-                  <div className="bg-gold-light-80 absolute cover h-100 w-100 z-3" />
+                  <div className="bg-gold-80 absolute cover h-100 w-100 z-3" />
                   <Img
                     sizes={service.background.childImageSharp.sizes}
                     style={this.backgroundImageStyle}
@@ -137,7 +137,7 @@ export class IndexPageTemplate extends Component {
 
         <section id="certifications" className="relative pt5 ph3">
           <div className="mw7 center">
-            <h1 className="f2 f1-ns green tc">Certifications</h1>
+            <h1 className="f2 f1-ns white bg-blue tc">Certifications</h1>
 
             <div className="flex flex-wrap justify-center items-center pt0">
               {certifications.map((cert, i) => (
@@ -160,7 +160,7 @@ export class IndexPageTemplate extends Component {
         {contactInfo && (
           <section id="contact" className="relative pb5 ph3">
             <div className="mw7 center">
-              <h1 className="f2 f1-ns green tc">Contact Us</h1>
+              <h1 className="f2 f1-ns white bg-green tc">Contact Us</h1>
               <ContactBox
                 street1={contactInfo.address.street1}
                 street2={contactInfo.address.street2}
