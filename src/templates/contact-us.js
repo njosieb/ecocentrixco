@@ -35,8 +35,9 @@ export const ContactPageTemplate = ({
       <section className="contact-form markdown-content pt5 mw7 center ph4">
         <h3>Tell Us About Your Project!</h3>
         <p className="f6">
-          If you'd like us to reach out to you give us an idea of your current
-          project. We'll reach out to you over the email you provide us below.
+          If you'd like us to reach out to you, give us an idea of your current
+          project. <br />
+          We'll reach out to you using the email you provide us below.
         </p>
         <form
           name="contact-us-form"
@@ -46,12 +47,24 @@ export const ContactPageTemplate = ({
         >
           <p>
             <label>
-              Your Name: <input type="text" name="name" required />
+              Your Name:{' '}
+              <input
+                type="text"
+                name="name"
+                placeholder="John Smith"
+                required
+              />
             </label>
           </p>
           <p>
             <label>
-              Your Email: <input type="email" name="email" required />
+              Your Email:{' '}
+              <input
+                type="email"
+                name="email"
+                placeholder="JSmith@contactme.com"
+                required
+              />
             </label>
           </p>
           <p>

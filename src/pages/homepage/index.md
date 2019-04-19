@@ -1,22 +1,22 @@
 ---
 templateKey: home-page
 headerImage: /img/gustavo-quepon-129114-unsplash.jpg
-headerText: ' We Save Energy To Save Your Money! '
+headerText: ' We Save Energy To Save You Money! '
 headerSubtext: '  '
 servicesHeader: 'What We Do'
 servicesList:
   - serviceLink: '/services#auditing'
     icon: fa-check-square-o
     name: Energy Auditing
-    background: '/img/anton-darius-thesollers-424266-unsplash.jpg'
+    background: '/img/joanna-kosinska-439233-unsplash.jpg'
   - serviceLink: '/services#consulting'
     icon: fa-handshake-o
     name: Energy Consulting
-    background: '/img/patrick-hendry-775890-unsplash.jpg'
+    background: '/img/andreas-gucklhorn-285602-unsplash.jpg'
   - serviceLink: '/services#energy'
     icon: fa-line-chart
     name: Energy Modeling
-    background: '/img/jakob-owens-130558-unsplash.jpg'
+    background: '/img/chris-barbalis-103434-unsplash.jpg'
   - serviceLink: '/services#radon'
     icon: fa-dashboard
     name: Radon Testing
