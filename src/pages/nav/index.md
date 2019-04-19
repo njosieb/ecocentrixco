@@ -2,7 +2,7 @@
 templateKey: settings
 nav:
   - label: Our Services
-    url: /services
+    url: "services"
     children:
       - label: Energy Auditing
         url: '/services#auditing'
@@ -11,7 +11,7 @@ nav:
       - label: Radon Testing
         url: '/services#radon'
   - label: Projects
-    url: /projects
+    url: 'projects'
     children:
       - label: Energy Audits
         url: '/projects#energy-audit'
@@ -24,9 +24,9 @@ nav:
       - label: Home Energy Rating System
         url: '/projects#home-energy-rating-system'
   - label: Certifications
-    url: /certifications
+    url: 'certifications'
   - label: About Us
-    url: /about
+    url: 'about'
   - label: Contact Us
-    url: /contact-us
+    url: 'contact-us'
 ---

@@ -1,4 +1,4 @@
-import GatsbyLink from 'gatsby-link'
+import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
@@ -15,35 +15,35 @@ class Navbar extends Component {
         </Helmet>
         <div className="site-header db bg-white">
           <div className="header-wrapper pt3-ns pb3-ns flex justify-between items-center">
-            <GatsbyLink to="/" className="db ml5-ns pb2">
+            <Link to="/" className="db ml5-ns pb2">
               <img
                 src={logo}
                 className="db"
                 title="ECOcentrix Co logo"
                 alt="ECOcentrix Co logo"
               />
-            </GatsbyLink>
+            </Link>
             <div className="menu">
               {nav.map((item, i) => (
                 <div key={i} className="menu-item">
-                  <GatsbyLink
+                  <Link
                     title={item.label}
                     to={item.url}
                     className="underline-hover fw5 ttu tracked"
                   >
                     {item.label}
-                  </GatsbyLink>
+                  </Link>
                   {item.children && (
                     <div className="sub-menu absolute bg-white pa3">
                       {item.children.map((child, j) => (
-                        <GatsbyLink
+                        <Link
                           key={j}
                           title={child.label}
                           to={child.url}
                           className="db pv2 nowrap underline-hover fw5"
                         >
                           {child.label}
-                        </GatsbyLink>
+                        </Link>
                       ))}
                     </div>
                   )}
