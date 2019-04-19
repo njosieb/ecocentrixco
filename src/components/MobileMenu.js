@@ -1,3 +1,4 @@
+import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 
@@ -9,16 +10,16 @@ const MobileMenu = ({ nav }) => (
   >
     <div className="menu-section pt4">
       {nav.map((item, i) => (
-        <a
+        <Link
           key={i}
           title={item.label}
-          href={item.url}
+          to={item.url}
           className="mobile-menu-link fw7"
         >
           <div className="menu-item underline-hover tr hover-white pointer">
             {item.label}
           </div>
-        </a>
+        </Link>
       ))}
     </div>
   </nav>
