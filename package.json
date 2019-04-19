@@ -24,6 +24,7 @@
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-google-maps": "^9.4.5",
     "react-helmet": "^5.2.0",
     "sugar": "2.0.4",
     "tachyons-sass": "^4.9.3"
