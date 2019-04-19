@@ -1,6 +1,8 @@
+import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 import Content, { HTMLContent } from '../components/Content'
+import Layout from '../components/Layout'
 
 export const FaqPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
@@ -28,11 +30,13 @@ const FaqPage = ({ data }) => {
   const { markdownRemark: page } = data
 
   return (
-    <FaqPageTemplate
-      title={page.frontmatter.title}
-      content={page.html}
-      contentComponent={HTMLContent}
-    />
+    <Layout>
+      <FaqPageTemplate
+        title={page.frontmatter.title}
+        content={page.html}
+        contentComponent={HTMLContent}
+      />
+    </Layout>
   )
 }
 

@@ -1,7 +1,9 @@
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
 import React from 'react'
 import Content, { HTMLContent } from '../components/Content'
-import Img from 'gatsby-image'
+import Layout from '../components/Layout'
 
 export const CertificationsPageTemplate = ({
   title,
@@ -51,12 +53,14 @@ const CertificationsPage = ({ data }) => {
   const { markdownRemark: page } = data
 
   return (
-    <CertificationsPageTemplate
-      title={page.frontmatter.title}
-      content={page.html}
-      contentComponent={HTMLContent}
-      certificationBackground={page.frontmatter.certificationBackground}
-    />
+    <Layout>
+      <CertificationsPageTemplate
+        title={page.frontmatter.title}
+        content={page.html}
+        contentComponent={HTMLContent}
+        certificationBackground={page.frontmatter.certificationBackground}
+      />
+    </Layout>
   )
 }
 

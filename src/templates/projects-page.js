@@ -1,6 +1,9 @@
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
+import Layout from '../components/Layout'
+import ProjectsMap from '../components/ProjectsMap'
 
 const tagList = [
   { label: 'All', value: 'All', href: 'all' },
@@ -24,35 +27,18 @@ export class ProjectsPageTemplate extends Component {
   state = {
     activeTag: 'All',
     filteredProjects: [],
-    map: null,
     markers: []
-  }
-
-  constructor(props) {
-    super(props)
-
-    this.initMap = this.initMap.bind(this)
   }
 
   componentDidMount() {
     const activeTag = tagList.filter(
       tag => tag.href === window.location.hash.replace('#', '')
     )[0]
-    this.setState({
-      ...this.state,
-      activeTag: activeTag ? activeTag.value : 'All'
-    })
 
-    this.checkMapsLoaded = setInterval(() => {
-      if (window.google.maps.Map) {
-        clearInterval(this.checkMapsLoaded)
-        this.initMap()
-      }
-    }, 250)
+    this.filterProjects(activeTag ? activeTag.value : 'All')
   }
 
-  filterProjects = function(tag, map) {
-    const mapToUse = map || this.state.map
+  filterProjects = function(tag) {
     const { projects } = this.props
     const filteredProjects =
       tag === 'All' ? projects : projects.filter(proj => proj.type === tag)
@@ -60,64 +46,11 @@ export class ProjectsPageTemplate extends Component {
     const foundTag = tagList.filter(item => item.value === tag)[0]
     window.location.hash = tag === 'All' ? '' : `#${foundTag.href}`
 
-    this.state.markers.forEach(marker => marker.setMap(null))
-
-    const markers = filteredProjects.map(project => {
-      const marker = new window.google.maps.Marker({
-        position: project.position,
-        map: mapToUse
-      })
-
-      const infoWindow = new window.google.maps.InfoWindow({
-        content: `<div class="marker-info-window">
-                    ${
-                      project.picture
-                        ? `<div class="marker-picture">
-                          <img alt="${project.title}" src="${
-                            project.picture
-                          }" />
-                        </div>`
-                        : ''
-                    }
-                    <div class="marker-body">
-                      <h4 class="marker-title">${project.title}</h4>
-                      <p class="marker-description">
-                        ${project.description || ''}
-                      </p>
-                    </div>
-                  </div>
-                 `
-      })
-
-      marker.addListener('click', function() {
-        infoWindow.open(map, marker)
-      })
-
-      return marker
-    })
-
     this.setState({
-      map: mapToUse,
       activeTag: tag,
-      markers,
+      markers: filteredProjects,
       filteredProjects
     })
-  }
-
-  initMap = function() {
-    const map = new window.google.maps.Map(
-      document.getElementById('projects-map'),
-      {
-        zoom: 5,
-        center: { lat: 38.628141, lng: -90.209818 },
-        mapTypeControl: false,
-        fullscreenControl: false,
-        streetViewControl: false,
-        draggable: true
-      }
-    )
-
-    this.filterProjects(this.state.activeTag, map)
   }
 
   render() {
@@ -159,7 +92,15 @@ export class ProjectsPageTemplate extends Component {
             ))}
           </div>
           <div className="projects-area flex-ns vh-50-ns overflow-hidden-ns pb5 pl5 pr5">
-            <div id="projects-map" className="h-100 w-100 flex-50" />
+            <ProjectsMap
+              googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsuCjHZUuNmjtfjwxYsFGj8aouf18e9aU"
+              markers={this.state.markers}
+              loadingElement={<div style={{ height: `100%` }} />}
+              containerElement={
+                <div id="projects-map" className="h-100 w-100 flex-50" />
+              }
+              mapElement={<div style={{ height: `100%` }} />}
+            />
             <div className="projects-container flex-50 pb4 overflow-auto h-100">
               {filteredProjects.map((project, i) => (
                 <div
@@ -212,11 +153,13 @@ const ProjectsPage = ({ data }) => {
   const { markdownRemark: page } = data
 
   return (
-    <ProjectsPageTemplate
-      title={page.frontmatter.title}
-      projects={page.frontmatter.projects}
-      projectsBackground={page.frontmatter.projectsBackground}
-    />
+    <Layout>
+      <ProjectsPageTemplate
+        title={page.frontmatter.title}
+        projects={page.frontmatter.projects}
+        projectsBackground={page.frontmatter.projectsBackground}
+      />
+    </Layout>
   )
 }
 

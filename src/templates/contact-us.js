@@ -1,14 +1,15 @@
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
 import React from 'react'
 import ContactBox from '../components/Contact'
 import Content, { HTMLContent } from '../components/Content'
+import Layout from '../components/Layout'
 
 export const ContactPageTemplate = ({
   title,
   content,
   contentComponent,
-  contactInfo,
   contactBackground
 }) => {
   const PageContent = contentComponent || Content
@@ -91,19 +92,9 @@ export const ContactPageTemplate = ({
         className="markdown-content pt4 mw7 center ph4"
         content={content}
       />
-      {contactInfo && (
-        <section className="pb5 mw7 center ph4">
-          <ContactBox
-            street1={contactInfo.address.street1}
-            street2={contactInfo.address.street2}
-            city={contactInfo.address.city}
-            state={contactInfo.address.state}
-            zip={contactInfo.address.zip}
-            email={contactInfo.email}
-            phone={contactInfo.phone}
-          />
-        </section>
-      )}
+      <section className="pb5 mw7 center ph4">
+        <ContactBox />
+      </section>
     </div>
   )
 }
@@ -117,19 +108,17 @@ ContactPageTemplate.propTypes = {
 }
 
 const ContactPage = ({ data }) => {
-  const settingsEdge = data.allMarkdownRemark.edges.find(
-    edge => edge.node.frontmatter.templateKey === 'settings'
-  )
   const { markdownRemark: page } = data
 
   return (
-    <ContactPageTemplate
-      title={page.frontmatter.title}
-      content={page.html}
-      contentComponent={HTMLContent}
-      contactInfo={settingsEdge.node.frontmatter}
-      contactBackground={page.frontmatter.contactBackground}
-    />
+    <Layout>
+      <ContactPageTemplate
+        title={page.frontmatter.title}
+        content={page.html}
+        contentComponent={HTMLContent}
+        contactBackground={page.frontmatter.contactBackground}
+      />
+    </Layout>
   )
 }
 
@@ -141,7 +130,6 @@ export default ContactPage
 
 export const ContactPageQuery = graphql`
   query ContactQueryk {
-    ...ContactDetails
     markdownRemark(frontmatter: { templateKey: { eq: "contact-us" } }) {
       html
       frontmatter {
