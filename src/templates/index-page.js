@@ -1,8 +1,9 @@
+import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
-import Link from 'gatsby-link'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import ContactBox from '../components/Contact'
+import Layout from '../components/Layout'
 
 export class IndexPageTemplate extends Component {
   backgroundImageStyle = {
@@ -22,7 +23,6 @@ export class IndexPageTemplate extends Component {
       statsBackground,
       statsList,
       certifications,
-      contactInfo,
       servicesHeader,
       whoList,
       whoHeader
@@ -63,10 +63,12 @@ export class IndexPageTemplate extends Component {
               >
                 <div className="h-100 relative z-1">
                   <div className="bg-gold-lighter-80 absolute cover h-100 w-100 z-3" />
-                  <Img
-                    sizes={service.background.childImageSharp.sizes}
-                    style={this.backgroundImageStyle}
-                  />
+                  {service.background && (
+                    <Img
+                      sizes={service.background.childImageSharp.sizes}
+                      style={this.backgroundImageStyle}
+                    />
+                  )}
                   <div className="pa3 relative">
                     <i
                       className={`fa ${
@@ -153,22 +155,12 @@ export class IndexPageTemplate extends Component {
             </div>
           </div>
         </section>
-        {contactInfo && (
-          <section id="contact" className="relative pb5 ph3">
-            <div className="mw7 center">
-              <h1 className="f2 f1-ns white bg-green tc">Contact Us</h1>
-              <ContactBox
-                street1={contactInfo.address.street1}
-                street2={contactInfo.address.street2}
-                city={contactInfo.address.city}
-                state={contactInfo.address.state}
-                zip={contactInfo.address.zip}
-                email={contactInfo.email}
-                phone={contactInfo.phone}
-              />
-            </div>
-          </section>
-        )}
+        <section id="contact" className="relative pb5 ph3">
+          <div className="mw7 center">
+            <h1 className="f2 f1-ns white bg-green tc">Contact Us</h1>
+            <ContactBox />
+          </div>
+        </section>
       </main>
     )
   }
@@ -201,24 +193,22 @@ const IndexPage = ({ data }) => {
     whoList,
     whoHeader
   } = data.markdownRemark.frontmatter
-  const settingsEdge = data.allMarkdownRemark.edges.find(
-    edge => edge.node.frontmatter.templateKey === 'settings'
-  )
 
   return (
-    <IndexPageTemplate
-      headerImage={headerImage}
-      headerText={headerText}
-      headerSubtext={headerSubtext}
-      servicesList={servicesList}
-      statsBackground={statsBackground}
-      statsList={statsList}
-      certifications={certifications}
-      contactInfo={settingsEdge.node.frontmatter}
-      servicesHeader={servicesHeader}
-      whoList={whoList}
-      whoHeader={whoHeader}
-    />
+    <Layout>
+      <IndexPageTemplate
+        headerImage={headerImage}
+        headerText={headerText}
+        headerSubtext={headerSubtext}
+        servicesList={servicesList}
+        statsBackground={statsBackground}
+        statsList={statsList}
+        certifications={certifications}
+        servicesHeader={servicesHeader}
+        whoList={whoList}
+        whoHeader={whoHeader}
+      />
+    </Layout>
   )
 }
 
@@ -234,8 +224,7 @@ export default IndexPage
 
 export const indexPageQuery = graphql`
   query IndexPage {
-    ...ContactDetails
-    markdownRemark(frontmatter: { templateKey: { eq: "home-page" } }) {
+    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         headerImage {
           childImageSharp {

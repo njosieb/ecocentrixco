@@ -1,12 +1,13 @@
+import { graphql, StaticQuery } from 'gatsby'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
-import Footer from '../components/Footer'
-import MobileMenu from '../components/MobileMenu'
-import Navbar from '../components/Navbar'
 import './all.scss'
+import Footer from './Footer'
+import MobileMenu from './MobileMenu'
+import Navbar from './Navbar'
 
-class TemplateWrapper extends Component {
+class Layout extends Component {
   state = {
     menuOpen: false
   }
@@ -27,7 +28,6 @@ class TemplateWrapper extends Component {
 
   render() {
     const { data, children } = this.props
-
     const settingsEdges = data.allMarkdownRemark.edges.filter(
       edge => edge.node.frontmatter.templateKey === 'settings'
     )
@@ -46,42 +46,47 @@ class TemplateWrapper extends Component {
           onMenuClick={this.toggleMenu}
         />
         <MobileMenu nav={nav} />
-        {children()}
+        {children}
         <Footer socialMediaLinks={socialMediaLinks} />
       </div>
     )
   }
 }
 
-TemplateWrapper.propTypes = {
-  children: PropTypes.func,
+Layout.propTypes = {
+  children: PropTypes.object,
   data: PropTypes.object
 }
 
-export default TemplateWrapper
-
-export const LayoutQuery = graphql`
-  query LayoutQuery {
-    allMarkdownRemark {
-      edges {
-        node {
-          frontmatter {
-            templateKey
-            nav {
-              label
-              url
-              children {
-                label
-                url
+const LayoutQuery = props => (
+  <StaticQuery
+    query={graphql`
+      query LayoutQuery {
+        allMarkdownRemark {
+          edges {
+            node {
+              frontmatter {
+                templateKey
+                nav {
+                  label
+                  url
+                  children {
+                    label
+                    url
+                  }
+                }
+                socialMediaLinks {
+                  icon
+                  url
+                }
               }
-            }
-            socialMediaLinks {
-              icon
-              url
             }
           }
         }
       }
-    }
-  }
-`
+    `}
+    render={data => <Layout data={data} {...props} />}
+  />
+)
+
+export default LayoutQuery
