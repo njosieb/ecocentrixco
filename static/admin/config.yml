@@ -25,6 +25,7 @@ collections:
             widget: string
           - label: Header Subtext
             name: headerSubtext
+            required: false
             widget: string
           - label: Services Header
             name: servicesHeader
@@ -38,6 +39,7 @@ collections:
                 widget: string
               - label: Icon
                 name: icon
+                hint: "Choose from any icon at https://fontawesome.com/icons"
                 widget: string
               - label: Background
                 name: background
@@ -166,9 +168,11 @@ collections:
                 widget: number
               - label: Description
                 name: description
+                required: false
                 widget: string
               - label: Picture
                 name: picture
+                required: false
                 widget: image
               - label: City
                 name: city
@@ -263,6 +267,7 @@ collections:
             default: settings
           - label: Contact Us Image
             name: contactBackground
+            required: false
             widget: image
           - label: Address
             name: address
@@ -273,6 +278,7 @@ collections:
                 widget: string
               - label: Street 2
                 name: street2
+                required: false
                 widget: string
               - label: City
                 name: city
@@ -298,4 +304,5 @@ collections:
                 widget: string
               - label: Icon
                 name: icon
+                hint: "Choose from any icon at https://fontawesome.com/icons"
                 widget: string

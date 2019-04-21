@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 const { fmImagesToRelative } = require('gatsby-remark-relative-images')
@@ -46,18 +45,15 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   })
 }
 
-// const adjustImagePath = nodePath => image => {
-//   if (_.isString(image)) {
-//     if (image.indexOf('/img') === 0) {
-//       const nextImage = path.relative(
-//         path.dirname(nodePath),
-//         path.join(__dirname, 'static/img', image.substr('/img'.length))
-//       )
-//       return nextImage
-//     }
-//   }
-//   return image
-// }
+exports.onCreateWebpackConfig = ({ getConfig, stage }) => {
+  const config = getConfig()
+  if (stage.startsWith('develop') && config.resolve) {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      'react-dom': '@hot-loader/react-dom'
+    }
+  }
+}
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators
@@ -70,65 +66,5 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
       node,
       value
     })
-
-    // This is where we convert NetlifyCMS img path strings into ImageSharp objects
-    // const { frontmatter } = node
-    // if (frontmatter) {
-    //   const adjust = adjustImagePath(node.fileAbsolutePath)
-    //   const {
-    //     certifications,
-    //     headerImage,
-    //     statsBackground,
-    //     certificationBackground,
-    //     contactBackground,
-    //     aboutUsBackground,
-    //     servicesBackground,
-    //     projectsBackground,
-    //     servicesList,
-    //     whoList
-    //   } = frontmatter
-
-    //   // Image location string -> ImageSharp objects
-    //   if (certifications) {
-    //     node.frontmatter.certifications.forEach(cert => {
-    //       cert.certImage = adjust(cert.certImage)
-    //     })
-    //   }
-    //   if (headerImage) {
-    //     node.frontmatter.headerImage = adjust(headerImage)
-    //   }
-    //   if (statsBackground) {
-    //     node.frontmatter.statsBackground = adjust(statsBackground)
-    //   }
-    //   if (certificationBackground) {
-    //     node.frontmatter.certificationBackground = adjust(
-    //       certificationBackground
-    //     )
-    //   }
-    //   if (contactBackground) {
-    //     node.frontmatter.contactBackground = adjust(contactBackground)
-    //   }
-    //   if (aboutUsBackground) {
-    //     node.frontmatter.aboutUsBackground = adjust(aboutUsBackground)
-    //   }
-    //   if (servicesBackground) {
-    //     node.frontmatter.servicesBackground = adjust(servicesBackground)
-    //   }
-    //   if (projectsBackground) {
-    //     node.frontmatter.projectsBackground = adjust(projectsBackground)
-    //   }
-    //   if (servicesList) {
-    //     node.frontmatter.servicesList.forEach(service => {
-    //       service.background = adjust(service.background)
-    //     })
-    //   }
-    //   if (whoList) {
-    //     node.frontmatter.whoList.forEach(client => {
-    //       client.background = adjust(client.background)
-    //     })
-    //   }
-    // }
   }
 }
-
-// exports.modifyWebpackConfig

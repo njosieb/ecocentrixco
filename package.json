@@ -37,6 +37,7 @@
     "uuid": "^3.2.1"
   },
   "devDependencies": {
+    "@hot-loader/react-dom": "^16.8.6",
     "babel-eslint": "^8.2.2",
     "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.9.0",
