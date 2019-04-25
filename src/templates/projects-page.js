@@ -128,6 +128,7 @@ export class ProjectsPageTemplate extends Component {
                   <h3
                     className="project-title f5 f4-ns ma0 green lh-solid pr2 pr0-ns"
                     style={{ flexBasis: '50%' }}
+                    onClick={() => this.toggleMarkerWindow(project.id)}
                   >
                     <span className="project-title-text underline-hover lh-copy">
                       {project.title}
@@ -138,18 +139,6 @@ export class ProjectsPageTemplate extends Component {
                     style={{ flexBasis: '25%' }}
                   >
                     {project.city}, {project.state}
-                  </div>
-                  <div
-                    className="project-units flex-auto f6 f5-ns"
-                    style={{ flexBasis: '15%' }}
-                  >
-                    {project.units} units
-                  </div>
-                  <div
-                    className="type tc flex-auto dn db-ns"
-                    style={{ flexBasis: '10%' }}
-                  >
-                    {project.type}
                   </div>
                 </div>
               ))}

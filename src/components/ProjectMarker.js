@@ -12,7 +12,9 @@ const ProjectMarker = ({ project, windowOpen, toggleWindow }) => (
             </div>
           )}
           <div className="marker-body">
-            <h4 className="marker-title">{project.title}</h4>
+            <h4 className="marker-title mb0">{project.title}</h4>
+            <div className="project-units f6">{project.units} units</div>
+            <div className="type">Type: {project.type}</div>
             <p className="marker-description">{project.description || ''}</p>
           </div>
         </div>
