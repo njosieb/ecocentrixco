@@ -27,7 +27,7 @@ export class ProjectsPageTemplate extends Component {
   state = {
     activeTag: 'All',
     filteredProjects: [],
-    markers: []
+    markers: {}
   }
 
   componentDidMount() {
@@ -48,9 +48,25 @@ export class ProjectsPageTemplate extends Component {
 
     this.setState({
       activeTag: tag,
-      markers: filteredProjects,
+      markers: projects.reduce(
+        (map, marker) => ({ ...map, [marker.id]: false }),
+        {}
+      ),
       filteredProjects
     })
+  }
+
+  toggleMarkerWindow = markerId => {
+    const { projects } = this.props
+
+    this.setState(prevState => ({
+      ...prevState,
+      markers: projects.reduce((map, project) => ({
+        ...map,
+        [project.id]:
+          project.id === markerId ? !prevState.markers[markerId] : false
+      }))
+    }))
   }
 
   render() {
@@ -94,7 +110,9 @@ export class ProjectsPageTemplate extends Component {
           <div className="projects-area flex-ns vh-50-ns overflow-hidden-ns pb5 pl5 pr5">
             <ProjectsMap
               googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsuCjHZUuNmjtfjwxYsFGj8aouf18e9aU"
-              markers={this.state.markers}
+              markers={this.state.filteredProjects}
+              markerStates={this.state.markers}
+              toggleMarkerWindow={this.toggleMarkerWindow}
               loadingElement={<div style={{ height: `100%` }} />}
               containerElement={
                 <div id="projects-map" className="h-100 w-100 flex-50" />

@@ -3,7 +3,7 @@ import { GoogleMap, withGoogleMap, withScriptjs } from 'react-google-maps'
 import ProjectMarker from './ProjectMarker'
 
 const ProjectsMap = withScriptjs(
-  withGoogleMap(({ markers }) => (
+  withGoogleMap(({ markers, markerStates, toggleMarkerWindow }) => (
     <GoogleMap
       defaultZoom={4}
       defaultCenter={{ lat: 38.628141, lng: -90.209818 }}
@@ -15,7 +15,12 @@ const ProjectsMap = withScriptjs(
       }}
     >
       {markers.map(marker => (
-        <ProjectMarker key={marker.id} project={marker} />
+        <ProjectMarker
+          key={marker.id}
+          windowOpen={markerStates[marker.id]}
+          toggleWindow={toggleMarkerWindow}
+          project={marker}
+        />
       ))}
     </GoogleMap>
   ))
