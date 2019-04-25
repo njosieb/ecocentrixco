@@ -1,9 +1,8 @@
 ---
 templateKey: certifications-page
-certificationBackground: '/img/rawpixel-423665-unsplash.jpg'
+certificationBackground: /img/rawpixel-423665-unsplash.jpg
 title: Certifications
 ---
-
 <a id="BPI" href="http://www.bpi.org/certified-professionals/building-analyst" target="_blank">
     <h3>Building Analyst Professional</h3>
     <h3>Building Envelope Professional</h3>
@@ -25,7 +24,7 @@ A home energy rating involves an analysis of a home's construction plans and ons
 Upon completion of the plan review, the rater will work with the builder to identify the energy efficiency improvements needed to ensure the house will meet ENERGY STAR performance guidelines. The rater then conducts onsite inspections, typically including a blower door test (to test the leakiness of the house) and a duct test (to test the leakiness of the ducts). Results of these tests, along with inputs derived from the plan review, are used to generate the HERS Index for the home. The HERS Index makes it easy to compare relative energy efficiency of different homes.
 
 <a id="NAHB" href="http://www.nahb.org" target="_blank">
-    <h3>NAHB Certified Green Professional (CHP)</h3>
+    <h3>NAHB Certified Green Professional (CGP)</h3>
     <img alt="Certified Green Professioal" src="/img/green-professional-certified.jpg" />
 </a>
 
