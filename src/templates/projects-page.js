@@ -189,20 +189,20 @@ export const ProjectsPageQuery = graphql`
             }
           }
         }
-        projects {
-          id
-          title
-          picture
-          description
-          city
-          state
-          position {
-            lat
-            lng
-          }
-          units
-          type
-        }
+        # projects {
+        #   id
+        #   title
+        #   picture
+        #   description
+        #   city
+        #   state
+        #   position {
+        #     lat
+        #     lng
+        #   }
+        #   units
+        #   type
+        # }
       }
     }
   }
