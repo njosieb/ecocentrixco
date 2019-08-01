@@ -157,13 +157,18 @@ ProjectsPageTemplate.propTypes = {
 }
 
 const ProjectsPage = ({ data }) => {
-  const { markdownRemark: page } = data
+  const { markdownRemark: page, allMarkdownRemark } = data
+  const projectEdges = allMarkdownRemark.edges.filter(
+    edge => !!edge.node.frontmatter.id
+  )
+
+  const projects = projectEdges.map(edge => edge.node.frontmatter)
 
   return (
     <Layout>
       <ProjectsPageTemplate
         title={page.frontmatter.title}
-        projects={page.frontmatter.projects}
+        projects={projects}
         projectsBackground={page.frontmatter.projectsBackground}
       />
     </Layout>
@@ -189,20 +194,21 @@ export const ProjectsPageQuery = graphql`
             }
           }
         }
-        # projects {
-        #   id
-        #   title
-        #   picture
-        #   description
-        #   city
-        #   state
-        #   position {
-        #     lat
-        #     lng
-        #   }
-        #   units
-        #   type
-        # }
+      }
+    }
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            title
+            id
+            city
+            state
+            units
+            type
+            tags
+          }
+        }
       }
     }
   }
