@@ -16,6 +16,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             }
             frontmatter {
               templateKey
+              id
             }
           }
         }
@@ -27,7 +28,9 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    const pages = result.data.allMarkdownRemark.edges
+    const pages = result.data.allMarkdownRemark.edges.filter(
+      edge => !!edge.node.frontmatter.templateKey
+    )
 
     pages.forEach(edge => {
       const id = edge.node.id
@@ -36,6 +39,24 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         component: path.resolve(
           `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
         ),
+        // additional data can be passed via context
+        context: {
+          id
+        }
+      })
+    })
+
+    const posts = result.data.allMarkdownRemark.edges.filter(
+      edge => !!edge.node.frontmatter.id
+    )
+
+    posts.forEach(edge => {
+      console.log(edge.node.frontmatter.id)
+
+      const id = edge.node.id
+      createPage({
+        path: edge.node.frontmatter.id,
+        component: path.resolve(`src/templates/post-template.js`),
         // additional data can be passed via context
         context: {
           id
