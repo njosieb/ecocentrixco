@@ -1,5 +1,5 @@
 ---
-id: 15012
+id: '/projects/15012'
 title: 'DeSales Preservation'
 city: 'St. Louis'
 state: 'MO'

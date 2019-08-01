@@ -1,5 +1,5 @@
 ---
-id: 14008
+id: '/projects/14008'
 title: 'Barton Center'
 city: 'Indianapolis'
 state: 'IN'

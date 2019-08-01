@@ -1,5 +1,5 @@
 ---
-id: 15005
+id: '/projects/15005'
 title: 'East Fox Homes'
 city: 'St. Louis'
 state: 'MO'

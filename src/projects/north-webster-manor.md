@@ -1,5 +1,5 @@
 ---
-id: 15010
+id: '/projects/15010'
 title: 'North Webster Manor'
 city: 'Webster Groves'
 state: 'MO'

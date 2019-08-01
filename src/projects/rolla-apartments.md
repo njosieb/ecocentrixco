@@ -1,5 +1,5 @@
 ---
-id: 16001
+id: '/projects/16001'
 title: 'Rolla Apartments'
 city: 'Rolla'
 position: { 'lat': 37.949194, 'lng': -91.772744 }

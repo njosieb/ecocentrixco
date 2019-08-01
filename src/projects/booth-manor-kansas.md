@@ -1,5 +1,5 @@
 ---
-id: 14010
+id: '/projects/14010'
 title: 'Booth Manor Kansas'
 city: 'Kansas City'
 state: 'KS'

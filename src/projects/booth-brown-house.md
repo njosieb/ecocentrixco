@@ -1,5 +1,5 @@
 ---
-id: 14017
+id: '/projects/14017'
 title: 'Booth Brown House'
 city: 'St. Paul'
 state: 'MN'

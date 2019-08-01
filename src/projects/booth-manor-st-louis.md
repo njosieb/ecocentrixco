@@ -1,5 +1,5 @@
 ---
-id: 14020
+id: '/projects/14020'
 title: 'Booth Manor St Louis'
 city: 'St. Louis'
 state: 'MO'

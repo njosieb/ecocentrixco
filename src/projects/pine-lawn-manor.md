@@ -1,5 +1,5 @@
 ---
-id: 17001
+id: '/projects/17001'
 title: 'Pine Lawn Manor'
 city: 'Pine Lawn'
 state: 'MO'

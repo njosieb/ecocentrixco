@@ -1,5 +1,5 @@
 ---
-id: 14004
+id: '/projects/14004'
 title: 'Booth Manor Minneapolis'
 city: 'Minneapolis'
 state: 'MN'

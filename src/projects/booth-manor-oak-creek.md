@@ -1,5 +1,5 @@
 ---
-id: 14012
+id: '/projects/14012'
 title: 'Booth Manor Oak Creek'
 city: 'Oak Creek'
 state: 'WI'

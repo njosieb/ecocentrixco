@@ -1,5 +1,5 @@
 ---
-id: 14015
+id: '/projects/14015'
 title: 'Castleview Apartments'
 city: 'Rochester'
 state: 'MN'

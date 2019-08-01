@@ -1,5 +1,5 @@
 ---
-id: 13416
+id: '/projects/13416'
 title: 'Etzel Place'
 city: 'St. Louis'
 state: 'MO'

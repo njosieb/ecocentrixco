@@ -1,5 +1,5 @@
 ---
-id: 14006
+id: '/projects/14006'
 title: 'Carpenter Apartments'
 city: 'Indianapolis'
 state: 'IN'

@@ -1,5 +1,5 @@
 ---
-id: 15015
+id: '/projects/15015'
 title: 'St Regis Apartments'
 city: 'Kansas City'
 state: 'MO'

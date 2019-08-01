@@ -1,5 +1,5 @@
 ---
-id: 16007
+id: '/projects/16007'
 title: 'Pioneer House'
 city: 'Lexington'
 state: 'MO'

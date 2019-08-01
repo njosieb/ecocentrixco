@@ -1,5 +1,5 @@
 ---
-id: 13418
+id: '/projects/13418'
 title: 'Village at Delmar'
 city: 'St. Louis'
 state: 'MO'

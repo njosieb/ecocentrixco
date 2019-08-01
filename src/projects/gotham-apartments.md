@@ -1,5 +1,5 @@
 ---
-id: 16006
+id: '/projects/16006'
 title: 'Gotham Apartments'
 city: 'Kansas City'
 state: 'MO'

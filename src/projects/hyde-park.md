@@ -1,5 +1,5 @@
 ---
-id: 16008
+id: '/projects/16008'
 title: 'Hyde Park'
 city: 'St. Louis'
 state: 'MO'

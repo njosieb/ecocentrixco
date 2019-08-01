@@ -1,5 +1,5 @@
 ---
-id: 16005
+id: '/projects/16005'
 title: 'Chippewa Park'
 city: 'St. Louis'
 state: 'MO'

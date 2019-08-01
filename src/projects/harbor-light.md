@@ -1,5 +1,5 @@
 ---
-id: 14018
+id: '/projects/14018'
 title: 'Harbor Light'
 city: 'Minneapolis'
 state: 'MN'

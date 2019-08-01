@@ -1,5 +1,5 @@
 ---
-id: 12085
+id: '/projects/12085'
 title: 'The Court at Washington Square'
 picture: ''
 description: ''

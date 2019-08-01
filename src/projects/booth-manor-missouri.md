@@ -1,5 +1,5 @@
 ---
-id: 14009
+id: '/projects/14009'
 title: 'Booth Manor Missouri'
 city: 'Grandview'
 state: 'MO'

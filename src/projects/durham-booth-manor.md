@@ -1,5 +1,5 @@
 ---
-id: 14014
+id: '/projects/14014'
 title: 'Durham Booth Manor'
 city: 'Omaha'
 state: 'NE'

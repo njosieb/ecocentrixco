@@ -1,5 +1,5 @@
 ---
-id: 16004
+id: '/projects/16004'
 title: 'Metro at 70 Apartments'
 city: 'St. Louis'
 state: 'MO'

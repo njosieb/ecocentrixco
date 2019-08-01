@@ -1,5 +1,5 @@
 ---
-id: 14011
+id: '/projects/14011'
 title: 'Booth Manor Chicago'
 city: 'Chicago'
 state: 'IL'

@@ -1,5 +1,5 @@
 ---
-id: 16011
+id: '/projects/16011'
 title: 'Preservation Square'
 city: 'St. Louis'
 state: 'MO'

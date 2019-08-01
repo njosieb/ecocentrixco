@@ -1,5 +1,5 @@
 ---
-id: 13089
+id: '/projects/13089'
 title: '3010 Apartments'
 city: 'St. Louis'
 state: 'MO'

@@ -1,5 +1,5 @@
 ---
-id: 15009
+id: '/projects/15009'
 title: 'Woodbridge Apartments'
 city: 'Kansas City'
 state: 'MO'

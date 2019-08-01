@@ -1,5 +1,5 @@
 ---
-id: 15006
+id: '/projects/15006'
 title: 'Friendship Manor'
 city: 'Blue Springs'
 state: 'MO'

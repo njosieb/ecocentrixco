@@ -1,5 +1,5 @@
 ---
-id: 15016
+id: '/projects/15016'
 title: 'The Lane Apartments'
 city: 'Neosho'
 state: 'MO'

@@ -1,5 +1,5 @@
 ---
-id: 16010
+id: '/projects/16010'
 title: 'Valley Park Apartments'
 city: 'Valley Park'
 state: 'MO'

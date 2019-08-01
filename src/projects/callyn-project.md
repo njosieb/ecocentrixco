@@ -1,5 +1,5 @@
 ---
-id: 14096
+id: '/projects/14096'
 title: 'Callyn Project'
 city: 'Kirksville'
 state: 'MO'

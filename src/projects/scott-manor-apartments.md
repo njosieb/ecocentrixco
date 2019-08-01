@@ -1,5 +1,5 @@
 ---
-id: 15007
+id: '/projects/15007'
 title: 'Scott Manor Apartments'
 city: 'Sikeston'
 state: 'MO'
