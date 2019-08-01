@@ -266,7 +266,7 @@ collections:
         widget: string
       - label: Id
         name: id
-        widget: number
+        widget: string
       - label: Description
         name: description
         required: false
