@@ -1,13 +1,14 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import ContactMap from '../components/SingleLocationMap'
 
 export default function Template({
   data // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
-  const { title, city, state, units, type, tags } = frontmatter
+  const { title, city, state, units, type, tags, position } = frontmatter
 
   return (
     <Layout>
@@ -21,21 +22,37 @@ export default function Template({
           </div>
           <div className="container fw5 flex justify-between center project-info">
             <div>
-              <ul className="black f4 pl0">
-                <li>{'Location: ' + city + ', ' + state}</li>
-                <li>{'Project Type: ' + tags + ' (' + type + ')'}</li>
-                <li>{'Number of Units: ' + units}</li>
-              </ul>
+              <div className="black f4 pl0">
+                <div>
+                  <span className="b">Location: </span>
+                  {city + ', ' + state}
+                </div>
+                <div>
+                  <span className="b">Project Type: </span>
+                  {tags + ' (' + type + ')'}
+                </div>
+                <div>
+                  <span className="b">Number of Units: </span>
+                  {units}
+                </div>
+              </div>
+              <div
+                className="blog-post-content"
+                dangerouslySetInnerHTML={{ __html: html }}
+              />
             </div>
             <div className="map pa2">
-              <p className="f3">Map showing location will go here!</p>
+              <ContactMap
+                googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsuCjHZUuNmjtfjwxYsFGj8aouf18e9aU"
+                loadingElement={<div style={{ height: `100%` }} />}
+                containerElement={<div id="contact-map" className="w-100" />}
+                mapElement={<div style={{ height: `100%` }} />}
+                lat={position.lat}
+                lng={position.lng}
+              />
             </div>
           </div>
         </div>
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
       </div>
     </Layout>
   )
@@ -53,6 +70,10 @@ export const projectQuery = graphql`
         units
         type
         tags
+        position {
+          lat
+          lng
+        }
       }
     }
   }
