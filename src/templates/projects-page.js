@@ -207,6 +207,10 @@ export const ProjectsPageQuery = graphql`
             units
             type
             tags
+            position {
+              lat
+              lng
+            }
           }
         }
       }

@@ -1,5 +1,6 @@
 import React from 'react'
 import { InfoWindow, Marker } from 'react-google-maps'
+import { Link } from 'gatsby'
 
 const ProjectMarker = ({ project, windowOpen, toggleWindow }) => (
   <Marker position={project.position} onClick={() => toggleWindow(project.id)}>
@@ -12,7 +13,9 @@ const ProjectMarker = ({ project, windowOpen, toggleWindow }) => (
             </div>
           )}
           <div className="marker-body">
-            <h4 className="marker-title mb0">{project.title}</h4>
+            <h4 className="marker-title mb0">
+              <Link to={project.id}>{project.title}</Link>
+            </h4>
             <div className="project-units f6">{project.units} units</div>
             <div className="type">Type: {project.type}</div>
             <p className="marker-description">{project.description || ''}</p>

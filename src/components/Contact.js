@@ -1,7 +1,7 @@
 import { graphql, StaticQuery } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
-import ContactMap from './ContactMap'
+import ContactMap from './SingleLocationMap'
 
 const ContactBox = ({ address, email, phone }) => (
   <div className="flex-ns justify-between">
@@ -24,6 +24,8 @@ const ContactBox = ({ address, email, phone }) => (
       loadingElement={<div style={{ height: `100%` }} />}
       containerElement={<div id="contact-map" className="w-100" />}
       mapElement={<div style={{ height: `100%` }} />}
+      lat={38.636834}
+      lng={-90.213108}
     />
   </div>
 )
