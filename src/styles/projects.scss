@@ -1,3 +1,20 @@
 .project-header {
   font-size: 65px;
+  padding-top: 50px;
+}
+
+.project-info {
+  padding-bottom: 6rem;
+  padding-top: 5rem;
+}
+
+.map {
+  background-color: #8dc63f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: disc outside none;
 }
