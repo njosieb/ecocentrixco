@@ -20,7 +20,7 @@ export default function Template({
               {title}
             </h1>
           </div>
-          <div className="container fw5 flex justify-between center project-info">
+          <div className="container fw5 flex justify-between center">
             <div>
               <div className="black f4 pl0">
                 <div>
