@@ -3,32 +3,37 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import ContactMap from './SingleLocationMap'
 
-const ContactBox = ({ address, email, phone }) => (
-  <div className="flex-ns justify-between">
-    <div className="">
-      <div className="fw7">ECOcentrix Consultants, LLC</div>
-      <div className="fw5">{address.street1}</div>
-      {address.street2 && <div className="fw5">{address.street2}</div>}
-      <div className="fw5">
-        {address.city}, {address.state}. {address.zip}
+const ContactBox = props => {
+  console.log('ADDREESS HERE', props)
+  return (
+    <div className="flex-ns justify-between">
+      <div className="">
+        <div className="fw7">ECOcentrix Consultants, LLC</div>
+        <div className="fw5">2612 Delmar Blvd</div>
+        {props.address.street2 && (
+          <div className="fw5">{props.address.street2}</div>
+        )}
+        <div className="fw5">
+          {props.address.city}, {props.address.state}. {props.address.zip}
+        </div>
+        <div className="pv2">
+          <a className="fw7" href={props.email}>
+            {props.email}
+          </a>
+        </div>
+        <div className="fw5">{props.phone}</div>
       </div>
-      <div className="pv2">
-        <a className="fw7" href={email}>
-          {email}
-        </a>
-      </div>
-      <div className="fw5">{phone}</div>
+      <ContactMap
+        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsuCjHZUuNmjtfjwxYsFGj8aouf18e9aU"
+        loadingElement={<div style={{ height: `100%` }} />}
+        containerElement={<div id="contact-map" className="w-100" />}
+        mapElement={<div style={{ height: `100%` }} />}
+        lat={38.636834}
+        lng={-90.213108}
+      />
     </div>
-    <ContactMap
-      googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsuCjHZUuNmjtfjwxYsFGj8aouf18e9aU"
-      loadingElement={<div style={{ height: `100%` }} />}
-      containerElement={<div id="contact-map" className="w-100" />}
-      mapElement={<div style={{ height: `100%` }} />}
-      lat={38.636834}
-      lng={-90.213108}
-    />
-  </div>
-)
+  )
+}
 
 ContactBox.propTypes = {
   address: PropTypes.shape({
