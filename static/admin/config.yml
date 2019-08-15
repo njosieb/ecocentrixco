@@ -308,3 +308,6 @@ collections:
             value: 'NGBS'
           - label: 'Home Energy Rating System'
             value: 'HERS'
+      - label: Body
+        name: body
+        widget: markdown
