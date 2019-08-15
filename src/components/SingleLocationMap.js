@@ -7,10 +7,10 @@ import {
 } from 'react-google-maps'
 
 const ContactMap = withScriptjs(
-  withGoogleMap(() => (
+  withGoogleMap(({ lat, lng }) => (
     <GoogleMap
       defaultZoom={12}
-      defaultCenter={{ lat: 38.636834, lng: -90.213108 }}
+      defaultCenter={{ lat, lng }}
       options={{
         mapTypeControl: false,
         fullscreenControl: false,
@@ -18,7 +18,7 @@ const ContactMap = withScriptjs(
         draggable: false
       }}
     >
-      <Marker position={{ lat: 38.636834, lng: -90.213108 }} />
+      <Marker position={{ lat, lng }} />
     </GoogleMap>
   ))
 )
