@@ -1,18 +1,19 @@
 ---
 templateKey: settings
 address:
-  street1: 2612 Delmar Blvd
-  street2: ''
   city: St. Louis
   state: MO
+  street1: 2612 Delmar Blvd
+  street2: ''
   zip: 63013
-email: mollie@ecocentrixco.com
-phone: 314.409.1684
+email: Info@ecocentrixco.com
+phone: 314.246.9122
 socialMediaLinks:
   - icon: fa-facebook
-    url: https://www.facebook.com/ECOcentrix-Consulting-LLC-225325200871400/
+    url: 'https://www.facebook.com/ECOcentrix-Consulting-LLC-225325200871400/'
   - icon: fa-twitter
-    url: https://twitter.com/ecocentrixco
+    url: 'https://twitter.com/ecocentrixco'
   - icon: fa-envelope-o
-    url: mailto:mollie@ecocentrixco.com
+    url: 'mailto:mollie@ecocentrixco.com'
 ---
+
