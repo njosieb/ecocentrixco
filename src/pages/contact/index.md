@@ -15,5 +15,7 @@ socialMediaLinks:
     url: 'https://twitter.com/ecocentrixco'
   - icon: fa-envelope-o
     url: 'mailto:info@ecocentrixco.com'
+  - icon: fa-solid fa-calendar-plus
+    url: 'https://calendly.com/ecocentrixco'
 ---
 
