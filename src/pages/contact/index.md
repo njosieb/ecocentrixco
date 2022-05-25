@@ -6,7 +6,7 @@ address:
   street1: 2612 Delmar Blvd
   street2: ''
   zip: 63013
-email: Info@ecocentrixco.com
+email: info@ecocentrixco.com
 phone: 314.246.9122
 socialMediaLinks:
   - icon: fa-facebook
@@ -14,6 +14,6 @@ socialMediaLinks:
   - icon: fa-twitter
     url: 'https://twitter.com/ecocentrixco'
   - icon: fa-envelope-o
-    url: 'mailto:mollie@ecocentrixco.com'
+    url: 'mailto:info@ecocentrixco.com'
 ---
 
