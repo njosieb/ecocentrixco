@@ -7,7 +7,7 @@ address:
   street2: ''
   zip: 63013
 email: info@ecocentrixco.com
-phone: 314.246.9122
+phone: (844)990-3ECO
 socialMediaLinks:
   - icon: fa-facebook
     url: 'https://www.facebook.com/ECOcentrix-Consulting-LLC-225325200871400/'
