@@ -25,12 +25,10 @@ export const ContactPageTemplate = ({
     <div className="contact-main">
       <div className="pb0-ns z-1 h5 relative">
         <div className="bg-grey-color-80 absolute cover h-100 w-100 z-2" />
-        {contactBackground && (
-          <Img
-            sizes={contactBackground.childImageSharp.sizes}
-            style={backgroundImageStyle}
-          />
-        )}
+        <Img
+          sizes={contactBackground.childImageSharp.sizes}
+          style={backgroundImageStyle}
+        />
         <h1 className="mw8 pl5 f2 f-5-ns center white mv0 lh-copy z-5 relative">
           {title}
         </h1>

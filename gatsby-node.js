@@ -66,31 +66,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   })
 }
 
-exports.createSchemaCustomization = ({ actions, schema }) => {
-  const { createTypes } = actions
-  const typeDefs = [
-    'type MarkdownRemark implements Node { frontmatter: Frontmatter }',
-    schema.buildObjectType({
-      name: 'Frontmatter',
-      fields: {
-        contactBackground: {
-          type: 'File',
-          resolve(source) {
-            // For a more generic solution, you could pick the field value from
-            // `source[info.fieldName]`
-            const { contactBackground } = source
-            if (!source.contactBackground) {
-              return null
-            }
-            return contactBackground
-          }
-        }
-      }
-    })
-  ]
-  createTypes(typeDefs)
-}
-
 exports.onCreateWebpackConfig = ({ getConfig, stage }) => {
   const config = getConfig()
   if (stage.startsWith('develop') && config.resolve) {
