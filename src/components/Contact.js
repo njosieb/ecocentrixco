@@ -4,12 +4,11 @@ import React from 'react'
 import ContactMap from './SingleLocationMap'
 
 const ContactBox = props => {
-  console.log('ADDREESS HERE', props)
   return (
     <div className="flex-ns justify-between">
       <div className="">
         <div className="fw7">ECOcentrix Consultants, LLC</div>
-        <div className="fw5">2612 Delmar Blvd</div>
+        <div className="fw5">{props.address.street1}</div>
         {props.address.street2 && (
           <div className="fw5">{props.address.street2}</div>
         )}
@@ -73,9 +72,13 @@ export const ContactBoxQuery = () => (
         }
       }
     `}
-    render={data => (
-      <ContactBox {...data.allMarkdownRemark.edges[0].node.frontmatter} />
-    )}
+    render={data => {
+      const { node } = data.allMarkdownRemark.edges.find(
+        edge => edge.node.frontmatter.address !== null
+      )
+      console.log({ node })
+      return <ContactBox {...node.frontmatter} />
+    }}
   />
 )
 
