@@ -26,6 +26,7 @@ collections:
           - label: Header Subtext
             name: headerSubtext
             required: false
+            default: ''
             widget: string
           - label: Services Header
             name: servicesHeader
@@ -217,6 +218,7 @@ collections:
           - label: Contact Us Image
             name: contactBackground
             required: false
+            default: null
             widget: image
           - label: Address
             name: address
@@ -228,6 +230,7 @@ collections:
               - label: Street 2
                 name: street2
                 required: false
+                default: ''
                 widget: string
               - label: City
                 name: city
@@ -270,10 +273,12 @@ collections:
       - label: Description
         name: description
         required: false
+        default: ''
         widget: string
       - label: Picture
         name: picture
         required: false
+        default: ''
         widget: image
       - label: City
         name: city
