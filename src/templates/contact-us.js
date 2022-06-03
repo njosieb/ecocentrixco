@@ -1,34 +1,17 @@
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
 import React from 'react'
 import ContactBox from '../components/Contact'
 import Content, { HTMLContent } from '../components/Content'
 import Layout from '../components/Layout'
 
-export const ContactPageTemplate = ({
-  title,
-  content,
-  contentComponent,
-  contactBackground
-}) => {
+export const ContactPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
-  const backgroundImageStyle = {
-    position: 'absolute',
-    left: 0,
-    top: 0,
-    height: '100%',
-    width: '100%'
-  }
 
   return (
     <div className="contact-main">
       <div className="pb0-ns z-1 h5 relative">
         <div className="bg-grey-color-80 absolute cover h-100 w-100 z-2" />
-        <Img
-          sizes={contactBackground.childImageSharp.sizes}
-          style={backgroundImageStyle}
-        />
         <h1 className="mw8 pl5 f2 f-5-ns center white mv0 lh-copy z-5 relative">
           {title}
         </h1>
@@ -103,8 +86,7 @@ ContactPageTemplate.propTypes = {
   title: PropTypes.string,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
-  contactInfo: PropTypes.object,
-  contactBackground: PropTypes.object
+  contactInfo: PropTypes.object
 }
 
 const ContactPage = ({ data }) => {
@@ -116,7 +98,6 @@ const ContactPage = ({ data }) => {
         title={page.frontmatter.title}
         content={page.html}
         contentComponent={HTMLContent}
-        contactBackground={page.frontmatter.contactBackground}
       />
     </Layout>
   )
@@ -134,13 +115,6 @@ export const ContactPageQuery = graphql`
       html
       frontmatter {
         title
-        contactBackground {
-          childImageSharp {
-            sizes(maxWidth: 1400) {
-              ...GatsbyImageSharpSizes
-            }
-          }
-        }
       }
     }
   }

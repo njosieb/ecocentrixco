@@ -214,10 +214,6 @@ collections:
             name: templateKey
             widget: hidden
             default: settings
-          - label: Contact Us Image
-            name: contactBackground
-            required: false
-            widget: image
           - label: Address
             name: address
             widget: object
