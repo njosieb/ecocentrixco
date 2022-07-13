@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 headerImage: /img/andreas-gucklhorn-285602-unsplash.jpg
-headerText: 'Science, Not Sales. '
+headerText: 'Based on science, not sales. '
 headerSubtext: '  '
 servicesHeader: What We Do
 servicesList:
